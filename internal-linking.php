@@ -43,59 +43,100 @@ function aiseo_add_internal_links_to_post($post_id) {
 
     // Get the current post
     $current_post = get_post($post_id);
+    aiseo_log("Processing post ID: {$post_id}, Title: {$current_post->post_title}");
 
     // Get all other AI-generated posts with their AI SEO keywords
-    $other_posts = $wpdb->get_results("
+    $query = "
         SELECT p.ID, p.post_title, GROUP_CONCAT(t.name) AS keywords
         FROM {$wpdb->posts} p
         JOIN {$wpdb->postmeta} pm ON p.ID = pm.post_id AND pm.meta_key = '_aiseo_generated'
         LEFT JOIN {$wpdb->term_relationships} tr ON p.ID = tr.object_id
         LEFT JOIN {$wpdb->term_taxonomy} tt ON tr.term_taxonomy_id = tt.term_taxonomy_id AND tt.taxonomy = 'aiseo_keyword'
         LEFT JOIN {$wpdb->terms} t ON tt.term_id = t.term_id
-        WHERE p.post_status = 'publish' AND p.ID != {$post_id}
+        WHERE p.post_status IN ('publish', 'draft') AND p.ID != {$post_id}
         GROUP BY p.ID
-    ");
+    ";
+    $other_posts = $wpdb->get_results($query);
+
+    aiseo_log("Internal linking query: " . $query);
+    aiseo_log("Number of other AI-generated posts found: " . count($other_posts));
 
     if (empty($other_posts)) {
+        aiseo_log("No other AI-generated posts found. Checking for '_aiseo_generated' meta...");
+        $meta_check = $wpdb->get_var("SELECT COUNT(*) FROM {$wpdb->postmeta} WHERE meta_key = '_aiseo_generated'");
+        aiseo_log("Number of posts with '_aiseo_generated' meta: " . $meta_check);
         return ['status' => 'error', 'message' => 'No other AI-generated posts found to link to.'];
     }
 
-    $updated_content = $current_post->post_content;
+    $content = $current_post->post_content;
     $links_added = 0;
     $potential_links = 0;
+    $max_links_per_post = 5;
+    $linked_posts = []; // Keep track of posts we've already linked to
+
+    // Split content into blocks (separating HTML tags from text)
+    $blocks = preg_split('/(<.*?>)/', $content, -1, PREG_SPLIT_DELIM_CAPTURE | PREG_SPLIT_NO_EMPTY);
 
     foreach ($other_posts as $link_post) {
         $potential_links++;
+        if (in_array($link_post->ID, $linked_posts)) continue; // Skip if we've already linked to this post
+        
         $keywords = $link_post->keywords ? explode(',', $link_post->keywords) : [];
-        $keywords[] = $link_post->post_title; // Add the post title as a potential keyword
+        $keywords[] = $link_post->post_title;
 
         foreach ($keywords as $keyword) {
             $keyword = trim($keyword);
             if (strlen($keyword) < 3) continue; // Skip very short keywords
 
-            $pattern = '/\b' . preg_quote($keyword, '/') . '\w*\b(?![^<]*>)/i';
-            $replacement = '<a href="' . get_permalink($link_post->ID) . '">${0}</a>';
-            $new_content = preg_replace($pattern, $replacement, $updated_content, 1, $count);
+            aiseo_log("Searching for keyword: '{$keyword}' in post ID: {$post_id}");
             
-            if ($count > 0) {
-                $updated_content = $new_content;
-                $links_added++;
-                break; // Only add one link per post
+            // Process each block
+            for ($i = 0; $i < count($blocks); $i++) {
+                // Skip HTML tags and heading tags
+                if (preg_match('/<h[1-6].*?>|<.*?>/', $blocks[$i])) {
+                    continue;
+                }
+
+                $pattern = '/\b' . preg_quote($keyword, '/') . '\b(?![^<]*>|[^<>]*<\/a>)/i';
+                $blocks[$i] = preg_replace_callback($pattern, function($matches) use ($link_post, &$links_added, &$linked_posts) {
+                    if ($links_added >= 5) return $matches[0]; // Max links reached
+                    $links_added++;
+                    $linked_posts[] = $link_post->ID;
+                    aiseo_log("Added link to post ID {$link_post->ID} with keyword: '{$matches[0]}'");
+                    return '<a href="' . get_permalink($link_post->ID) . '">' . $matches[0] . '</a>';
+                }, $blocks[$i], 1);
+
+                if ($links_added >= $max_links_per_post) break 3; // Break out of all loops if max links reached
             }
         }
     }
 
+    // Reassemble the content
+    $updated_content = implode('', $blocks);
+
+    aiseo_log("Final content (first 1000 chars): " . substr($updated_content, 0, 1000));
+
     if ($links_added > 0) {
-        wp_update_post([
+        aiseo_log("Updated content (first 500 chars): " . substr($updated_content, 0, 500));
+        
+        $update_result = wp_update_post([
             'ID' => $post_id,
             'post_content' => $updated_content
-        ]);
+        ], true);
+
+        if (is_wp_error($update_result)) {
+            aiseo_log("Error updating post: " . $update_result->get_error_message());
+            return ['status' => 'error', 'message' => "Error updating post: " . $update_result->get_error_message()];
+        }
+
+        aiseo_log("Updated post ID {$post_id} with {$links_added} internal links");
         return [
             'status' => 'success',
             'message' => "{$links_added} internal links added out of {$potential_links} potential posts.",
             'content' => $updated_content
         ];
     } else {
+        aiseo_log("No links added to post ID {$post_id}");
         return [
             'status' => 'info',
             'message' => "No new links added. Checked {$potential_links} potential posts, but no suitable anchor text was found."

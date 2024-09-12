@@ -58,6 +58,7 @@ function aiseo_process_queue() {
                 if ($post_id) {
                     wp_set_post_tags($post_id, $content['tags']);
                     add_post_meta($post_id, '_aiseo_generated', true);
+                    aiseo_log("Added '_aiseo_generated' meta to post ID: " . $post_id);
                     add_post_meta($post_id, '_aiseo_alternate_titles', array_slice($content['titles'], 1));
 
                     // Rank Math integration

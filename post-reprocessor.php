@@ -157,6 +157,8 @@ function aiseo_add_internal_links_ajax() {
     $result = aiseo_add_internal_links_to_post($post_id);
 
     if ($result['status'] === 'success') {
+        aiseo_log("AJAX response content (first 500 chars): " . substr($result['content'], 0, 500));
+        aiseo_log("AJAX response message: " . $result['message']);
         wp_send_json_success([
             'content' => $result['content'],
             'message' => $result['message']

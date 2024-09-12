@@ -28,6 +28,9 @@ require_once plugin_dir_path(__FILE__) . 'queue-handler.php';
 // Include the progress page
 require_once plugin_dir_path(__FILE__) . 'progress-page.php';
 
+// Include the post reprocessor
+require_once plugin_dir_path(__FILE__) . 'post-reprocessor.php';
+
 function aiseo_enqueue_admin_scripts($hook) {
     if ('ai-seo-writer_page_ai-seo-writer-progress' === $hook) {
         wp_enqueue_script('jquery');

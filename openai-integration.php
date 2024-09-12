@@ -26,20 +26,34 @@ function aiseo_process_content($content) {
     return $html;
 }
 
-function aiseo_openai_request($api_key, $keyword, $post_length, $context, $tone_style) {
+function aiseo_openai_request($api_key, $keyword, $post_length = '', $context = '', $tone_style = '') {
     $url = 'https://api.openai.com/v1/chat/completions';
 
-    $prompt = "Generate a detailed blog post about '{$keyword}'. The post should be no less than {$post_length} words long. {$context} {$tone_style}
+    if (is_array($keyword) && isset($keyword['content'])) {
+        // This is a reprocessing request
+        $prompt = "Reprocess and improve the following blog post content. {$keyword['additional_prompt']}\n\nOriginal content:\n{$keyword['content']}
 
-    Please provide the following in your response:
-    1. An array of 3-5 SEO-friendly titles
-    2. The main content of the blog post in Markdown format
-    3. A meta description of about 155 characters
-    4. A suggested category for the post
-    5. An array of 5-7 relevant tags
-    6. An array of 3-5 frequently asked questions (FAQs) related to the topic, each with a 'question' and 'answer' field
+        Please provide the following in your response:
+        1. The main content of the blog post in Markdown format
+        2. An array of 3-5 frequently asked questions (FAQs) related to the topic, each with a 'question' and 'answer' field
 
-    Format your response as a JSON object with the following keys: titles, content, excerpt, category, tags, faqs";
+        Format your response as a JSON object with the following keys: content, faqs";
+        aiseo_log("Sending request to OpenAI for reprocessing with prompt: " . substr($prompt, 0, 500) . "...");
+    } else {
+        // This is a new post request
+        $prompt = "Generate a detailed blog post about '{$keyword}'. The post should be no less than {$post_length} words long. {$context} {$tone_style}
+
+        Please provide the following in your response:
+        1. An array of 3-5 SEO-friendly titles
+        2. The main content of the blog post in Markdown format
+        3. A meta description of about 155 characters
+        4. A suggested category for the post
+        5. An array of 5-7 relevant tags
+        6. An array of 3-5 frequently asked questions (FAQs) related to the topic, each with a 'question' and 'answer' field
+
+        Format your response as a JSON object with the following keys: titles, content, excerpt, category, tags, faqs";
+        aiseo_log("Sending request to OpenAI for keyword: " . $keyword);
+    }
 
     $data = array(
         'model' => 'gpt-4o-mini',
@@ -75,9 +89,20 @@ function aiseo_openai_request($api_key, $keyword, $post_length, $context, $tone_
                             'type' => 'array',
                             'items' => ['type' => 'string'],
                             'description' => 'An array of tags for the blog post'
+                        ],
+                        'faqs' => [
+                            'type' => 'array',
+                            'items' => [
+                                'type' => 'object',
+                                'properties' => [
+                                    'question' => ['type' => 'string'],
+                                    'answer' => ['type' => 'string']
+                                ]
+                            ],
+                            'description' => 'An array of FAQs related to the blog post'
                         ]
                     ],
-                    'required' => ['titles', 'content', 'excerpt', 'category', 'tags']
+                    'required' => ['titles', 'content', 'excerpt', 'category', 'tags', 'faqs']
                 ]
             ]
         ],
@@ -85,7 +110,7 @@ function aiseo_openai_request($api_key, $keyword, $post_length, $context, $tone_
         'temperature' => 0.7
     );
 
-    aiseo_log("Sending request to OpenAI for keyword: " . $keyword);
+    aiseo_log("Sending request to OpenAI for " . (is_array($keyword) ? "reprocessing" : "keyword: " . $keyword));
 
     $args = array(
         'body'        => json_encode($data),
@@ -93,7 +118,7 @@ function aiseo_openai_request($api_key, $keyword, $post_length, $context, $tone_
             'Content-Type'  => 'application/json',
             'Authorization' => 'Bearer ' . $api_key
         ),
-        'timeout'     => 60
+        'timeout'     => 120  // Increase timeout to 120 seconds
     );
 
     $response = wp_remote_post($url, $args);

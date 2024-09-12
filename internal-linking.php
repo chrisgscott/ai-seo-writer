@@ -92,8 +92,24 @@ function aiseo_add_internal_links_to_post($post_id) {
             
             // Process each block
             for ($i = 0; $i < count($blocks); $i++) {
-                // Skip HTML tags and heading tags
-                if (preg_match('/<h[1-6].*?>|<.*?>/', $blocks[$i])) {
+                // Skip HTML tags, especially heading tags
+                if (preg_match('/<h[1-6].*?>|<\/h[1-6]>|<.*?>/', $blocks[$i])) {
+                    continue;
+                }
+
+                // Check if we're inside a heading tag
+                $inside_heading = false;
+                for ($j = $i - 1; $j >= 0; $j--) {
+                    if (preg_match('/<h[1-6].*?>/', $blocks[$j])) {
+                        $inside_heading = true;
+                        break;
+                    }
+                    if (preg_match('/<\/h[1-6]>/', $blocks[$j])) {
+                        break;
+                    }
+                }
+
+                if ($inside_heading) {
                     continue;
                 }
 

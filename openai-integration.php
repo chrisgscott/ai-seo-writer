@@ -36,9 +36,9 @@ function aiseo_openai_request($api_key, $keyword, $post_length = '', $context = 
         Please provide the following in your response:
         1. The main content of the blog post in Markdown format
         2. An array of 3-5 frequently asked questions (FAQs) related to the topic, each with a 'question' and 'answer' field
+        3. A custom call-to-action (CTA) text for a free email course on dog training, tailored to the specific content of this post
 
-        Format your response as a JSON object with the following keys: content, faqs";
-        aiseo_log("Sending request to OpenAI for reprocessing with prompt: " . substr($prompt, 0, 500) . "...");
+        Format your response as a JSON object with the following keys: content, faqs, custom_cta";
     } else {
         // This is a new post request
         $prompt = "Generate a detailed blog post about '{$keyword}'. The post should be no less than {$post_length} words long. {$context} {$tone_style}
@@ -50,9 +50,9 @@ function aiseo_openai_request($api_key, $keyword, $post_length = '', $context = 
         4. A suggested category for the post
         5. An array of 5-7 relevant tags
         6. An array of 3-5 frequently asked questions (FAQs) related to the topic, each with a 'question' and 'answer' field
+        7. A custom call-to-action (CTA) text for a free email course on dog training, tailored to the specific content of this post
 
-        Format your response as a JSON object with the following keys: titles, content, excerpt, category, tags, faqs";
-        aiseo_log("Sending request to OpenAI for keyword: " . $keyword);
+        Format your response as a JSON object with the following keys: titles, content, excerpt, category, tags, faqs, custom_cta";
     }
 
     $data = array(
@@ -100,9 +100,13 @@ function aiseo_openai_request($api_key, $keyword, $post_length = '', $context = 
                                 ]
                             ],
                             'description' => 'An array of FAQs related to the blog post'
+                        ],
+                        'custom_cta' => [
+                            'type' => 'string',
+                            'description' => 'A custom call-to-action (CTA) text for a free email course on dog training'
                         ]
                     ],
-                    'required' => ['titles', 'content', 'excerpt', 'category', 'tags', 'faqs']
+                    'required' => ['titles', 'content', 'excerpt', 'category', 'tags', 'faqs', 'custom_cta']
                 ]
             ]
         ],

@@ -125,13 +125,18 @@ function aiseo_reprocess_post() {
                 aiseo_log("FAQs already present in the content. Skipping addition.");
             }
 
+            // Save custom CTA
+            if (isset($new_content['custom_cta'])) {
+                update_post_meta($post_id, '_aiseo_custom_cta', sanitize_text_field($new_content['custom_cta']));
+            }
+
             $post_data = [
                 'ID' => $post_id,
                 'post_content' => $processed_content
             ];
             wp_update_post($post_data);
             aiseo_log("Post ID " . $post_id . " reprocessed successfully. Content length: " . strlen($processed_content));
-            wp_send_json_success(['content' => $processed_content]);
+            wp_send_json_success(['content' => $processed_content, 'custom_cta' => $new_content['custom_cta'] ?? '']);
         } else {
             aiseo_log("Invalid response from OpenAI for post ID " . $post_id . ". Response: " . print_r($new_content, true));
             wp_send_json_error(['message' => 'Invalid response from OpenAI.']);

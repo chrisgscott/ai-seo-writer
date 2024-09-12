@@ -107,16 +107,22 @@ function aiseo_reprocess_post() {
         if (isset($new_content['content'])) {
             $processed_content = aiseo_process_content($new_content['content']);
 
-            // Add FAQ block to post content
-            if (isset($new_content['faqs']) && is_array($new_content['faqs'])) {
-                aiseo_log("FAQs found in response. Adding to content.");
-                $faq_content = "\n\n<h2>Frequently Asked Questions</h2>\n\n";
-                foreach ($new_content['faqs'] as $faq) {
-                    $faq_content .= "<!-- wp:rank-math/faq-block {\"questions\":[{\"id\":\"" . uniqid() . "\",\"title\":\"" . esc_attr($faq['question']) . "\",\"content\":\"" . esc_attr($faq['answer']) . "\",\"visible\":true}]} /-->\n\n";
+            // Check if FAQs are already in the content
+            if (strpos($processed_content, 'Frequently Asked Questions') === false) {
+                // Add FAQ block to post content only if it's not already there
+                if (isset($new_content['faqs']) && is_array($new_content['faqs'])) {
+                    aiseo_log("FAQs found in response. Adding to content.");
+                    $faq_content = "\n\n<h2>Frequently Asked Questions</h2>\n\n";
+                    foreach ($new_content['faqs'] as $faq) {
+                        $faq_content .= "<h3>" . esc_html($faq['question']) . "</h3>\n";
+                        $faq_content .= "<p>" . esc_html($faq['answer']) . "</p>\n\n";
+                    }
+                    $processed_content .= $faq_content;
+                } else {
+                    aiseo_log("No FAQs found in the response.");
                 }
-                $processed_content .= $faq_content;
             } else {
-                aiseo_log("No FAQs found in the response.");
+                aiseo_log("FAQs already present in the content. Skipping addition.");
             }
 
             $post_data = [

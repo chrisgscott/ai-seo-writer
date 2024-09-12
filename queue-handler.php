@@ -97,6 +97,11 @@ function aiseo_process_queue() {
                     update_option('aiseo_keyword_queue', $queue);
                     
                     aiseo_log("Removed processed keyword from queue: {$item['keyword']}");
+                    
+                    // Assuming $content['keywords'] contains an array of keywords from OpenAI
+                    if (isset($content['keywords']) && is_array($content['keywords'])) {
+                        wp_set_object_terms($post_id, $content['keywords'], 'aiseo_keyword');
+                    }
                 } else {
                     throw new Exception("Failed to create post.");
                 }
@@ -115,6 +120,11 @@ function aiseo_process_queue() {
     update_option('aiseo_current_status', 'Queue processing completed');
     update_option('aiseo_current_process', 'No active process');
     aiseo_log("Queue processing completed");
+
+    // After processing all items in the queue
+    if (empty($queue)) {
+        aiseo_add_internal_links();
+    }
 }
 
 add_action('aiseo_process_queue', 'aiseo_process_queue');

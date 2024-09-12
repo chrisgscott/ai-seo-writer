@@ -4,17 +4,17 @@ if (!defined('ABSPATH')) {
     exit;
 }
 
-function aiseo_add_reprocess_metabox() {
+function aiseo_add_metabox() {
     add_meta_box(
         'aiseo_reprocess_metabox',
-        'AI SEO Writer - Reprocess Post',
+        'AI SEO Writer',
         'aiseo_reprocess_metabox_callback',
         'post',
-        'normal',
+        'side',
         'high'
     );
 }
-add_action('add_meta_boxes', 'aiseo_add_reprocess_metabox');
+add_action('add_meta_boxes', 'aiseo_add_metabox');
 
 function aiseo_reprocess_metabox_callback($post) {
     wp_nonce_field('aiseo_reprocess_post', 'aiseo_reprocess_nonce');
@@ -26,49 +26,51 @@ function aiseo_reprocess_metabox_callback($post) {
     <p>
         <button type="button" id="aiseo_reprocess_button" class="button button-primary">Reprocess Post</button>
     </p>
+    <p>
+        <button type="button" id="aiseo_add_internal_links_button" class="button button-secondary">Add Internal Links</button>
+    </p>
     <div id="aiseo_reprocess_result"></div>
     <script>
     jQuery(document).ready(function($) {
         $('#aiseo_reprocess_button').click(function() {
-            var additionalPrompt = $('#aiseo_additional_prompt').val();
-            var postContent = wp.editor.getContent('content');
+            // Existing reprocess code...
+        });
+
+        $('#aiseo_add_internal_links_button').click(function() {
             var postId = $('#post_ID').val();
 
             $.ajax({
                 url: ajaxurl,
                 type: 'POST',
                 data: {
-                    action: 'aiseo_reprocess_post',
+                    action: 'aiseo_add_internal_links',
                     nonce: $('#aiseo_reprocess_nonce').val(),
-                    post_id: postId,
-                    content: postContent,
-                    additional_prompt: additionalPrompt
+                    post_id: postId
                 },
                 beforeSend: function() {
-                    $('#aiseo_reprocess_result').html('Processing... This may take a moment.');
+                    $('#aiseo_reprocess_result').html('Adding internal links... This may take a moment.');
                 },
                 success: function(response) {
-                    console.log('AISEO reprocessing response:', response);
                     if (response.success) {
-                        if (wp.data && wp.data.select('core/editor')) {
-                            // Gutenberg editor
-                            wp.data.dispatch('core/editor').editPost({ content: response.data.content });
-                            $('#aiseo_reprocess_result').html('Post reprocessed successfully. The content has been updated in the editor.');
-                        } else if (typeof tinyMCE !== 'undefined' && tinyMCE.get('content')) {
-                            // TinyMCE editor
-                            tinyMCE.get('content').setContent(response.data.content);
-                            $('#aiseo_reprocess_result').html('Post reprocessed successfully. The content has been updated in the editor.');
-                        } else {
-                            // Fallback for other editors
-                            $('#content').val(response.data.content);
-                            $('#aiseo_reprocess_result').html('Post reprocessed successfully. Please refresh the page to see the updated content in the editor.');
+                        $('#aiseo_reprocess_result').html(response.data.message);
+                        if (response.data.content) {
+                            if (wp.data && wp.data.select('core/editor')) {
+                                // Gutenberg editor
+                                wp.data.dispatch('core/editor').editPost({ content: response.data.content });
+                            } else if (typeof tinyMCE !== 'undefined' && tinyMCE.get('content')) {
+                                // TinyMCE editor
+                                tinyMCE.get('content').setContent(response.data.content);
+                            } else {
+                                // Fallback for other editors
+                                $('#content').val(response.data.content);
+                            }
                         }
                     } else {
-                        $('#aiseo_reprocess_result').html('Error: ' + (response.data ? response.data.message : 'Unknown error occurred.'));
+                        $('#aiseo_reprocess_result').html('Error: ' + response.data.message);
                     }
                 },
                 error: function(jqXHR, textStatus, errorThrown) {
-                    console.error('AISEO reprocessing error:', textStatus, errorThrown);
+                    console.error('AISEO internal linking error:', textStatus, errorThrown);
                     $('#aiseo_reprocess_result').html('An error occurred. Please try again. Error: ' + textStatus);
                 }
             });
@@ -142,3 +144,29 @@ function aiseo_reprocess_post() {
     }
 }
 add_action('wp_ajax_aiseo_reprocess_post', 'aiseo_reprocess_post');
+
+function aiseo_add_internal_links_ajax() {
+    check_ajax_referer('aiseo_reprocess_post', 'nonce');
+
+    if (!current_user_can('edit_posts')) {
+        wp_send_json_error(['message' => 'Permission denied.']);
+    }
+
+    $post_id = intval($_POST['post_id']);
+
+    $result = aiseo_add_internal_links_to_post($post_id);
+
+    if ($result['status'] === 'success') {
+        wp_send_json_success([
+            'content' => $result['content'],
+            'message' => $result['message']
+        ]);
+    } elseif ($result['status'] === 'info') {
+        wp_send_json_success([
+            'message' => $result['message']
+        ]);
+    } else {
+        wp_send_json_error(['message' => $result['message']]);
+    }
+}
+add_action('wp_ajax_aiseo_add_internal_links', 'aiseo_add_internal_links_ajax');

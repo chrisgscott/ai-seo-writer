@@ -31,6 +31,8 @@ require_once plugin_dir_path(__FILE__) . 'progress-page.php';
 // Include the post reprocessor
 require_once plugin_dir_path(__FILE__) . 'post-reprocessor.php';
 
+require_once plugin_dir_path(__FILE__) . 'internal-linking.php';
+
 function aiseo_enqueue_admin_scripts($hook) {
     if ('ai-seo-writer_page_ai-seo-writer-progress' === $hook) {
         wp_enqueue_script('jquery');
@@ -99,3 +101,31 @@ function aiseo_clear_queue() {
     exit;
 }
 //add_action('admin_init', 'aiseo_clear_queue');
+
+function aiseo_register_keyword_taxonomy() {
+    $labels = array(
+        'name'              => _x('AI SEO Keywords', 'taxonomy general name'),
+        'singular_name'     => _x('AI SEO Keyword', 'taxonomy singular name'),
+        'search_items'      => __('Search Keywords'),
+        'all_items'         => __('All Keywords'),
+        'edit_item'         => __('Edit Keyword'),
+        'update_item'       => __('Update Keyword'),
+        'add_new_item'      => __('Add New Keyword'),
+        'new_item_name'     => __('New Keyword Name'),
+        'menu_name'         => __('AI SEO Keywords'),
+    );
+
+    $args = array(
+        'hierarchical'      => false,
+        'labels'            => $labels,
+        'show_ui'           => true,
+        'show_admin_column' => true,
+        'query_var'         => true,
+        'rewrite'           => array('slug' => 'aiseo-keyword'),
+        'show_in_rest'      => true,
+        'public'            => false, // Set to false to hide from frontend
+    );
+
+    register_taxonomy('aiseo_keyword', array('post'), $args);
+}
+add_action('init', 'aiseo_register_keyword_taxonomy', 0);

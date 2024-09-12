@@ -28,6 +28,11 @@ function aiseo_process_content($content) {
 
 function aiseo_openai_request($api_key, $keyword, $post_length = '', $context = '', $tone_style = '') {
     $url = 'https://api.openai.com/v1/chat/completions';
+    $site_niche = get_option('aiseo_site_niche', '');
+    $offer_type = get_option('aiseo_offer_type', 'resource');
+    $cta_template = get_option('aiseo_cta_template', 'Sign up for our free {offer_type} on {site_niche}!');
+
+    $cta_instruction = "A custom call-to-action (CTA) text for a free {$offer_type} related to {$site_niche}, tailored to the specific content of this post. Use this template if suitable: '{$cta_template}'";
 
     if (is_array($keyword) && isset($keyword['content'])) {
         // This is a reprocessing request
@@ -36,9 +41,9 @@ function aiseo_openai_request($api_key, $keyword, $post_length = '', $context = 
         Please provide the following in your response:
         1. The main content of the blog post in Markdown format
         2. An array of 3-5 frequently asked questions (FAQs) related to the topic, each with a 'question' and 'answer' field
+        3. {$cta_instruction}
 
-        Format your response as a JSON object with the following keys: content, faqs";
-        aiseo_log("Sending request to OpenAI for reprocessing with prompt: " . substr($prompt, 0, 500) . "...");
+        Format your response as a JSON object with the following keys: content, faqs, custom_cta";
     } else {
         // This is a new post request
         $prompt = "Generate a detailed blog post about '{$keyword}'. The post should be no less than {$post_length} words long. {$context} {$tone_style}
@@ -49,10 +54,11 @@ function aiseo_openai_request($api_key, $keyword, $post_length = '', $context = 
         3. A meta description of about 155 characters
         4. A suggested category for the post
         5. An array of 5-7 relevant tags
-        6. An array of 3-5 frequently asked questions (FAQs) related to the topic, each with a 'question' and 'answer' field
+        6. An array of 10-15 SEO keywords related to the topic
+        7. An array of 3-5 frequently asked questions (FAQs) related to the topic, each with a 'question' and 'answer' field
+        8. {$cta_instruction}
 
-        Format your response as a JSON object with the following keys: titles, content, excerpt, category, tags, faqs";
-        aiseo_log("Sending request to OpenAI for keyword: " . $keyword);
+        Format your response as a JSON object with the following keys: titles, content, excerpt, category, tags, keywords, faqs, custom_cta";
     }
 
     $data = array(
@@ -90,6 +96,11 @@ function aiseo_openai_request($api_key, $keyword, $post_length = '', $context = 
                             'items' => ['type' => 'string'],
                             'description' => 'An array of tags for the blog post'
                         ],
+                        'keywords' => [
+                            'type' => 'array',
+                            'items' => ['type' => 'string'],
+                            'description' => 'An array of SEO keywords related to the topic'
+                        ],
                         'faqs' => [
                             'type' => 'array',
                             'items' => [
@@ -100,9 +111,13 @@ function aiseo_openai_request($api_key, $keyword, $post_length = '', $context = 
                                 ]
                             ],
                             'description' => 'An array of FAQs related to the blog post'
+                        ],
+                        'custom_cta' => [
+                            'type' => 'string',
+                            'description' => 'A custom call-to-action (CTA) text for a free resource or email course related to {$site_niche}'
                         ]
                     ],
-                    'required' => ['titles', 'content', 'excerpt', 'category', 'tags', 'faqs']
+                    'required' => ['titles', 'content', 'excerpt', 'category', 'tags', 'keywords', 'faqs', 'custom_cta']
                 ]
             ]
         ],

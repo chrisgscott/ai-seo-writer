@@ -33,7 +33,48 @@ function aiseo_reprocess_metabox_callback($post) {
     <script>
     jQuery(document).ready(function($) {
         $('#aiseo_reprocess_button').click(function() {
-            // Existing reprocess code...
+            var additionalPrompt = $('#aiseo_additional_prompt').val();
+            var postContent = wp.editor.getContent('content');
+            var postId = $('#post_ID').val();
+
+            $.ajax({
+                url: ajaxurl,
+                type: 'POST',
+                data: {
+                    action: 'aiseo_reprocess_post',
+                    nonce: $('#aiseo_reprocess_nonce').val(),
+                    post_id: postId,
+                    content: postContent,
+                    additional_prompt: additionalPrompt
+                },
+                beforeSend: function() {
+                    $('#aiseo_reprocess_result').html('Processing... This may take a moment.');
+                },
+                success: function(response) {
+                    console.log('AISEO reprocessing response:', response);
+                    if (response.success) {
+                        $('#aiseo_reprocess_result').html('Post reprocessed successfully.');
+                        if (response.data && response.data.content) {
+                            if (wp.data && wp.data.select('core/editor')) {
+                                // Gutenberg editor
+                                wp.data.dispatch('core/editor').editPost({ content: response.data.content });
+                            } else if (typeof tinyMCE !== 'undefined' && tinyMCE.get('content')) {
+                                // TinyMCE editor
+                                tinyMCE.get('content').setContent(response.data.content);
+                            } else {
+                                // Fallback for other editors
+                                $('#content').val(response.data.content);
+                            }
+                        }
+                    } else {
+                        $('#aiseo_reprocess_result').html('Error: ' + (response.data ? response.data.message : 'Unknown error occurred.'));
+                    }
+                },
+                error: function(jqXHR, textStatus, errorThrown) {
+                    console.error('AISEO reprocessing error:', textStatus, errorThrown);
+                    $('#aiseo_reprocess_result').html('An error occurred. Please try again. Error: ' + textStatus);
+                }
+            });
         });
 
         $('#aiseo_add_internal_links_button').click(function() {
@@ -106,38 +147,26 @@ function aiseo_reprocess_post() {
 
         aiseo_log("Received response from OpenAI: " . print_r($new_content, true));
 
-        if (isset($new_content['content'])) {
-            $processed_content = aiseo_process_content($new_content['content']);
+        $processed_content = aiseo_process_content($new_content['content']);
 
-            // Check if FAQs are already in the content
-            if (strpos($processed_content, 'Frequently Asked Questions') === false) {
-                // Add FAQ block to post content only if it's not already there
-                if (isset($new_content['faqs']) && is_array($new_content['faqs'])) {
-                    aiseo_log("FAQs found in response. Adding to content.");
-                    $faq_content = "\n\n<h2>Frequently Asked Questions</h2>\n\n";
-                    foreach ($new_content['faqs'] as $faq) {
-                        $faq_content .= "<h3>" . esc_html($faq['question']) . "</h3>\n";
-                        $faq_content .= "<p>" . esc_html($faq['answer']) . "</p>\n\n";
-                    }
-                    $processed_content .= $faq_content;
-                } else {
-                    aiseo_log("No FAQs found in the response.");
-                }
-            } else {
-                aiseo_log("FAQs already present in the content. Skipping addition.");
+        if (isset($new_content['faqs']) && is_array($new_content['faqs'])) {
+            $faq_content = "\n\n<h2>Frequently Asked Questions</h2>\n\n";
+            foreach ($new_content['faqs'] as $faq) {
+                $faq_content .= "<h3>" . esc_html($faq['question']) . "</h3>\n";
+                $faq_content .= "<p>" . esc_html($faq['answer']) . "</p>\n\n";
             }
-
-            $post_data = [
-                'ID' => $post_id,
-                'post_content' => $processed_content
-            ];
-            wp_update_post($post_data);
-            aiseo_log("Post ID " . $post_id . " reprocessed successfully. Content length: " . strlen($processed_content));
-            wp_send_json_success(['content' => $processed_content]);
+            $processed_content .= $faq_content;
         } else {
-            aiseo_log("Invalid response from OpenAI for post ID " . $post_id . ". Response: " . print_r($new_content, true));
-            wp_send_json_error(['message' => 'Invalid response from OpenAI.']);
+            aiseo_log("No FAQs found in the response.");
         }
+
+        $post_data = [
+            'ID' => $post_id,
+            'post_content' => $processed_content
+        ];
+        wp_update_post($post_data);
+        aiseo_log("Post ID " . $post_id . " reprocessed successfully. Content length: " . strlen($processed_content));
+        wp_send_json_success(['content' => $processed_content]);
     } catch (Exception $e) {
         aiseo_log("Error reprocessing post ID " . $post_id . ": " . $e->getMessage());
         wp_send_json_error(['message' => $e->getMessage()]);

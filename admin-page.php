@@ -8,7 +8,16 @@ function aiseo_admin_page() {
     // Check if form is submitted
     if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['aiseo_nonce']) && wp_verify_nonce($_POST['aiseo_nonce'], 'aiseo_generate_posts')) {
         // Process form submission
-        $keywords = explode(',', sanitize_textarea_field($_POST['keywords']));
+        $keywords = isset($_POST['aiseo_keywords']) ? sanitize_textarea_field($_POST['aiseo_keywords']) : '';
+        $keywords = preg_split('/[\n,]+/', $keywords);
+        $keywords = array_map('trim', $keywords);
+        $keywords = array_filter($keywords);
+
+        foreach ($keywords as $keyword) {
+            // Generate posts
+            aiseo_generate_posts($keywords, $post_length, $context, $tone_style);
+        }
+
         $post_length = sanitize_text_field($_POST['post_length']);
 
         // Get context and tone_style from settings
@@ -35,7 +44,7 @@ function aiseo_admin_page() {
                 <tr>
                     <th scope="row"><label for="keywords">Keywords</label></th>
                     <td>
-                        <textarea name="keywords" id="keywords" rows="5" cols="50" required></textarea>
+                        <textarea name="aiseo_keywords" rows="5" cols="50" placeholder="Enter keywords (one per line or comma-separated)"><?php echo esc_textarea(get_option('aiseo_keywords', '')); ?></textarea>
                         <p class="description">Enter keywords separated by commas. A separate blog post will be generated for each keyword.</p>
                     </td>
                 </tr>

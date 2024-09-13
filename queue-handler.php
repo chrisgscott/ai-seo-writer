@@ -22,11 +22,15 @@ function aiseo_enqueue_keywords($keywords, $post_length, $context, $tone_style) 
 }
 
 function aiseo_process_queue() {
+    // Ensure WordPress functions are available
+    require_once(ABSPATH . 'wp-admin/includes/taxonomy.php');
+
     aiseo_log("Starting queue processing");
     update_option('aiseo_current_status', 'Processing queue');
 
     $queue = get_option('aiseo_keyword_queue', array());
     $api_key = get_option('aiseo_openai_api_key');
+    $all_keywords = array_column($queue, 'keyword');
 
     foreach ($queue as $key => $item) {
         update_option('aiseo_current_process', "Processing keyword: {$item['keyword']}");
@@ -34,7 +38,7 @@ function aiseo_process_queue() {
         
         try {
             update_option('aiseo_current_process', "Sending request to OpenAI for keyword: {$item['keyword']}");
-            $response = aiseo_openai_request($api_key, $item['keyword'], $item['post_length'], $item['context'], $item['tone_style']);
+            $response = aiseo_openai_request($api_key, $item['keyword'], $item['post_length'], $item['context'], $item['tone_style'], $all_keywords);
             $content = json_decode($response, true);
             
             aiseo_log("Decoded content for keyword '{$item['keyword']}': " . print_r($content, true));
@@ -80,11 +84,12 @@ function aiseo_process_queue() {
 
                     // Add FAQ block to post content
                     if (isset($content['faqs']) && is_array($content['faqs'])) {
-                        $faq_content = '';
+                        $faq_content = "\n\n<h2>Frequently Asked Questions</h2>\n\n";
                         foreach ($content['faqs'] as $faq) {
-                            $faq_content .= "<!-- wp:rank-math/faq-block {\"questions\":[{\"id\":\"" . uniqid() . "\",\"title\":\"" . esc_attr($faq['question']) . "\",\"content\":\"" . esc_attr($faq['answer']) . "\",\"visible\":true}]} /-->\n\n";
+                            $faq_content .= "<h3>" . esc_html($faq['question']) . "</h3>\n";
+                            $faq_content .= "<p>" . esc_html($faq['answer']) . "</p>\n\n";
                         }
-                        $updated_content = $post_content . "\n\n" . $faq_content;
+                        $updated_content = $post_content . $faq_content;
                         wp_update_post([
                             'ID' => $post_id,
                             'post_content' => $updated_content
@@ -99,10 +104,8 @@ function aiseo_process_queue() {
                     
                     aiseo_log("Removed processed keyword from queue: {$item['keyword']}");
                     
-                    // Assuming $content['keywords'] contains an array of keywords from OpenAI
-                    if (isset($content['keywords']) && is_array($content['keywords'])) {
-                        wp_set_object_terms($post_id, $content['keywords'], 'aiseo_keyword');
-                    }
+                    // Store the initial keywords for this post
+                    add_post_meta($post_id, '_aiseo_initial_keywords', $all_keywords);
                 } else {
                     throw new Exception("Failed to create post.");
                 }
@@ -122,14 +125,18 @@ function aiseo_process_queue() {
     update_option('aiseo_current_process', 'No active process');
     aiseo_log("Queue processing completed");
 
-    // After processing all items in the queue
-    if (empty($queue)) {
-        aiseo_add_internal_links();
-    }
+    // After all posts have been processed, add internal links
+    aiseo_add_internal_links_to_all_posts($all_keywords);
 }
 
 add_action('aiseo_process_queue', 'aiseo_process_queue');
 
 if (!wp_next_scheduled('aiseo_process_queue')) {
-    wp_schedule_single_event(time() + 60, 'aiseo_process_queue');
+    wp_schedule_event(time(), 'hourly', 'aiseo_process_queue');
 }
+
+// Add this new action
+add_action('aiseo_process_queue', function() {
+    $cron_url = plugin_dir_url(__FILE__) . 'aiseo-cron.php';
+    wp_remote_get($cron_url);
+});

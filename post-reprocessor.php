@@ -167,6 +167,13 @@ function aiseo_reprocess_post() {
         wp_update_post($post_data);
         aiseo_log("Post ID " . $post_id . " reprocessed successfully. Content length: " . strlen($processed_content));
         wp_send_json_success(['content' => $processed_content]);
+
+        // Add internal links to the reprocessed content
+        $internal_linking_result = aiseo_add_internal_links_to_post($post_id);
+        if ($internal_linking_result['status'] === 'success') {
+            $processed_content = $internal_linking_result['content'];
+            aiseo_log("Added internal links to reprocessed content for post ID: " . $post_id);
+        }
     } catch (Exception $e) {
         aiseo_log("Error reprocessing post ID " . $post_id . ": " . $e->getMessage());
         wp_send_json_error(['message' => $e->getMessage()]);

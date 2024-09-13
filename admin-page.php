@@ -5,6 +5,7 @@ if (!defined('ABSPATH')) {
 }
 
 function aiseo_admin_page() {
+    ob_start();
     // Check if form is submitted
     if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['aiseo_nonce']) && wp_verify_nonce($_POST['aiseo_nonce'], 'aiseo_generate_posts')) {
         // Process form submission
@@ -12,11 +13,6 @@ function aiseo_admin_page() {
         $keywords = preg_split('/[\n,]+/', $keywords);
         $keywords = array_map('trim', $keywords);
         $keywords = array_filter($keywords);
-
-        foreach ($keywords as $keyword) {
-            // Generate posts
-            aiseo_generate_posts($keywords, $post_length, $context, $tone_style);
-        }
 
         $post_length = sanitize_text_field($_POST['post_length']);
 
@@ -27,8 +23,12 @@ function aiseo_admin_page() {
         // Generate posts
         aiseo_generate_posts($keywords, $post_length, $context, $tone_style);
 
+        // Add this before the wp_redirect line
+        aiseo_log("Attempting to redirect to progress page");
+
+        ob_end_clean();
         // Redirect to the progress page
-        wp_redirect(admin_url('admin.php?page=aiseo-progress'));
+        wp_redirect(admin_url('admin.php?page=ai-seo-writer-progress'));
         exit;
     }
 

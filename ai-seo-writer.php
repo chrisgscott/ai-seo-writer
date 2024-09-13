@@ -6,48 +6,92 @@ Version: 1.0
 Author: Your Name
 */
 
-// Load Composer autoloader
-require_once plugin_dir_path(__FILE__) . 'vendor/autoload.php';
-
 // Prevent direct access to this file
 if (!defined('ABSPATH')) {
     exit;
 }
 
-// Include the admin page
-require_once plugin_dir_path(__FILE__) . 'admin-page.php';
-// Include the settings page
-require_once plugin_dir_path(__FILE__) . 'settings-page.php';
+function aiseo_init() {
+    aiseo_log("Initializing AI SEO Writer plugin");
+    // Load Composer autoloader
+    require_once plugin_dir_path(__FILE__) . 'vendor/autoload.php';
 
-// Include the OpenAI integration
-require_once plugin_dir_path(__FILE__) . 'openai-integration.php';
+    // Include the admin page
+    require_once plugin_dir_path(__FILE__) . 'admin-page.php';
+    // Include the settings page
+    require_once plugin_dir_path(__FILE__) . 'settings-page.php';
+    // Include the OpenAI integration
+    require_once plugin_dir_path(__FILE__) . 'openai-integration.php';
+    // Include the queue handler
+    require_once plugin_dir_path(__FILE__) . 'queue-handler.php';
+    // Include the progress page
+    require_once plugin_dir_path(__FILE__) . 'progress-page.php';
+    // Include the post reprocessor
+    require_once plugin_dir_path(__FILE__) . 'post-reprocessor.php';
+    // Include the internal linking
+    require_once plugin_dir_path(__FILE__) . 'internal-linking.php';
 
-// Include the queue handler
-require_once plugin_dir_path(__FILE__) . 'queue-handler.php';
+    add_action('admin_enqueue_scripts', 'aiseo_enqueue_admin_scripts');
+    add_action('admin_menu', 'aiseo_add_admin_menu');
+    add_action('init', 'aiseo_register_keyword_taxonomy', 0);
+    add_action('wp_ajax_aiseo_clear_queue_and_keywords', 'aiseo_clear_queue_and_keywords');
+    aiseo_log("AI SEO Writer plugin initialized");
+}
 
-// Include the progress page
-require_once plugin_dir_path(__FILE__) . 'progress-page.php';
-
-// Include the post reprocessor
-require_once plugin_dir_path(__FILE__) . 'post-reprocessor.php';
-
-require_once plugin_dir_path(__FILE__) . 'internal-linking.php';
+add_action('plugins_loaded', 'aiseo_init');
 
 function aiseo_enqueue_admin_scripts($hook) {
+    aiseo_log("Enqueuing admin scripts for hook: $hook");
     if ('ai-seo-writer_page_ai-seo-writer-progress' === $hook) {
         wp_enqueue_script('jquery');
         
-        // Enqueue custom JavaScript if you have any
-        wp_enqueue_script('aiseo-progress-js', plugin_dir_url(__FILE__) . 'js/progress.js', array('jquery'), '1.0', true);
-        
-        // You can also localize the script to pass PHP variables to JavaScript
-        wp_localize_script('aiseo-progress-js', 'aiseoData', array(
+        wp_localize_script('jquery', 'aiseoData', array(
             'ajaxurl' => admin_url('admin-ajax.php'),
             'nonce' => wp_create_nonce('aiseo-ajax-nonce')
         ));
+
+        add_action('admin_footer', 'aiseo_print_progress_js');
+        aiseo_log("Admin scripts enqueued for progress page");
     }
 }
-add_action('admin_enqueue_scripts', 'aiseo_enqueue_admin_scripts');
+
+function aiseo_print_progress_js() {
+    aiseo_log("Printing progress JavaScript");
+    ?>
+    <script type="text/javascript">
+    jQuery(document).ready(function($) {
+        function updateProgress() {
+            console.log("Updating progress...");
+            $.ajax({
+                url: aiseoData.ajaxurl,
+                type: 'POST',
+                data: {
+                    action: 'aiseo_get_progress',
+                    nonce: aiseoData.nonce
+                },
+                success: function(response) {
+                    console.log("Progress update received:", response);
+                    if (response.success) {
+                        $('#current-status').text(response.data.current_status);
+                        $('#next-scheduled').text(response.data.next_scheduled);
+                        $('#queue-list').html(response.data.queue_list);
+                        $('#processed-list').html(response.data.processed_list);
+                        $('#current-process').text(response.data.current_process);
+                    }
+                },
+                complete: function() {
+                    setTimeout(updateProgress, 5000); // Update every 5 seconds
+                }
+            });
+        }
+
+        // Start the update process
+        updateProgress();
+    });
+    </script>
+    <?php
+    aiseo_log("Progress JavaScript printed");
+}
 
 function aiseo_log($message) {
     $log_file = plugin_dir_path(__FILE__) . 'aiseo_log.txt';
@@ -56,14 +100,16 @@ function aiseo_log($message) {
     error_log($log_message, 3, $log_file);
 }
 
-// Add this function to your existing plugin file
 function aiseo_plugin_deactivation() {
+    aiseo_log("Deactivating AI SEO Writer plugin");
     delete_option('aiseo_current_status');
     wp_clear_scheduled_hook('aiseo_process_queue');
+    aiseo_log("AI SEO Writer plugin deactivated");
 }
 register_deactivation_hook(__FILE__, 'aiseo_plugin_deactivation');
 
 function aiseo_add_admin_menu() {
+    aiseo_log("Adding admin menu items");
     add_menu_page(
         'AI SEO Writer',
         'AI SEO Writer',
@@ -90,19 +136,11 @@ function aiseo_add_admin_menu() {
         'ai-seo-writer-progress',
         'aiseo_progress_page'
     );
+    aiseo_log("Admin menu items added");
 }
-add_action('admin_menu', 'aiseo_add_admin_menu');
-
-function aiseo_clear_queue() {
-    delete_option('aiseo_keyword_queue');
-    delete_option('aiseo_current_status');
-    delete_option('aiseo_next_process_time');
-    echo "Queue cleared successfully.";
-    exit;
-}
-//add_action('admin_init', 'aiseo_clear_queue');
 
 function aiseo_register_keyword_taxonomy() {
+    aiseo_log("Registering AI SEO Keyword taxonomy");
     $labels = array(
         'name'              => _x('AI SEO Keywords', 'taxonomy general name'),
         'singular_name'     => _x('AI SEO Keyword', 'taxonomy singular name'),
@@ -127,5 +165,42 @@ function aiseo_register_keyword_taxonomy() {
     );
 
     register_taxonomy('aiseo_keyword', array('post'), $args);
+    aiseo_log("AI SEO Keyword taxonomy registered");
 }
-add_action('init', 'aiseo_register_keyword_taxonomy', 0);
+
+function aiseo_clear_queue_and_keywords() {
+    aiseo_log("Clearing queue and processed keywords");
+    check_ajax_referer('aiseo-ajax-nonce', 'nonce');
+
+    if (!current_user_can('manage_options')) {
+        aiseo_log("Permission denied for clearing queue and keywords");
+        wp_send_json_error(['message' => 'Permission denied.']);
+    }
+
+    delete_option('aiseo_keyword_queue');
+    delete_option('aiseo_processed_keywords');
+    delete_option('aiseo_current_status');
+    delete_option('aiseo_next_process_time');
+
+    aiseo_log("Queue and processed keywords cleared successfully");
+    wp_send_json_success(['message' => 'Queue and processed keywords cleared successfully.']);
+}
+
+function aiseo_get_progress() {
+    check_ajax_referer('aiseo-ajax-nonce', 'nonce');
+
+    $status = get_option('aiseo_current_status', 'No active process');
+    $next_scheduled = wp_next_scheduled('aiseo_process_queue');
+    $queue = get_option('aiseo_keyword_queue', array());
+    $processed = get_option('aiseo_processed_keywords', array());
+    $current_process = get_option('aiseo_current_process', 'No active process');
+
+    wp_send_json_success(array(
+        'status' => $status,
+        'next_scheduled' => $next_scheduled ? date('Y-m-d H:i:s', $next_scheduled) : 'Not scheduled',
+        'queue' => '<li>' . implode('</li><li>', array_column($queue, 'keyword')) . '</li>',
+        'processed' => '<li>' . implode('</li><li>', $processed) . '</li>',
+        'current_process' => $current_process
+    ));
+}
+add_action('wp_ajax_aiseo_get_progress', 'aiseo_get_progress');

@@ -16,6 +16,7 @@ function aiseo_progress_page() {
             delete_transient('aiseo_success_message');
         }
         ?>
+        <button id="aiseo-clear-queue" class="button button-secondary">Clear Queue and Processed Keywords</button>
         <div id="aiseo-progress-container">
             <h2>Current Status: <span id="current-status">Loading...</span></h2>
             <p>Next scheduled processing: <span id="next-scheduled">Loading...</span></p>
@@ -37,35 +38,51 @@ function aiseo_progress_page() {
 
     <script type="text/javascript">
     jQuery(document).ready(function($) {
+        $('#aiseo-clear-queue').click(function() {
+            if (confirm('Are you sure you want to clear the queue and processed keywords? This action cannot be undone.')) {
+                $.ajax({
+                    url: ajaxurl,
+                    type: 'POST',
+                    data: {
+                        action: 'aiseo_clear_queue_and_keywords',
+                        nonce: '<?php echo wp_create_nonce('aiseo-ajax-nonce'); ?>'
+                    },
+                    success: function(response) {
+                        if (response.success) {
+                            alert('Queue and processed keywords cleared successfully.');
+                            location.reload();
+                        } else {
+                            alert('Error: ' + response.data.message);
+                        }
+                    },
+                    error: function() {
+                        alert('An error occurred. Please try again.');
+                    }
+                });
+            }
+        });
+
         function updateProgress() {
             $.ajax({
                 url: ajaxurl,
+                type: 'POST',
                 data: {
-                    action: 'aiseo_get_progress'
+                    action: 'aiseo_get_progress',
+                    nonce: aiseoData.nonce
                 },
                 success: function(response) {
-                    $('#current-status').text(response.current_status);
-                    $('#next-scheduled').text(response.next_scheduled);
-                    
-                    // Update queue
-                    var queueHtml = '';
-                    $.each(response.queue, function(index, item) {
-                        queueHtml += '<li>' + item.keyword + '</li>';
-                    });
-                    $('#queue-list').html(queueHtml || '<li>Queue is empty</li>');
-
-                    // Update processed keywords
-                    var processedHtml = '';
-                    $.each(response.processed, function(keyword, postId) {
-                        processedHtml += '<li>' + keyword + ' - <a href="post.php?post=' + postId + '&action=edit">Edit Post</a></li>';
-                    });
-                    $('#processed-list').html(processedHtml || '<li>No keywords have been processed yet</li>');
-
-                    // Update current process
-                    $('#current-process').text(response.current_process);
-
-                    // Schedule next update
+                    if (response.success) {
+                        $('#current-status').text(response.data.status);
+                        $('#next-scheduled').text(response.data.next_scheduled);
+                        $('#queue-list').html(response.data.queue);
+                        $('#processed-list').html(response.data.processed);
+                        $('#current-process').text(response.data.current_process);
+                    }
                     setTimeout(updateProgress, 5000); // Update every 5 seconds
+                },
+                error: function() {
+                    console.log('Error updating progress');
+                    setTimeout(updateProgress, 5000);
                 }
             });
         }
@@ -75,22 +92,4 @@ function aiseo_progress_page() {
     });
     </script>
     <?php
-}
-
-// AJAX handler for progress updates
-add_action('wp_ajax_aiseo_get_progress', 'aiseo_ajax_get_progress');
-function aiseo_ajax_get_progress() {
-    $queue = get_option('aiseo_keyword_queue', array());
-    $processed = get_option('aiseo_processed_keywords', array());
-    $current_status = get_option('aiseo_current_status', 'Idle');
-    $next_scheduled = wp_next_scheduled('aiseo_process_queue');
-    $current_process = get_option('aiseo_current_process', 'No active process');
-
-    wp_send_json(array(
-        'current_status' => $current_status,
-        'next_scheduled' => $next_scheduled ? date('Y-m-d H:i:s', $next_scheduled) : 'Not scheduled',
-        'queue' => $queue,
-        'processed' => $processed,
-        'current_process' => $current_process
-    ));
 }

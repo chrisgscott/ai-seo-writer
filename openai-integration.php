@@ -5,11 +5,17 @@ if (!defined('ABSPATH')) {
 }
 
 require_once __DIR__ . '/vendor/autoload.php';
-use Parsedown;
 
 function aiseo_generate_posts($keywords, $post_length, $context, $tone_style) {
     aiseo_log("Enqueueing keywords: " . implode(', ', $keywords));
-    aiseo_enqueue_keywords($keywords, $post_length, $context, $tone_style);
+    
+    // Make sure queue-handler.php is included
+    require_once plugin_dir_path(__FILE__) . 'queue-handler.php';
+    
+    aiseo_enqueue_keywords($keywords, $post_length, $context, $tone_style, true);
+    
+    // Trigger immediate queue processing
+    wp_schedule_single_event(time(), 'aiseo_process_queue');
     
     // Set a transient with the success message
     set_transient('aiseo_success_message', count($keywords) . " keywords have been added to the queue for processing.", 60);

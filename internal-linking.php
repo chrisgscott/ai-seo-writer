@@ -16,7 +16,6 @@ function aiseo_add_internal_links_to_all_posts() {
         AND p.post_status IN ('publish', 'draft')
     ");
 
-    aiseo_log("SQL Query for fetching posts: " . $wpdb->last_query);
     aiseo_log("Number of posts fetched for internal linking: " . count($posts));
 
     // Get all keywords and their associated post IDs
@@ -27,29 +26,27 @@ function aiseo_add_internal_links_to_all_posts() {
     ");
     $keyword_map = array_column($keyword_posts, 'post_id', 'keyword');
 
-    aiseo_log("Starting to process " . count($posts) . " posts for internal linking");
-
-    aiseo_log("SQL Query for fetching posts: " . $wpdb->last_query);
-    aiseo_log("Number of posts fetched for internal linking: " . count($posts));
-
-    aiseo_log("SQL Query for fetching keywords: " . $wpdb->last_query);
     aiseo_log("Number of keywords fetched: " . count($keyword_posts));
 
     foreach ($posts as $post) {
-        $updated_content = $post->post_content;
         $links_added = 0;
-        $max_links = 5; // Maximum number of links to add per post
+        $max_links = 5;
+        $linked_keywords = array();
 
-        // Get all keywords
+        // Get all keywords for this post
         $keywords = wp_get_object_terms($post->ID, 'aiseo_keyword', array('fields' => 'names'));
+        aiseo_log("Post ID: {$post->ID} - Keywords: " . implode(', ', $keywords));
+
+        $content = $post->post_content;
 
         foreach ($keywords as $keyword) {
-            if ($links_added >= $max_links) {
-                break;
-            }
+            if ($links_added >= $max_links) break;
+            if (in_array($keyword, $linked_keywords)) continue;
 
             // Skip if this is the primary keyword for the current post
-            if (get_post_meta($post->ID, '_aiseo_primary_keyword', true) === $keyword) {
+            $primary_keyword = get_post_meta($post->ID, '_aiseo_primary_keyword', true);
+            if ($primary_keyword === $keyword) {
+                aiseo_log("Skipping primary keyword '{$keyword}' for post ID: {$post->ID}");
                 continue;
             }
 
@@ -59,33 +56,36 @@ function aiseo_add_internal_links_to_all_posts() {
             if ($keyword_post_id && $keyword_post_id != $post->ID) {
                 $link_url = get_permalink($keyword_post_id);
 
-                // Use preg_replace to add the link, ensuring we don't link within existing links or headings
-                $pattern = '/(?<!<a[^>]*>)(?<!<h[1-6]>)' . preg_quote($keyword, '/') . '(?![^<]*<\/a>)(?![^<]*<\/h[1-6]>)/i';
-                $replacement = '<a href="' . esc_url($link_url) . '">' . $keyword . '</a>';
-                $new_content = preg_replace($pattern, $replacement, $updated_content, 1);
-
-                if ($new_content !== $updated_content) {
-                    $updated_content = $new_content;
+                // Use preg_replace_callback to add the link
+                $pattern = '/(?<!<a[^>]*>)(?<!<h[1-6]>)(' . preg_quote($keyword, '/') . ')(?![^<]*<\/a>)(?![^<]*<\/h[1-6]>)/i';
+                $content = preg_replace_callback($pattern, function($matches) use ($link_url, &$links_added, &$linked_keywords, $keyword, $post) {
                     $links_added++;
+                    $linked_keywords[] = $keyword;
                     aiseo_log("Added internal link for keyword '{$keyword}' in post ID: {$post->ID}");
-                }
+                    return '<a href="' . esc_url($link_url) . '">' . $matches[1] . '</a>';
+                }, $content, 1);
+            } else {
+                aiseo_log("No matching post found for keyword '{$keyword}' in post ID: {$post->ID}");
             }
         }
-        aiseo_log("Original content length for post ID {$post->ID}: " . strlen($post->post_content));
-        aiseo_log("Updated content length for post ID {$post->ID}: " . strlen($updated_content));
 
-        if ($updated_content !== $post->post_content) {
-            $post_data = get_post($post->ID, ARRAY_A);
-            $post_data['post_content'] = $updated_content;
+        if ($content !== $post->post_content && !empty($content)) {
+            $post_data = array(
+                'ID' => $post->ID,
+                'post_content' => $content
+            );
             
             wp_update_post($post_data);
             
             aiseo_log("Updated post ID: {$post->ID} with {$links_added} internal links");
+            aiseo_log("Original content length: " . strlen($post->post_content));
+            aiseo_log("Updated content length: " . strlen($content));
+        } else {
+            aiseo_log("No update performed for post ID: {$post->ID}. Content unchanged or empty.");
         }
     }
 
     aiseo_log("Completed processing " . count($posts) . " posts for internal linking");
-    aiseo_log("Internal linking process completed for all posts.");
 }
 
 function aiseo_add_internal_links_to_post($post_id) {
@@ -96,9 +96,9 @@ function aiseo_add_internal_links_to_post($post_id) {
         return array('status' => 'error', 'message' => 'Post not found.');
     }
 
-    $updated_content = $post->post_content;
     $links_added = 0;
     $max_links = 5; // Maximum number of links to add per post
+    $linked_keywords = array(); // Track which keywords have been linked
 
     // Get all keywords and their associated post IDs
     $keyword_posts = $wpdb->get_results("
@@ -110,14 +110,18 @@ function aiseo_add_internal_links_to_post($post_id) {
 
     // Get all keywords for this post
     $keywords = wp_get_object_terms($post_id, 'aiseo_keyword', array('fields' => 'names'));
+    aiseo_log("Post ID: {$post_id} - Keywords: " . implode(', ', $keywords));
+
+    $content = $post->post_content;
 
     foreach ($keywords as $keyword) {
-        if ($links_added >= $max_links) {
-            break;
-        }
+        if ($links_added >= $max_links) break;
+        if (in_array($keyword, $linked_keywords)) continue; // Skip if we've already linked this keyword
 
         // Skip if this is the primary keyword for the current post
-        if (get_post_meta($post_id, '_aiseo_primary_keyword', true) === $keyword) {
+        $primary_keyword = get_post_meta($post_id, '_aiseo_primary_keyword', true);
+        if ($primary_keyword === $keyword) {
+            aiseo_log("Skipping primary keyword '{$keyword}' for post ID: {$post_id}");
             continue;
         }
 
@@ -127,35 +131,38 @@ function aiseo_add_internal_links_to_post($post_id) {
         if ($keyword_post_id && $keyword_post_id != $post_id) {
             $link_url = get_permalink($keyword_post_id);
 
-            // Use preg_replace to add the link, ensuring we don't link within existing links or headings
-            $pattern = '/(?<!<a[^>]*>)(?<!<h[1-6]>)' . preg_quote($keyword, '/') . '(?![^<]*<\/a>)(?![^<]*<\/h[1-6]>)/i';
-            $replacement = '<a href="' . esc_url($link_url) . '">' . $keyword . '</a>';
-            $new_content = preg_replace($pattern, $replacement, $updated_content, 1);
-
-            if ($new_content !== $updated_content) {
-                $updated_content = $new_content;
+            // Use preg_replace_callback to add the link, ensuring we don't link within existing links or headings
+            $pattern = '/(?<!<a[^>]*>)(?<!<h[1-6]>)(' . preg_quote($keyword, '/') . ')(?![^<]*<\/a>)(?![^<]*<\/h[1-6]>)/i';
+            $content = preg_replace_callback($pattern, function($matches) use ($link_url, &$links_added, &$linked_keywords, $keyword, $post_id) {
                 $links_added++;
+                $linked_keywords[] = $keyword;
                 aiseo_log("Added internal link for keyword '{$keyword}' in post ID: {$post_id}");
-            }
+                return '<a href="' . esc_url($link_url) . '">' . $matches[1] . '</a>';
+            }, $content, 1);
+        } else {
+            aiseo_log("No matching post found for keyword '{$keyword}' in post ID: {$post_id}");
         }
     }
 
-    if ($updated_content !== $post->post_content) {
-        $post_data = get_post($post_id, ARRAY_A);
-        $post_data['post_content'] = $updated_content;
+    if ($content !== $post->post_content && !empty($content)) {
+        $post_data = array(
+            'ID' => $post_id,
+            'post_content' => $content
+        );
         
         wp_update_post($post_data);
         
         aiseo_log("Updated post ID: {$post_id} with {$links_added} internal links");
         aiseo_log("Original content length: " . strlen($post->post_content));
-        aiseo_log("Updated content length: " . strlen($updated_content));
+        aiseo_log("Updated content length: " . strlen($content));
         
         return array(
             'status' => 'success',
             'message' => "Added {$links_added} internal links to the post.",
-            'content' => $updated_content
+            'content' => $content
         );
     } else {
+        aiseo_log("No update performed for post ID: {$post_id}. Content unchanged or empty.");
         return array(
             'status' => 'info',
             'message' => 'No new internal links were added to the post.'

@@ -141,10 +141,7 @@ function aiseo_create_post($content, $keyword, $all_keywords) {
     wp_set_post_tags($post_id, $content['tags']);
     add_post_meta($post_id, '_aiseo_generated', true);
     add_post_meta($post_id, '_aiseo_alternate_titles', array_slice($content['titles'], 1));
-    
-    // Store the primary keyword
     add_post_meta($post_id, '_aiseo_primary_keyword', $keyword);
-    
     // Add all keywords to the aiseo_keyword taxonomy
     wp_set_object_terms($post_id, $all_keywords, 'aiseo_keyword', true);
 
@@ -214,3 +211,29 @@ add_action('aiseo_daily_cleanup', 'aiseo_cleanup_processed_keywords');
 
 // Initialize the processed keywords option if it doesn't exist
 add_option('aiseo_processed_keywords', array());
+
+function aiseo_update_existing_posts() {
+    $posts = get_posts(array(
+        'post_type' => 'post',
+        'posts_per_page' => -1,
+        'meta_key' => '_aiseo_primary_keyword'
+    ));
+
+    foreach ($posts as $post) {
+        aiseo_update_keyword_index($post->ID);
+    }
+}
+
+// Add an admin action to trigger the update
+add_action('admin_post_aiseo_update_existing_posts', 'aiseo_handle_update_existing_posts');
+
+function aiseo_handle_update_existing_posts() {
+    if (!current_user_can('manage_options')) {
+        wp_die('You do not have sufficient permissions to access this page.');
+    }
+
+    aiseo_update_existing_posts();
+
+    wp_redirect(admin_url('admin.php?page=ai-seo-writer&updated=true'));
+    exit;
+}

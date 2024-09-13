@@ -11,6 +11,8 @@ if (!defined('ABSPATH')) {
     exit;
 }
 
+require_once plugin_dir_path(__FILE__) . 'internal-linking.php';
+
 function aiseo_init() {
     aiseo_log("Initializing AI SEO Writer plugin");
     // Load Composer autoloader
@@ -28,9 +30,7 @@ function aiseo_init() {
     require_once plugin_dir_path(__FILE__) . 'progress-page.php';
     // Include the post reprocessor
     require_once plugin_dir_path(__FILE__) . 'post-reprocessor.php';
-    // Include the internal linking
-    require_once plugin_dir_path(__FILE__) . 'internal-linking.php';
-
+    
     add_action('admin_enqueue_scripts', 'aiseo_enqueue_admin_scripts');
     add_action('admin_menu', 'aiseo_add_admin_menu');
     add_action('init', 'aiseo_register_keyword_taxonomy', 0);
@@ -204,3 +204,5 @@ function aiseo_get_progress() {
     ));
 }
 add_action('wp_ajax_aiseo_get_progress', 'aiseo_get_progress');
+
+register_activation_hook(__FILE__, 'aiseo_create_keyword_index_table');

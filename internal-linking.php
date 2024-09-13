@@ -71,12 +71,15 @@ function aiseo_add_internal_links_to_all_posts() {
                 }
             }
         }
+        aiseo_log("Original content length for post ID {$post->ID}: " . strlen($post->post_content));
+        aiseo_log("Updated content length for post ID {$post->ID}: " . strlen($updated_content));
 
         if ($updated_content !== $post->post_content) {
-            wp_update_post(array(
-                'ID' => $post->ID,
-                'post_content' => $updated_content
-            ));
+            $post_data = get_post($post->ID, ARRAY_A);
+            $post_data['post_content'] = $updated_content;
+            
+            wp_update_post($post_data);
+            
             aiseo_log("Updated post ID: {$post->ID} with {$links_added} internal links");
         }
     }
@@ -138,11 +141,15 @@ function aiseo_add_internal_links_to_post($post_id) {
     }
 
     if ($updated_content !== $post->post_content) {
-        wp_update_post(array(
-            'ID' => $post_id,
-            'post_content' => $updated_content
-        ));
+        $post_data = get_post($post_id, ARRAY_A);
+        $post_data['post_content'] = $updated_content;
+        
+        wp_update_post($post_data);
+        
         aiseo_log("Updated post ID: {$post_id} with {$links_added} internal links");
+        aiseo_log("Original content length: " . strlen($post->post_content));
+        aiseo_log("Updated content length: " . strlen($updated_content));
+        
         return array(
             'status' => 'success',
             'message' => "Added {$links_added} internal links to the post.",

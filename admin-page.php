@@ -5,7 +5,8 @@ if (!defined('ABSPATH')) {
 }
 
 function aiseo_admin_page() {
-    ob_start();
+    $success_message = '';
+
     // Check if form is submitted
     if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['aiseo_nonce']) && wp_verify_nonce($_POST['aiseo_nonce'], 'aiseo_generate_posts')) {
         // Process form submission
@@ -23,13 +24,9 @@ function aiseo_admin_page() {
         // Generate posts
         aiseo_generate_posts($keywords, $post_length, $context, $tone_style);
 
-        // Add this before the wp_redirect line
-        aiseo_log("Attempting to redirect to progress page");
-
-        ob_end_clean();
-        // Redirect to the progress page
-        wp_redirect(admin_url('admin.php?page=ai-seo-writer-progress'));
-        exit;
+        // Set success message
+        $success_message = count($keywords) . " keywords have been added to the queue for processing.";
+        aiseo_log("Form submitted successfully: " . $success_message);
     }
 
     // Default value for post length
@@ -38,6 +35,11 @@ function aiseo_admin_page() {
     ?>
     <div class="wrap">
         <h1>Generate AI SEO Content</h1>
+        <?php if ($success_message): ?>
+            <div class="notice notice-success is-dismissible">
+                <p><?php echo esc_html($success_message); ?></p>
+            </div>
+        <?php endif; ?>
         <form method="post" action="">
             <?php wp_nonce_field('aiseo_generate_posts', 'aiseo_nonce'); ?>
             <table class="form-table">

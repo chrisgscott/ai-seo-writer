@@ -206,3 +206,10 @@ function aiseo_get_progress() {
 add_action('wp_ajax_aiseo_get_progress', 'aiseo_get_progress');
 
 register_activation_hook(__FILE__, 'aiseo_create_keyword_index_table');
+
+function aiseo_manual_update_existing_posts() {
+    aiseo_log("Starting manual update of existing posts");
+    aiseo_update_existing_posts();
+    aiseo_log("Finished manual update of existing posts");
+}
+add_action('admin_init', 'aiseo_manual_update_existing_posts');

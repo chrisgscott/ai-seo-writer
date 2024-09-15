@@ -109,6 +109,7 @@ function aiseo_plugin_deactivation() {
 register_deactivation_hook(__FILE__, 'aiseo_plugin_deactivation');
 
 function aiseo_add_admin_menu() {
+    aiseo_log("Adding admin menu items");
     add_menu_page(
         'AI SEO Writer',
         'AI SEO Writer',
@@ -120,8 +121,8 @@ function aiseo_add_admin_menu() {
 
     add_submenu_page(
         'ai-seo-writer',
-        'Settings & Utilities',
-        'Settings & Utilities',
+        'Settings',
+        'Settings',
         'manage_options',
         'ai-seo-writer-settings',
         'aiseo_settings_page'
@@ -251,3 +252,26 @@ function aiseo_remove_duplicate_content_ajax() {
     wp_send_json_success(['updated_count' => $updated_count]);
 }
 add_action('wp_ajax_aiseo_remove_duplicate_content', 'aiseo_remove_duplicate_content_ajax');
+
+function aiseo_update_post_title_ajax() {
+    check_ajax_referer('aiseo_update_title', 'nonce');
+
+    if (!current_user_can('edit_posts')) {
+        wp_send_json_error(['message' => 'Permission denied.']);
+    }
+
+    $post_id = intval($_POST['post_id']);
+    $new_title = sanitize_text_field($_POST['new_title']);
+
+    $updated = wp_update_post([
+        'ID' => $post_id,
+        'post_title' => $new_title
+    ]);
+
+    if ($updated) {
+        wp_send_json_success(['message' => 'Title updated successfully.']);
+    } else {
+        wp_send_json_error(['message' => 'Failed to update title.']);
+    }
+}
+add_action('wp_ajax_aiseo_update_post_title', 'aiseo_update_post_title_ajax');

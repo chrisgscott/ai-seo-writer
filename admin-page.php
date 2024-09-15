@@ -5,6 +5,8 @@ if (!defined('ABSPATH')) {
 }
 
 function aiseo_admin_page() {
+    aiseo_log("Entering aiseo_admin_page function");
+    
     $success_message = '';
 
     // Check if form is submitted
@@ -62,4 +64,13 @@ function aiseo_admin_page() {
         </form>
     </div>
     <?php
+}
+
+function aiseo_generate_posts($keywords, $post_length, $context, $tone_style) {
+    aiseo_log("Entering aiseo_generate_posts function");
+    aiseo_log("Keywords received: " . implode(', ', $keywords));
+    
+    aiseo_enqueue_keywords($keywords, $post_length, $context, $tone_style, true);
+    
+    aiseo_log("Exiting aiseo_generate_posts function");
 }

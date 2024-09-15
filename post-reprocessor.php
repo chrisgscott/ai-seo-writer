@@ -121,6 +121,66 @@ function aiseo_reprocess_metabox_callback($post) {
     <?php
 }
 
+function aiseo_add_title_options_metabox() {
+    add_meta_box(
+        'aiseo_title_options_metabox',
+        'AI SEO Title Options',
+        'aiseo_title_options_metabox_callback',
+        'post',
+        'side',
+        'high'
+    );
+}
+add_action('add_meta_boxes', 'aiseo_add_title_options_metabox');
+
+function aiseo_title_options_metabox_callback($post) {
+    wp_nonce_field('aiseo_update_title', 'aiseo_title_nonce');
+    $title_options = get_post_meta($post->ID, '_aiseo_title_options', true);
+    
+    if (!empty($title_options) && is_array($title_options)) {
+        echo '<select id="aiseo_title_select" name="aiseo_selected_title">';
+        foreach ($title_options as $index => $title) {
+            $selected = ($index === 0) ? 'selected' : '';
+            echo '<option value="' . esc_attr($title) . '" ' . $selected . '>' . esc_html($title) . '</option>';
+        }
+        echo '</select>';
+        echo '<p><button type="button" id="aiseo_update_title" class="button">Update Title</button></p>';
+    } else {
+        echo '<p>No AI-generated title options available for this post.</p>';
+    }
+
+    ?>
+    <script type="text/javascript">
+    jQuery(document).ready(function($) {
+        $('#aiseo_update_title').click(function() {
+            var selectedTitle = $('#aiseo_title_select').val();
+            $.ajax({
+                url: ajaxurl,
+                type: 'POST',
+                data: {
+                    action: 'aiseo_update_post_title',
+                    nonce: $('#aiseo_title_nonce').val(),
+                    post_id: <?php echo $post->ID; ?>,
+                    new_title: selectedTitle
+                },
+                success: function(response) {
+                    if (response.success) {
+                        $('#title').val(selectedTitle);
+                        alert('Title updated successfully!');
+                    } else {
+                        alert('Error updating title: ' + response.data.message);
+                    }
+                },
+                error: function() {
+                    alert('An error occurred. Please try again.');
+                }
+            });
+        });
+    });
+    </script>
+    <?php
+}
+
 function aiseo_reprocess_post() {
     check_ajax_referer('aiseo_reprocess_post', 'nonce');
 

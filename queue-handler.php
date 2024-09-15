@@ -5,9 +5,12 @@ if (!defined('ABSPATH')) {
 }
 
 function aiseo_enqueue_keywords($keywords, $post_length, $context, $tone_style, $bypass_cooldown = false) {
+    aiseo_log("Entering aiseo_enqueue_keywords function");
+    aiseo_log("Keywords to enqueue: " . implode(', ', $keywords));
+
     if (!$bypass_cooldown) {
         $last_enqueue = get_transient('aiseo_last_enqueue');
-        if ($last_enqueue && (time() - $last_enqueue) < 300) { // 5 minutes cooldown
+        if ($last_enqueue && (time() - $last_enqueue) < 300) {
             aiseo_log("Enqueue attempt too soon. Skipping.");
             return;
         }
@@ -18,6 +21,9 @@ function aiseo_enqueue_keywords($keywords, $post_length, $context, $tone_style, 
     $queue = get_option('aiseo_keyword_queue', array());
     $processed_keywords = get_option('aiseo_processed_keywords', array());
     $enqueued = false;
+
+    aiseo_log("Current queue size before enqueuing: " . count($queue));
+    aiseo_log("Processed keywords: " . implode(', ', $processed_keywords));
 
     foreach ($keywords as $keyword) {
         if (!in_array($keyword, $processed_keywords) && !in_array($keyword, array_column($queue, 'keyword'))) {
@@ -36,12 +42,16 @@ function aiseo_enqueue_keywords($keywords, $post_length, $context, $tone_style, 
 
     if ($enqueued) {
         update_option('aiseo_keyword_queue', $queue);
-        aiseo_log("Keywords enqueued. Current queue size: " . count($queue));
+        aiseo_log("Keywords enqueued. New queue size: " . count($queue));
         
         // Trigger immediate queue processing
         wp_schedule_single_event(time(), 'aiseo_process_queue');
         aiseo_log("Scheduled immediate queue processing");
+    } else {
+        aiseo_log("No new keywords were enqueued.");
     }
+
+    aiseo_log("Exiting aiseo_enqueue_keywords function");
 }
 
 function aiseo_process_queue() {
@@ -128,7 +138,7 @@ function aiseo_create_post($content, $keyword, $all_keywords) {
     $post_slug = aiseo_create_slug_from_keyword($keyword);
     
     $post_id = wp_insert_post([
-        'post_title' => $content['titles'][0],
+        'post_title' => $content['titles'][0], // Use the first title as default
         'post_content' => $post_content,
         'post_excerpt' => $content['excerpt'],
         'post_status' => 'draft',
@@ -140,6 +150,9 @@ function aiseo_create_post($content, $keyword, $all_keywords) {
     if (!$post_id) {
         return false;
     }
+
+    // Store all title options as post meta
+    add_post_meta($post_id, '_aiseo_title_options', $content['titles']);
 
     wp_set_post_tags($post_id, $content['tags']);
     add_post_meta($post_id, '_aiseo_generated', true);

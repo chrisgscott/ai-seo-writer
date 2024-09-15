@@ -1,6 +1,10 @@
 <?php
+aiseo_log("AISEO Cron: Script started");
+
 // Load WordPress
 require_once(__DIR__ . '/../../../../wp-load.php');
+
+aiseo_log("AISEO Cron: WordPress loaded");
 
 // Check if the queue is already being processed
 if (!get_transient('aiseo_queue_processing')) {

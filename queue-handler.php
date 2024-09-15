@@ -241,3 +241,46 @@ function aiseo_create_slug_from_keyword($keyword) {
     
     return $slug;
 }
+
+// Update existing post slugs
+function aiseo_update_existing_post_slugs() {
+    aiseo_log("Starting update of existing post slugs");
+    $posts = get_posts(array(
+        'post_type' => 'post',
+        'numberposts' => -1,
+        'post_status' => array('publish', 'draft', 'pending', 'future', 'private'),
+        'fields' => 'ids' // This will return an array of post IDs
+    ));
+    aiseo_log("Found " . count($posts) . " posts to process");
+    aiseo_log("Post IDs found: " . implode(', ', $posts));
+    
+    $updated_count = 0;
+    
+    foreach ($posts as $post_id) {
+        $post = get_post($post_id);
+        aiseo_log("Processing post ID: " . $post_id . ", Status: " . $post->post_status . ", Title: '" . $post->post_title . "'");
+        
+        $primary_keyword = get_post_meta($post_id, '_aiseo_primary_keyword', true);
+        
+        if (empty($primary_keyword)) {
+            aiseo_log("No primary keyword found for post ID: " . $post_id . ". Skipping.");
+            continue;
+        }
+        
+        $new_slug = aiseo_create_slug_from_keyword($primary_keyword);
+        
+        if ($new_slug !== $post->post_name) {
+            wp_update_post(array(
+                'ID' => $post_id,
+                'post_name' => $new_slug
+            ));
+            $updated_count++;
+            aiseo_log("Updated slug for post ID: " . $post_id . " to: " . $new_slug);
+        } else {
+            aiseo_log("Slug already matches keyword for post ID: " . $post_id . ". Skipping.");
+        }
+    }
+    
+    aiseo_log("Finished updating existing post slugs. Updated " . $updated_count . " posts.");
+    return $updated_count;
+}

@@ -213,3 +213,16 @@ function aiseo_manual_update_existing_posts() {
     aiseo_log("Finished manual update of existing posts");
 }
 add_action('admin_init', 'aiseo_manual_update_existing_posts');
+
+function aiseo_update_post_slugs_ajax() {
+    check_ajax_referer('aiseo-update-slugs-nonce', 'nonce');
+
+    if (!current_user_can('manage_options')) {
+        wp_send_json_error(['message' => 'Permission denied.']);
+    }
+
+    $updated_count = aiseo_update_existing_post_slugs();
+
+    wp_send_json_success(['updated_count' => $updated_count]);
+}
+add_action('wp_ajax_aiseo_update_post_slugs', 'aiseo_update_post_slugs_ajax');

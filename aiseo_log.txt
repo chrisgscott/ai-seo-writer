@@ -1,0 +1,905 @@
+[2024-09-15 07:16:47] Initializing AI SEO Writer plugin
+[2024-09-15 07:16:47] AI SEO Writer plugin initialized
+[2024-09-15 07:16:47] Registering AI SEO Keyword taxonomy
+[2024-09-15 07:16:47] AI SEO Keyword taxonomy registered
+[2024-09-15 07:16:47] Initializing AI SEO Writer plugin
+[2024-09-15 07:16:47] AI SEO Writer plugin initialized
+[2024-09-15 07:16:47] Registering AI SEO Keyword taxonomy
+[2024-09-15 07:16:47] AI SEO Keyword taxonomy registered
+[2024-09-15 07:16:49] Starting manual update of existing posts
+[2024-09-15 07:16:49] Starting update of existing posts
+[2024-09-15 07:16:49] Found 0 posts to process
+[2024-09-15 07:16:49] Finished updating existing posts
+[2024-09-15 07:16:49] Finished manual update of existing posts
+[2024-09-15 07:16:50] Initializing AI SEO Writer plugin
+[2024-09-15 07:16:50] AI SEO Writer plugin initialized
+[2024-09-15 07:16:50] Registering AI SEO Keyword taxonomy
+[2024-09-15 07:16:50] AI SEO Keyword taxonomy registered
+[2024-09-15 07:16:50] Adding admin menu items
+[2024-09-15 07:16:50] Admin menu items added
+[2024-09-15 07:16:50] Starting manual update of existing posts
+[2024-09-15 07:16:50] Starting update of existing posts
+[2024-09-15 07:16:50] Found 0 posts to process
+[2024-09-15 07:16:50] Finished updating existing posts
+[2024-09-15 07:16:50] Finished manual update of existing posts
+[2024-09-15 07:16:50] Enqueuing admin scripts for hook: index.php
+[2024-09-15 07:16:52] Initializing AI SEO Writer plugin
+[2024-09-15 07:16:52] AI SEO Writer plugin initialized
+[2024-09-15 07:16:52] Registering AI SEO Keyword taxonomy
+[2024-09-15 07:16:52] AI SEO Keyword taxonomy registered
+[2024-09-15 07:16:52] Starting manual update of existing posts
+[2024-09-15 07:16:52] Starting update of existing posts
+[2024-09-15 07:16:52] Found 0 posts to process
+[2024-09-15 07:16:52] Finished updating existing posts
+[2024-09-15 07:16:52] Finished manual update of existing posts
+[2024-09-15 07:16:52] Initializing AI SEO Writer plugin
+[2024-09-15 07:16:52] AI SEO Writer plugin initialized
+[2024-09-15 07:16:52] Initializing AI SEO Writer plugin
+[2024-09-15 07:16:52] AI SEO Writer plugin initialized
+[2024-09-15 07:16:52] Registering AI SEO Keyword taxonomy
+[2024-09-15 07:16:52] AI SEO Keyword taxonomy registered
+[2024-09-15 07:16:52] Registering AI SEO Keyword taxonomy
+[2024-09-15 07:16:52] AI SEO Keyword taxonomy registered
+[2024-09-15 07:16:52] Starting manual update of existing posts
+[2024-09-15 07:16:52] Starting update of existing posts
+[2024-09-15 07:16:52] Found 0 posts to process
+[2024-09-15 07:16:52] Finished updating existing posts
+[2024-09-15 07:16:52] Finished manual update of existing posts
+[2024-09-15 07:16:57] Initializing AI SEO Writer plugin
+[2024-09-15 07:16:57] AI SEO Writer plugin initialized
+[2024-09-15 07:16:57] Registering AI SEO Keyword taxonomy
+[2024-09-15 07:16:57] AI SEO Keyword taxonomy registered
+[2024-09-15 07:16:57] Starting manual update of existing posts
+[2024-09-15 07:16:57] Starting update of existing posts
+[2024-09-15 07:16:57] Found 0 posts to process
+[2024-09-15 07:16:57] Finished updating existing posts
+[2024-09-15 07:16:57] Finished manual update of existing posts
+[2024-09-15 07:16:57] Initializing AI SEO Writer plugin
+[2024-09-15 07:16:57] AI SEO Writer plugin initialized
+[2024-09-15 07:16:57] Registering AI SEO Keyword taxonomy
+[2024-09-15 07:16:57] AI SEO Keyword taxonomy registered
+[2024-09-15 07:16:57] Adding admin menu items
+[2024-09-15 07:16:57] Admin menu items added
+[2024-09-15 07:16:57] Starting manual update of existing posts
+[2024-09-15 07:16:57] Starting update of existing posts
+[2024-09-15 07:16:57] Found 0 posts to process
+[2024-09-15 07:16:57] Finished updating existing posts
+[2024-09-15 07:16:57] Finished manual update of existing posts
+[2024-09-15 07:16:57] Enqueuing admin scripts for hook: toplevel_page_ai-seo-writer
+[2024-09-15 07:17:01] Initializing AI SEO Writer plugin
+[2024-09-15 07:17:01] AI SEO Writer plugin initialized
+[2024-09-15 07:17:01] Registering AI SEO Keyword taxonomy
+[2024-09-15 07:17:01] AI SEO Keyword taxonomy registered
+[2024-09-15 07:17:01] Starting manual update of existing posts
+[2024-09-15 07:17:01] Starting update of existing posts
+[2024-09-15 07:17:01] Found 0 posts to process
+[2024-09-15 07:17:01] Finished updating existing posts
+[2024-09-15 07:17:01] Finished manual update of existing posts
+[2024-09-15 07:17:01] Starting update of existing post slugs
+[2024-09-15 07:17:01] Found 0 posts to process
+[2024-09-15 07:17:01] Finished updating existing post slugs. Updated 0 posts.
+[2024-09-15 07:17:16] Initializing AI SEO Writer plugin
+[2024-09-15 07:17:16] AI SEO Writer plugin initialized
+[2024-09-15 07:17:16] Registering AI SEO Keyword taxonomy
+[2024-09-15 07:17:16] AI SEO Keyword taxonomy registered
+[2024-09-15 07:17:16] Starting manual update of existing posts
+[2024-09-15 07:17:16] Starting update of existing posts
+[2024-09-15 07:17:16] Found 0 posts to process
+[2024-09-15 07:17:16] Finished updating existing posts
+[2024-09-15 07:17:16] Finished manual update of existing posts
+[2024-09-15 07:17:16] Starting update of existing post slugs
+[2024-09-15 07:17:16] Found 0 posts to process
+[2024-09-15 07:17:16] Finished updating existing post slugs. Updated 0 posts.
+[2024-09-15 07:17:18] Initializing AI SEO Writer plugin
+[2024-09-15 07:17:18] AI SEO Writer plugin initialized
+[2024-09-15 07:17:18] Registering AI SEO Keyword taxonomy
+[2024-09-15 07:17:18] AI SEO Keyword taxonomy registered
+[2024-09-15 07:17:18] Adding admin menu items
+[2024-09-15 07:17:18] Admin menu items added
+[2024-09-15 07:17:18] Starting manual update of existing posts
+[2024-09-15 07:17:18] Starting update of existing posts
+[2024-09-15 07:17:18] Found 0 posts to process
+[2024-09-15 07:17:18] Finished updating existing posts
+[2024-09-15 07:17:18] Finished manual update of existing posts
+[2024-09-15 07:17:19] Enqueuing admin scripts for hook: edit.php
+[2024-09-15 07:17:19] Initializing AI SEO Writer plugin
+[2024-09-15 07:17:19] AI SEO Writer plugin initialized
+[2024-09-15 07:17:19] Registering AI SEO Keyword taxonomy
+[2024-09-15 07:17:19] AI SEO Keyword taxonomy registered
+[2024-09-15 07:17:19] Starting manual update of existing posts
+[2024-09-15 07:17:19] Starting update of existing posts
+[2024-09-15 07:17:19] Found 0 posts to process
+[2024-09-15 07:17:19] Finished updating existing posts
+[2024-09-15 07:17:19] Finished manual update of existing posts
+[2024-09-15 07:17:30] Initializing AI SEO Writer plugin
+[2024-09-15 07:17:30] AI SEO Writer plugin initialized
+[2024-09-15 07:17:30] Registering AI SEO Keyword taxonomy
+[2024-09-15 07:17:30] AI SEO Keyword taxonomy registered
+[2024-09-15 07:17:30] Adding admin menu items
+[2024-09-15 07:17:30] Admin menu items added
+[2024-09-15 07:17:30] Starting manual update of existing posts
+[2024-09-15 07:17:30] Starting update of existing posts
+[2024-09-15 07:17:30] Found 0 posts to process
+[2024-09-15 07:17:30] Finished updating existing posts
+[2024-09-15 07:17:30] Finished manual update of existing posts
+[2024-09-15 07:17:31] Enqueuing admin scripts for hook: post.php
+[2024-09-15 07:17:33] Initializing AI SEO Writer plugin
+[2024-09-15 07:17:33] AI SEO Writer plugin initialized
+[2024-09-15 07:17:33] Registering AI SEO Keyword taxonomy
+[2024-09-15 07:17:33] AI SEO Keyword taxonomy registered
+[2024-09-15 07:17:33] Starting manual update of existing posts
+[2024-09-15 07:17:33] Starting update of existing posts
+[2024-09-15 07:17:33] Found 0 posts to process
+[2024-09-15 07:17:33] Finished updating existing posts
+[2024-09-15 07:17:33] Finished manual update of existing posts
+[2024-09-15 07:18:32] Initializing AI SEO Writer plugin
+[2024-09-15 07:18:32] AI SEO Writer plugin initialized
+[2024-09-15 07:18:32] Registering AI SEO Keyword taxonomy
+[2024-09-15 07:18:32] AI SEO Keyword taxonomy registered
+[2024-09-15 07:18:32] Starting manual update of existing posts
+[2024-09-15 07:18:32] Starting update of existing posts
+[2024-09-15 07:18:32] Found 0 posts to process
+[2024-09-15 07:18:32] Finished updating existing posts
+[2024-09-15 07:18:32] Finished manual update of existing posts
+[2024-09-15 07:18:32] Initializing AI SEO Writer plugin
+[2024-09-15 07:18:32] AI SEO Writer plugin initialized
+[2024-09-15 07:18:32] Registering AI SEO Keyword taxonomy
+[2024-09-15 07:18:32] AI SEO Keyword taxonomy registered
+[2024-09-15 07:18:32] Starting queue processing
+[2024-09-15 07:18:32] Queue processing triggered. Current queue size: 1
+[2024-09-15 07:18:32] Processing keyword: journal prompts for self-reflection
+[2024-09-15 07:18:32] Sending request to OpenAI for keyword: journal prompts for self-reflection
+[2024-09-15 07:18:37] Initializing AI SEO Writer plugin
+[2024-09-15 07:18:37] AI SEO Writer plugin initialized
+[2024-09-15 07:18:37] Registering AI SEO Keyword taxonomy
+[2024-09-15 07:18:37] AI SEO Keyword taxonomy registered
+[2024-09-15 07:18:37] Adding admin menu items
+[2024-09-15 07:18:37] Admin menu items added
+[2024-09-15 07:18:37] Starting manual update of existing posts
+[2024-09-15 07:18:37] Starting update of existing posts
+[2024-09-15 07:18:37] Found 0 posts to process
+[2024-09-15 07:18:37] Finished updating existing posts
+[2024-09-15 07:18:37] Finished manual update of existing posts
+[2024-09-15 07:18:37] Enqueuing admin scripts for hook: edit.php
+[2024-09-15 07:18:38] Initializing AI SEO Writer plugin
+[2024-09-15 07:18:38] AI SEO Writer plugin initialized
+[2024-09-15 07:18:38] Registering AI SEO Keyword taxonomy
+[2024-09-15 07:18:38] AI SEO Keyword taxonomy registered
+[2024-09-15 07:18:38] Starting manual update of existing posts
+[2024-09-15 07:18:38] Starting update of existing posts
+[2024-09-15 07:18:38] Found 0 posts to process
+[2024-09-15 07:18:38] Finished updating existing posts
+[2024-09-15 07:18:38] Finished manual update of existing posts
+[2024-09-15 07:18:38] Initializing AI SEO Writer plugin
+[2024-09-15 07:18:38] AI SEO Writer plugin initialized
+[2024-09-15 07:18:38] Registering AI SEO Keyword taxonomy
+[2024-09-15 07:18:38] AI SEO Keyword taxonomy registered
+[2024-09-15 07:18:38] Starting manual update of existing posts
+[2024-09-15 07:18:38] Starting update of existing posts
+[2024-09-15 07:18:38] Found 0 posts to process
+[2024-09-15 07:18:38] Finished updating existing posts
+[2024-09-15 07:18:38] Finished manual update of existing posts
+[2024-09-15 07:18:43] Raw OpenAI response: {
+  "id": "chatcmpl-A7jR2hP85VM3H4rD6BjDUlnHUxHKX",
+  "object": "chat.completion",
+  "created": 1726406312,
+  "model": "gpt-4o-mini-2024-07-18",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": null,
+        "function_call": {
+          "name": "generate_blog_post",
+          "arguments": "{\"titles\":[\"Unlocking Your Mind: Journal Prompts for Self-Reflection\",\"Dive Deep: Effective Journal Prompts for Self-Reflection\",\"The Art of Self-Discovery: Journal Prompts for Reflective Writing\",\"Self-Reflection Made Easy: Journal Prompts You Need\",\"Explore Yourself: Essential Journal Prompts for Self-Reflection\"],\"content\":\"# Unlocking Your Mind: Journal Prompts for Self-Reflection\\n\\nSelf-reflection is like a mental spa day—it helps clear the clutter and rejuvenate your mind. One fantastic tool to guide you through this process is journaling. Today, we’ll explore journal prompts for self-reflection, which can help you d...
+[2024-09-15 07:18:43] Decoded OpenAI content: Array
+(
+    [titles] => Array
+        (
+            [0] => Unlocking Your Mind: Journal Prompts for Self-Reflection
+            [1] => Dive Deep: Effective Journal Prompts for Self-Reflection
+            [2] => The Art of Self-Discovery: Journal Prompts for Reflective Writing
+            [3] => Self-Reflection Made Easy: Journal Prompts You Need
+            [4] => Explore Yourself: Essential Journal Prompts for Self-Reflection
+        )
+
+    [content] => # Unlocking Your Mind: Journal Prompts for Self-Reflection
+
+Self-reflection is like a mental spa day—it helps clear the clutter and rejuvenate your mind. One fantastic tool to guide you through this process is journaling. Today, we’ll explore journal prompts for self-reflection, which can help you dive deep into your thoughts and feelings, providing clarity and insight.
+
+## Why Journal for Self-Reflection?
+
+Journaling can be immensely beneficial. Here are some reasons why you might want to grab that notebook:
+
+- **Emotional Clarity**: Writing helps articulate feelings, making them easier to understand.
+- **Problem Solving**: It can provide a fresh perspective on challenges.
+- **Goal Setting**: Helps identify personal values and future aspirations.
+- **Stress Relief**: The act of writing can be therapeutic.
+
+## How to Get Started with Journal Prompts for Self-Reflection
+
+Getting started with journaling doesn’t have to be daunting. Here’s a simple step-by-step guide:
+
+1. **Choose Your Medium**: Whether you prefer pen and paper or digital formats, pick what feels right for you.
+2. **Find Your Space**: Create a comfortable and quiet environment—this is your time.
+3. **Set a Time Limit**: Dedicate 10-20 minutes, so it doesn’t feel overwhelming.
+4. **Pick a Prompt**: Choose from the list below or create your own.
+5. **Just Write**: Don’t overthink it—let the words flow!
+
+## Journal Prompts for Self-Reflection
+
+Now, let’s get to the good stuff—prompts that will help you reflect:
+
+### 1. What are three things I’m grateful for today?
+   - This helps shift focus from negativity to positivity.
+
+### 2. How did I feel about my day today?
+   - Analyze your emotional responses to daily events.
+
+### 3. What is something I learned about myself recently?
+   - Self-discovery is a continuous journey.
+
+### 4. What are my core values?
+   - Understanding your values can guide your decisions.
+
+### 5. What obstacles have I overcome?
+   - Reflecting on past challenges can boost confidence.
+
+### 6. How can I improve my relationships?
+   - Consider your interactions and how you can enhance them.
+
+### 7. What are my goals for the next month?
+   - Setting short-term goals can provide direction.
+
+### 8. What fears are holding me back?
+   - Identifying your fears is the first step to overcoming them.
+
+### 9. Who inspires me and why?
+   - Think about the qualities you admire in others.
+
+### 10. What do I want to accomplish this year?
+   - Dream big and write down your aspirations!
+
+## Best Practices for Using Journal Prompts
+
+To make the most out of journal prompts for self-reflection, consider these best practices:
+
+- **Be Honest**: Authenticity leads to deeper insights.
+- **Stay Consistent**: Try to journal regularly to build a habit.
+- **Review Your Entries**: Go back and read what you’ve written for additional clarity.
+- **Be Patient**: Self-reflection is a process—give yourself time to explore.
+
+## What If I Get Stuck?
+
+Sometimes, the words just don’t flow. If you find yourself staring at a blank page, here are a few tips:
+
+- **Change Your Prompt**: Pick a different one to spark new thoughts.
+- **Free Write**: Write whatever comes to mind for five minutes without stopping.
+- **Take a Break**: Step away and come back later with a fresh perspective.
+
+## The Impact of Regular Self-Reflection
+
+Engaging with journal prompts for self-reflection regularly can lead to profound changes in your life. Not only does it enhance self-awareness, but it can also strengthen your emotional resilience.
+
+### Benefits of Regular Self-Reflection:
+- **Increased Self-Awareness**: Understand your thoughts and behaviors.
+- **Improved Decision Making**: Make choices aligned with your values.
+- **Enhanced Emotional Intelligence**: Recognize and manage your emotions better.
+
+## Conclusion
+
+Incorporating journal prompts for self-reflection into your routine can be a game-changer. It’s a simple yet powerful way to connect with yourself on a deeper level. So, grab that journal and start exploring the many layers of your mind. Remember, every great adventure begins with a single step—or in this case, a single word!  
+
+Happy journaling!
+    [excerpt] => Explore the transformative power of journaling with these effective prompts for self-reflection. Dive deep into your thoughts and feelings today!
+    [category] => Personal Development
+    [tags] => Array
+        (
+            [0] => self-reflection
+            [1] => journaling
+            [2] => mental health
+            [3] => wellness
+            [4] => personal growth
+            [5] => mindfulness
+        )
+
+    [faqs] => Array
+        (
+            [0] => Array
+                (
+                    [question] => What are journal prompts for self-reflection?
+                    [answer] => They are guided questions designed to help you explore your thoughts and feelings.
+                )
+
+            [1] => Array
+                (
+                    [question] => How often should I use journal prompts?
+                    [answer] => Using them daily or weekly can be beneficial for ongoing self-reflection.
+                )
+
+            [2] => Array
+                (
+                    [question] => Can journaling really help with emotional clarity?
+                    [answer] => Yes, it allows you to articulate and process your emotions effectively.
+                )
+
+            [3] => Array
+                (
+                    [question] => What if I can’t think of anything to write?
+                    [answer] => Try free writing for a few minutes or change your prompt.
+                )
+
+            [4] => Array
+                (
+                    [question] => Are there specific types of journals best for self-reflection?
+                    [answer] => Any format that feels comfortable to you works great—digital or paper.
+                )
+
+        )
+
+    [custom_cta] => Free daily journal prompts, customized just for you, in your inbox each day. For free.
+)
+
+[2024-09-15 07:18:43] Decoded content for keyword 'journal prompts for self-reflection': Array
+(
+    [titles] => Array
+        (
+            [0] => Unlocking Your Mind: Journal Prompts for Self-Reflection
+            [1] => Dive Deep: Effective Journal Prompts for Self-Reflection
+            [2] => The Art of Self-Discovery: Journal Prompts for Reflective Writing
+            [3] => Self-Reflection Made Easy: Journal Prompts You Need
+            [4] => Explore Yourself: Essential Journal Prompts for Self-Reflection
+        )
+
+    [content] => # Unlocking Your Mind: Journal Prompts for Self-Reflection
+
+Self-reflection is like a mental spa day—it helps clear the clutter and rejuvenate your mind. One fantastic tool to guide you through this process is journaling. Today, we’ll explore journal prompts for self-reflection, which can help you dive deep into your thoughts and feelings, providing clarity and insight.
+
+## Why Journal for Self-Reflection?
+
+Journaling can be immensely beneficial. Here are some reasons why you might want to grab that notebook:
+
+- **Emotional Clarity**: Writing helps articulate feelings, making them easier to understand.
+- **Problem Solving**: It can provide a fresh perspective on challenges.
+- **Goal Setting**: Helps identify personal values and future aspirations.
+- **Stress Relief**: The act of writing can be therapeutic.
+
+## How to Get Started with Journal Prompts for Self-Reflection
+
+Getting started with journaling doesn’t have to be daunting. Here’s a simple step-by-step guide:
+
+1. **Choose Your Medium**: Whether you prefer pen and paper or digital formats, pick what feels right for you.
+2. **Find Your Space**: Create a comfortable and quiet environment—this is your time.
+3. **Set a Time Limit**: Dedicate 10-20 minutes, so it doesn’t feel overwhelming.
+4. **Pick a Prompt**: Choose from the list below or create your own.
+5. **Just Write**: Don’t overthink it—let the words flow!
+
+## Journal Prompts for Self-Reflection
+
+Now, let’s get to the good stuff—prompts that will help you reflect:
+
+### 1. What are three things I’m grateful for today?
+   - This helps shift focus from negativity to positivity.
+
+### 2. How did I feel about my day today?
+   - Analyze your emotional responses to daily events.
+
+### 3. What is something I learned about myself recently?
+   - Self-discovery is a continuous journey.
+
+### 4. What are my core values?
+   - Understanding your values can guide your decisions.
+
+### 5. What obstacles have I overcome?
+   - Reflecting on past challenges can boost confidence.
+
+### 6. How can I improve my relationships?
+   - Consider your interactions and how you can enhance them.
+
+### 7. What are my goals for the next month?
+   - Setting short-term goals can provide direction.
+
+### 8. What fears are holding me back?
+   - Identifying your fears is the first step to overcoming them.
+
+### 9. Who inspires me and why?
+   - Think about the qualities you admire in others.
+
+### 10. What do I want to accomplish this year?
+   - Dream big and write down your aspirations!
+
+## Best Practices for Using Journal Prompts
+
+To make the most out of journal prompts for self-reflection, consider these best practices:
+
+- **Be Honest**: Authenticity leads to deeper insights.
+- **Stay Consistent**: Try to journal regularly to build a habit.
+- **Review Your Entries**: Go back and read what you’ve written for additional clarity.
+- **Be Patient**: Self-reflection is a process—give yourself time to explore.
+
+## What If I Get Stuck?
+
+Sometimes, the words just don’t flow. If you find yourself staring at a blank page, here are a few tips:
+
+- **Change Your Prompt**: Pick a different one to spark new thoughts.
+- **Free Write**: Write whatever comes to mind for five minutes without stopping.
+- **Take a Break**: Step away and come back later with a fresh perspective.
+
+## The Impact of Regular Self-Reflection
+
+Engaging with journal prompts for self-reflection regularly can lead to profound changes in your life. Not only does it enhance self-awareness, but it can also strengthen your emotional resilience.
+
+### Benefits of Regular Self-Reflection:
+- **Increased Self-Awareness**: Understand your thoughts and behaviors.
+- **Improved Decision Making**: Make choices aligned with your values.
+- **Enhanced Emotional Intelligence**: Recognize and manage your emotions better.
+
+## Conclusion
+
+Incorporating journal prompts for self-reflection into your routine can be a game-changer. It’s a simple yet powerful way to connect with yourself on a deeper level. So, grab that journal and start exploring the many layers of your mind. Remember, every great adventure begins with a single step—or in this case, a single word!  
+
+Happy journaling!
+    [excerpt] => Explore the transformative power of journaling with these effective prompts for self-reflection. Dive deep into your thoughts and feelings today!
+    [category] => Personal Development
+    [tags] => Array
+        (
+            [0] => self-reflection
+            [1] => journaling
+            [2] => mental health
+            [3] => wellness
+            [4] => personal growth
+            [5] => mindfulness
+        )
+
+    [faqs] => Array
+        (
+            [0] => Array
+                (
+                    [question] => What are journal prompts for self-reflection?
+                    [answer] => They are guided questions designed to help you explore your thoughts and feelings.
+                )
+
+            [1] => Array
+                (
+                    [question] => How often should I use journal prompts?
+                    [answer] => Using them daily or weekly can be beneficial for ongoing self-reflection.
+                )
+
+            [2] => Array
+                (
+                    [question] => Can journaling really help with emotional clarity?
+                    [answer] => Yes, it allows you to articulate and process your emotions effectively.
+                )
+
+            [3] => Array
+                (
+                    [question] => What if I can’t think of anything to write?
+                    [answer] => Try free writing for a few minutes or change your prompt.
+                )
+
+            [4] => Array
+                (
+                    [question] => Are there specific types of journals best for self-reflection?
+                    [answer] => Any format that feels comfortable to you works great—digital or paper.
+                )
+
+        )
+
+    [custom_cta] => Free daily journal prompts, customized just for you, in your inbox each day. For free.
+)
+
+[2024-09-15 07:18:43] Updating keyword index for post ID: 1375
+[2024-09-15 07:18:43] Primary keyword: 
+[2024-09-15 07:18:43] Alternate keywords: 
+[2024-09-15 07:18:43] Updating keyword index for post ID: 1375
+[2024-09-15 07:18:43] Primary keyword: journal prompts for self-reflection
+[2024-09-15 07:18:43] Alternate keywords: 
+[2024-09-15 07:18:43] Processed keyword: journal prompts for self-reflection. Post ID: 1375
+[2024-09-15 07:18:43] Queue processing completed
+[2024-09-15 07:18:43] Starting internal linking process for all posts
+[2024-09-15 07:18:53] Initializing AI SEO Writer plugin
+[2024-09-15 07:18:53] AI SEO Writer plugin initialized
+[2024-09-15 07:18:53] Registering AI SEO Keyword taxonomy
+[2024-09-15 07:18:53] AI SEO Keyword taxonomy registered
+[2024-09-15 07:18:53] Starting manual update of existing posts
+[2024-09-15 07:18:53] Starting update of existing posts
+[2024-09-15 07:18:53] Found 0 posts to process
+[2024-09-15 07:18:53] Finished updating existing posts
+[2024-09-15 07:18:53] Finished manual update of existing posts
+[2024-09-15 07:20:53] Initializing AI SEO Writer plugin
+[2024-09-15 07:20:53] AI SEO Writer plugin initialized
+[2024-09-15 07:20:53] Registering AI SEO Keyword taxonomy
+[2024-09-15 07:20:53] AI SEO Keyword taxonomy registered
+[2024-09-15 07:20:53] Starting manual update of existing posts
+[2024-09-15 07:20:53] Starting update of existing posts
+[2024-09-15 07:20:53] Found 0 posts to process
+[2024-09-15 07:20:53] Finished updating existing posts
+[2024-09-15 07:20:53] Finished manual update of existing posts
+[2024-09-15 07:20:53] Initializing AI SEO Writer plugin
+[2024-09-15 07:20:53] AI SEO Writer plugin initialized
+[2024-09-15 07:20:53] Registering AI SEO Keyword taxonomy
+[2024-09-15 07:20:53] AI SEO Keyword taxonomy registered
+[2024-09-15 07:22:40] Initializing AI SEO Writer plugin
+[2024-09-15 07:22:40] AI SEO Writer plugin initialized
+[2024-09-15 07:22:41] Registering AI SEO Keyword taxonomy
+[2024-09-15 07:22:41] AI SEO Keyword taxonomy registered
+[2024-09-15 07:22:41] Starting manual update of existing posts
+[2024-09-15 07:22:41] Starting update of existing posts
+[2024-09-15 07:22:41] Found 0 posts to process
+[2024-09-15 07:22:41] Finished updating existing posts
+[2024-09-15 07:22:41] Finished manual update of existing posts
+[2024-09-15 07:22:41] Initializing AI SEO Writer plugin
+[2024-09-15 07:22:41] AI SEO Writer plugin initialized
+[2024-09-15 07:22:41] Registering AI SEO Keyword taxonomy
+[2024-09-15 07:22:41] AI SEO Keyword taxonomy registered
+[2024-09-15 07:22:55] Initializing AI SEO Writer plugin
+[2024-09-15 07:22:55] AI SEO Writer plugin initialized
+[2024-09-15 07:22:56] Registering AI SEO Keyword taxonomy
+[2024-09-15 07:22:56] AI SEO Keyword taxonomy registered
+[2024-09-15 07:22:56] Starting manual update of existing posts
+[2024-09-15 07:22:56] Starting update of existing posts
+[2024-09-15 07:22:56] Found 0 posts to process
+[2024-09-15 07:22:56] Finished updating existing posts
+[2024-09-15 07:22:56] Finished manual update of existing posts
+[2024-09-15 07:22:56] Initializing AI SEO Writer plugin
+[2024-09-15 07:22:56] AI SEO Writer plugin initialized
+[2024-09-15 07:22:56] Registering AI SEO Keyword taxonomy
+[2024-09-15 07:22:56] AI SEO Keyword taxonomy registered
+[2024-09-15 07:23:07] Initializing AI SEO Writer plugin
+[2024-09-15 07:23:07] AI SEO Writer plugin initialized
+[2024-09-15 07:23:07] Registering AI SEO Keyword taxonomy
+[2024-09-15 07:23:07] AI SEO Keyword taxonomy registered
+[2024-09-15 07:23:07] Adding admin menu items
+[2024-09-15 07:23:07] Admin menu items added
+[2024-09-15 07:23:07] Initializing AI SEO Writer plugin
+[2024-09-15 07:23:07] AI SEO Writer plugin initialized
+[2024-09-15 07:23:07] Starting manual update of existing posts
+[2024-09-15 07:23:07] Starting update of existing posts
+[2024-09-15 07:23:07] Found 0 posts to process
+[2024-09-15 07:23:07] Finished updating existing posts
+[2024-09-15 07:23:07] Finished manual update of existing posts
+[2024-09-15 07:23:07] Registering AI SEO Keyword taxonomy
+[2024-09-15 07:23:07] AI SEO Keyword taxonomy registered
+[2024-09-15 07:23:08] Enqueuing admin scripts for hook: plugins.php
+[2024-09-15 07:23:09] Initializing AI SEO Writer plugin
+[2024-09-15 07:23:09] AI SEO Writer plugin initialized
+[2024-09-15 07:23:09] Registering AI SEO Keyword taxonomy
+[2024-09-15 07:23:09] AI SEO Keyword taxonomy registered
+[2024-09-15 07:23:10] Adding admin menu items
+[2024-09-15 07:23:10] Admin menu items added
+[2024-09-15 07:23:10] Starting manual update of existing posts
+[2024-09-15 07:23:10] Starting update of existing posts
+[2024-09-15 07:23:10] Found 0 posts to process
+[2024-09-15 07:23:10] Finished updating existing posts
+[2024-09-15 07:23:10] Finished manual update of existing posts
+[2024-09-15 07:23:10] Deactivating AI SEO Writer plugin
+[2024-09-15 07:23:10] AI SEO Writer plugin deactivated
+[2024-09-15 07:23:12] Initializing AI SEO Writer plugin
+[2024-09-15 07:23:12] AI SEO Writer plugin initialized
+[2024-09-15 07:23:12] Registering AI SEO Keyword taxonomy
+[2024-09-15 07:23:12] AI SEO Keyword taxonomy registered
+[2024-09-15 07:23:12] Adding admin menu items
+[2024-09-15 07:23:12] Admin menu items added
+[2024-09-15 07:23:12] Initializing AI SEO Writer plugin
+[2024-09-15 07:23:12] AI SEO Writer plugin initialized
+[2024-09-15 07:23:12] Starting manual update of existing posts
+[2024-09-15 07:23:12] Starting update of existing posts
+[2024-09-15 07:23:12] Found 0 posts to process
+[2024-09-15 07:23:12] Finished updating existing posts
+[2024-09-15 07:23:12] Finished manual update of existing posts
+[2024-09-15 07:23:12] Registering AI SEO Keyword taxonomy
+[2024-09-15 07:23:12] AI SEO Keyword taxonomy registered
+[2024-09-15 07:23:12] Starting queue processing
+[2024-09-15 07:23:12] Queue processing triggered. Current queue size: 0
+[2024-09-15 07:23:12] Queue processing completed
+[2024-09-15 07:23:12] Starting internal linking process for all posts
+[2024-09-15 07:23:12] Enqueuing admin scripts for hook: plugins.php
+[2024-09-15 07:23:19] Initializing AI SEO Writer plugin
+[2024-09-15 07:23:19] AI SEO Writer plugin initialized
+[2024-09-15 07:23:19] Registering AI SEO Keyword taxonomy
+[2024-09-15 07:23:19] AI SEO Keyword taxonomy registered
+[2024-09-15 07:23:19] Adding admin menu items
+[2024-09-15 07:23:19] Admin menu items added
+[2024-09-15 07:23:19] Starting manual update of existing posts
+[2024-09-15 07:23:19] Starting update of existing posts
+[2024-09-15 07:23:19] Found 0 posts to process
+[2024-09-15 07:23:19] Finished updating existing posts
+[2024-09-15 07:23:19] Finished manual update of existing posts
+[2024-09-15 07:23:19] Enqueuing admin scripts for hook: toplevel_page_ai-seo-writer
+[2024-09-15 07:23:22] Initializing AI SEO Writer plugin
+[2024-09-15 07:23:22] AI SEO Writer plugin initialized
+[2024-09-15 07:23:22] Registering AI SEO Keyword taxonomy
+[2024-09-15 07:23:22] AI SEO Keyword taxonomy registered
+[2024-09-15 07:23:22] Starting manual update of existing posts
+[2024-09-15 07:23:22] Starting update of existing posts
+[2024-09-15 07:23:22] Found 0 posts to process
+[2024-09-15 07:23:22] Finished updating existing posts
+[2024-09-15 07:23:22] Finished manual update of existing posts
+[2024-09-15 07:23:22] Starting update of existing post slugs
+[2024-09-15 07:23:22] Found 0 posts to process
+[2024-09-15 07:23:22] Finished updating existing post slugs. Updated 0 posts.
+[2024-09-15 07:24:19] Initializing AI SEO Writer plugin
+[2024-09-15 07:24:19] AI SEO Writer plugin initialized
+[2024-09-15 07:24:19] Registering AI SEO Keyword taxonomy
+[2024-09-15 07:24:19] AI SEO Keyword taxonomy registered
+[2024-09-15 07:24:19] Starting manual update of existing posts
+[2024-09-15 07:24:19] Starting update of existing posts
+[2024-09-15 07:24:19] Found 0 posts to process
+[2024-09-15 07:24:19] Finished updating existing posts
+[2024-09-15 07:24:19] Finished manual update of existing posts
+[2024-09-15 07:24:19] Initializing AI SEO Writer plugin
+[2024-09-15 07:24:19] AI SEO Writer plugin initialized
+[2024-09-15 07:24:19] Registering AI SEO Keyword taxonomy
+[2024-09-15 07:24:19] AI SEO Keyword taxonomy registered
+[2024-09-15 07:24:20] Initializing AI SEO Writer plugin
+[2024-09-15 07:24:20] AI SEO Writer plugin initialized
+[2024-09-15 07:24:20] Registering AI SEO Keyword taxonomy
+[2024-09-15 07:24:20] AI SEO Keyword taxonomy registered
+[2024-09-15 07:24:20] Starting manual update of existing posts
+[2024-09-15 07:24:20] Starting update of existing posts
+[2024-09-15 07:24:20] Found 0 posts to process
+[2024-09-15 07:24:20] Finished updating existing posts
+[2024-09-15 07:24:20] Finished manual update of existing posts
+[2024-09-15 07:26:19] Initializing AI SEO Writer plugin
+[2024-09-15 07:26:19] AI SEO Writer plugin initialized
+[2024-09-15 07:26:19] Registering AI SEO Keyword taxonomy
+[2024-09-15 07:26:19] AI SEO Keyword taxonomy registered
+[2024-09-15 07:26:19] Starting manual update of existing posts
+[2024-09-15 07:26:19] Starting update of existing posts
+[2024-09-15 07:26:19] Found 0 posts to process
+[2024-09-15 07:26:19] Finished updating existing posts
+[2024-09-15 07:26:19] Finished manual update of existing posts
+[2024-09-15 07:26:19] Initializing AI SEO Writer plugin
+[2024-09-15 07:26:19] AI SEO Writer plugin initialized
+[2024-09-15 07:26:19] Registering AI SEO Keyword taxonomy
+[2024-09-15 07:26:19] AI SEO Keyword taxonomy registered
+[2024-09-15 07:27:00] Initializing AI SEO Writer plugin
+[2024-09-15 07:27:00] AI SEO Writer plugin initialized
+[2024-09-15 07:27:00] Registering AI SEO Keyword taxonomy
+[2024-09-15 07:27:00] AI SEO Keyword taxonomy registered
+[2024-09-15 07:27:00] Adding admin menu items
+[2024-09-15 07:27:00] Admin menu items added
+[2024-09-15 07:27:00] Initializing AI SEO Writer plugin
+[2024-09-15 07:27:00] AI SEO Writer plugin initialized
+[2024-09-15 07:27:00] Starting manual update of existing posts
+[2024-09-15 07:27:00] Starting update of existing posts
+[2024-09-15 07:27:00] Found 0 posts to process
+[2024-09-15 07:27:00] Finished updating existing posts
+[2024-09-15 07:27:00] Finished manual update of existing posts
+[2024-09-15 07:27:00] Enqueuing admin scripts for hook: toplevel_page_ai-seo-writer
+[2024-09-15 07:27:00] Registering AI SEO Keyword taxonomy
+[2024-09-15 07:27:00] AI SEO Keyword taxonomy registered
+[2024-09-15 07:27:01] Initializing AI SEO Writer plugin
+[2024-09-15 07:27:01] AI SEO Writer plugin initialized
+[2024-09-15 07:27:01] Registering AI SEO Keyword taxonomy
+[2024-09-15 07:27:01] AI SEO Keyword taxonomy registered
+[2024-09-15 07:27:03] Initializing AI SEO Writer plugin
+[2024-09-15 07:27:03] AI SEO Writer plugin initialized
+[2024-09-15 07:27:03] Registering AI SEO Keyword taxonomy
+[2024-09-15 07:27:03] AI SEO Keyword taxonomy registered
+[2024-09-15 07:27:03] Starting manual update of existing posts
+[2024-09-15 07:27:03] Starting update of existing posts
+[2024-09-15 07:27:03] Found 0 posts to process
+[2024-09-15 07:27:03] Finished updating existing posts
+[2024-09-15 07:27:03] Finished manual update of existing posts
+[2024-09-15 07:27:03] Starting update of existing post slugs
+[2024-09-15 07:27:03] Found 16 posts to process
+[2024-09-15 07:27:03] Post IDs found: 1375, 1373, 1371, 1369, 1367, 1365, 1363, 1361, 1359, 1357, 1355, 1353, 1351, 1349, 1347, 1345
+[2024-09-15 07:27:03] Processing post ID: 1375, Status: draft, Title: 'Unlocking Your Mind: Journal Prompts for Self-Reflection'
+[2024-09-15 07:27:03] Updating keyword index for post ID: 1375
+[2024-09-15 07:27:03] Primary keyword: journal prompts for self-reflection
+[2024-09-15 07:27:03] Alternate keywords: 
+[2024-09-15 07:27:03] Updated slug for post ID: 1375 to: journal-prompts-for-self-reflection-1
+[2024-09-15 07:27:03] Processing post ID: 1373, Status: draft, Title: 'Unlocking Emotions: Social Emotional Journal Prompts for Elementary Students'
+[2024-09-15 07:27:03] Updating keyword index for post ID: 1373
+[2024-09-15 07:27:03] Primary keyword: social emotional journal prompts for elementary students
+[2024-09-15 07:27:03] Alternate keywords: 
+[2024-09-15 07:27:03] Updated slug for post ID: 1373 to: social-emotional-journal-prompts-for-elementary-students
+[2024-09-15 07:27:03] Processing post ID: 1371, Status: draft, Title: 'Unlocking Mental Wellness: Daily Journaling Prompts for a Happier You'
+[2024-09-15 07:27:03] Updating keyword index for post ID: 1371
+[2024-09-15 07:27:03] Primary keyword: daily journaling prompts for mental health
+[2024-09-15 07:27:03] Alternate keywords: 
+[2024-09-15 07:27:03] Updated slug for post ID: 1371 to: daily-journaling-prompts-for-mental-health
+[2024-09-15 07:27:03] Processing post ID: 1369, Status: draft, Title: 'Unlocking Your Mind: Daily Journal Questions for Self-Discovery'
+[2024-09-15 07:27:03] Updating keyword index for post ID: 1369
+[2024-09-15 07:27:03] Primary keyword: daily journal questions
+[2024-09-15 07:27:03] Alternate keywords: 
+[2024-09-15 07:27:03] Updated slug for post ID: 1369 to: daily-journal-questions
+[2024-09-15 07:27:03] Processing post ID: 1367, Status: draft, Title: 'Unlock Your Mind: Daily Journal Prompts for Mental Health'
+[2024-09-15 07:27:03] Updating keyword index for post ID: 1367
+[2024-09-15 07:27:03] Primary keyword: daily journal prompts for adults for mental health
+[2024-09-15 07:27:03] Alternate keywords: 
+[2024-09-15 07:27:03] Updated slug for post ID: 1367 to: daily-journal-prompts-for-adults-for-mental-health
+[2024-09-15 07:27:03] Processing post ID: 1365, Status: draft, Title: 'Unlocking Your Thoughts: Daily Journal Prompts for Adults Free'
+[2024-09-15 07:27:03] Updating keyword index for post ID: 1365
+[2024-09-15 07:27:03] Primary keyword: daily journal prompts for adults free
+[2024-09-15 07:27:03] Alternate keywords: 
+[2024-09-15 07:27:03] Updated slug for post ID: 1365 to: daily-journal-prompts-for-adults-free
+[2024-09-15 07:27:03] Processing post ID: 1363, Status: draft, Title: 'Unlock Your Mind: Daily Journal Prompts for Adults PDF'
+[2024-09-15 07:27:03] Updating keyword index for post ID: 1363
+[2024-09-15 07:27:03] Primary keyword: daily journal prompts for adults pdf
+[2024-09-15 07:27:03] Alternate keywords: 
+[2024-09-15 07:27:03] Updated slug for post ID: 1363 to: daily-journal-prompts-for-adults-pdf
+[2024-09-15 07:27:03] Processing post ID: 1361, Status: draft, Title: 'Unlocking Your Mind: Free Daily Journal Prompts for Self-Discovery'
+[2024-09-15 07:27:03] Updating keyword index for post ID: 1361
+[2024-09-15 07:27:03] Primary keyword: free daily journal prompts
+[2024-09-15 07:27:03] Alternate keywords: 
+[2024-09-15 07:27:03] Updated slug for post ID: 1361 to: free-daily-journal-prompts
+[2024-09-15 07:27:03] Processing post ID: 1359, Status: draft, Title: 'Unlocking Potential: Daily Journal Prompts for Self Growth'
+[2024-09-15 07:27:03] Updating keyword index for post ID: 1359
+[2024-09-15 07:27:03] Primary keyword: daily journal prompts for self growth
+[2024-09-15 07:27:03] Alternate keywords: 
+[2024-09-15 07:27:03] Updated slug for post ID: 1359 to: daily-journal-prompts-for-self-growth
+[2024-09-15 07:27:03] Processing post ID: 1357, Status: draft, Title: 'Unlock Your Thoughts: The Ultimate Daily Journal Prompt Generator'
+[2024-09-15 07:27:03] Updating keyword index for post ID: 1357
+[2024-09-15 07:27:03] Primary keyword: daily journal prompt generator
+[2024-09-15 07:27:03] Alternate keywords: 
+[2024-09-15 07:27:03] Updated slug for post ID: 1357 to: daily-journal-prompt-generator
+[2024-09-15 07:27:03] Processing post ID: 1355, Status: draft, Title: 'Unlock Your Creativity: The Best Daily Journal Prompts Apps'
+[2024-09-15 07:27:03] Updating keyword index for post ID: 1355
+[2024-09-15 07:27:03] Primary keyword: best daily journal prompts app
+[2024-09-15 07:27:03] Alternate keywords: 
+[2024-09-15 07:27:03] Updated slug for post ID: 1355 to: best-daily-journal-prompts-app
+[2024-09-15 07:27:03] Processing post ID: 1353, Status: draft, Title: 'Unlock Your Thoughts: The Best Daily Journal Prompts App for Adults'
+[2024-09-15 07:27:03] Updating keyword index for post ID: 1353
+[2024-09-15 07:27:03] Primary keyword: daily journal prompts app for adults
+[2024-09-15 07:27:03] Alternate keywords: 
+[2024-09-15 07:27:03] Updated slug for post ID: 1353 to: daily-journal-prompts-app-for-adults
+[2024-09-15 07:27:03] Processing post ID: 1351, Status: draft, Title: 'Unlocking Mental Health: The Power of a Daily Journal Prompts App'
+[2024-09-15 07:27:03] Updating keyword index for post ID: 1351
+[2024-09-15 07:27:03] Primary keyword: daily journal prompts app for mental health
+[2024-09-15 07:27:03] Alternate keywords: 
+[2024-09-15 07:27:04] Updated slug for post ID: 1351 to: daily-journal-prompts-app-for-mental-health
+[2024-09-15 07:27:04] Processing post ID: 1349, Status: draft, Title: 'Unlock Your Thoughts: 365 Daily Journal Prompts for Every Day of the Year'
+[2024-09-15 07:27:04] Updating keyword index for post ID: 1349
+[2024-09-15 07:27:04] Primary keyword: 365 daily journal prompts
+[2024-09-15 07:27:04] Alternate keywords: 
+[2024-09-15 07:27:04] Updated slug for post ID: 1349 to: 365-daily-journal-prompts
+[2024-09-15 07:27:04] Processing post ID: 1347, Status: draft, Title: 'Unlock Your Mind: Free Daily Journal Prompts Apps You Need'
+[2024-09-15 07:27:04] Updating keyword index for post ID: 1347
+[2024-09-15 07:27:04] Primary keyword: daily journal prompts app free
+[2024-09-15 07:27:04] Alternate keywords: 
+[2024-09-15 07:27:04] Updated slug for post ID: 1347 to: daily-journal-prompts-app-free
+[2024-09-15 07:27:04] Processing post ID: 1345, Status: draft, Title: 'Unlock Your Thoughts: Daily Journal Prompts for Self-Discovery'
+[2024-09-15 07:27:04] Updating keyword index for post ID: 1345
+[2024-09-15 07:27:04] Primary keyword: journal prompt of the day
+[2024-09-15 07:27:04] Alternate keywords: 
+[2024-09-15 07:27:04] Updated slug for post ID: 1345 to: journal-prompt-of-the-day
+[2024-09-15 07:27:04] Finished updating existing post slugs. Updated 16 posts.
+[2024-09-15 07:27:10] Initializing AI SEO Writer plugin
+[2024-09-15 07:27:10] AI SEO Writer plugin initialized
+[2024-09-15 07:27:10] Registering AI SEO Keyword taxonomy
+[2024-09-15 07:27:10] AI SEO Keyword taxonomy registered
+[2024-09-15 07:27:10] Adding admin menu items
+[2024-09-15 07:27:10] Admin menu items added
+[2024-09-15 07:27:10] Starting manual update of existing posts
+[2024-09-15 07:27:10] Starting update of existing posts
+[2024-09-15 07:27:10] Found 0 posts to process
+[2024-09-15 07:27:10] Finished updating existing posts
+[2024-09-15 07:27:10] Finished manual update of existing posts
+[2024-09-15 07:27:10] Enqueuing admin scripts for hook: edit.php
+[2024-09-15 07:27:10] Initializing AI SEO Writer plugin
+[2024-09-15 07:27:10] AI SEO Writer plugin initialized
+[2024-09-15 07:27:10] Registering AI SEO Keyword taxonomy
+[2024-09-15 07:27:10] AI SEO Keyword taxonomy registered
+[2024-09-15 07:27:10] Starting manual update of existing posts
+[2024-09-15 07:27:10] Starting update of existing posts
+[2024-09-15 07:27:10] Found 0 posts to process
+[2024-09-15 07:27:10] Finished updating existing posts
+[2024-09-15 07:27:10] Finished manual update of existing posts
+[2024-09-15 07:27:15] Initializing AI SEO Writer plugin
+[2024-09-15 07:27:15] AI SEO Writer plugin initialized
+[2024-09-15 07:27:15] Registering AI SEO Keyword taxonomy
+[2024-09-15 07:27:15] AI SEO Keyword taxonomy registered
+[2024-09-15 07:27:15] Adding admin menu items
+[2024-09-15 07:27:15] Admin menu items added
+[2024-09-15 07:27:15] Starting manual update of existing posts
+[2024-09-15 07:27:15] Starting update of existing posts
+[2024-09-15 07:27:15] Found 0 posts to process
+[2024-09-15 07:27:15] Finished updating existing posts
+[2024-09-15 07:27:15] Finished manual update of existing posts
+[2024-09-15 07:27:15] Enqueuing admin scripts for hook: post.php
+[2024-09-15 07:27:17] Initializing AI SEO Writer plugin
+[2024-09-15 07:27:17] AI SEO Writer plugin initialized
+[2024-09-15 07:27:17] Registering AI SEO Keyword taxonomy
+[2024-09-15 07:27:17] AI SEO Keyword taxonomy registered
+[2024-09-15 07:27:17] Starting manual update of existing posts
+[2024-09-15 07:27:17] Starting update of existing posts
+[2024-09-15 07:27:17] Found 0 posts to process
+[2024-09-15 07:27:17] Finished updating existing posts
+[2024-09-15 07:27:17] Finished manual update of existing posts
+[2024-09-15 07:36:09] Initializing AI SEO Writer plugin
+[2024-09-15 07:36:09] AI SEO Writer plugin initialized
+[2024-09-15 07:36:09] Registering AI SEO Keyword taxonomy
+[2024-09-15 07:36:09] AI SEO Keyword taxonomy registered
+[2024-09-15 07:36:09] Starting manual update of existing posts
+[2024-09-15 07:36:09] Starting update of existing posts
+[2024-09-15 07:36:09] Found 0 posts to process
+[2024-09-15 07:36:09] Finished updating existing posts
+[2024-09-15 07:36:09] Finished manual update of existing posts
+[2024-09-15 07:36:09] Initializing AI SEO Writer plugin
+[2024-09-15 07:36:09] AI SEO Writer plugin initialized
+[2024-09-15 07:36:09] Registering AI SEO Keyword taxonomy
+[2024-09-15 07:36:09] AI SEO Keyword taxonomy registered
+[2024-09-15 07:37:09] Initializing AI SEO Writer plugin
+[2024-09-15 07:37:09] AI SEO Writer plugin initialized
+[2024-09-15 07:37:09] Registering AI SEO Keyword taxonomy
+[2024-09-15 07:37:09] AI SEO Keyword taxonomy registered
+[2024-09-15 07:37:09] Starting manual update of existing posts
+[2024-09-15 07:37:09] Starting update of existing posts
+[2024-09-15 07:37:09] Found 0 posts to process
+[2024-09-15 07:37:09] Finished updating existing posts
+[2024-09-15 07:37:09] Finished manual update of existing posts
+[2024-09-15 07:37:09] Initializing AI SEO Writer plugin
+[2024-09-15 07:37:09] AI SEO Writer plugin initialized
+[2024-09-15 07:37:09] Registering AI SEO Keyword taxonomy
+[2024-09-15 07:37:09] AI SEO Keyword taxonomy registered
+[2024-09-15 07:38:09] Initializing AI SEO Writer plugin
+[2024-09-15 07:38:09] AI SEO Writer plugin initialized
+[2024-09-15 07:38:09] Registering AI SEO Keyword taxonomy
+[2024-09-15 07:38:09] AI SEO Keyword taxonomy registered
+[2024-09-15 07:38:09] Starting manual update of existing posts
+[2024-09-15 07:38:09] Starting update of existing posts
+[2024-09-15 07:38:09] Found 0 posts to process
+[2024-09-15 07:38:09] Finished updating existing posts
+[2024-09-15 07:38:09] Finished manual update of existing posts
+[2024-09-15 07:38:09] Initializing AI SEO Writer plugin
+[2024-09-15 07:38:09] AI SEO Writer plugin initialized
+[2024-09-15 07:38:09] Registering AI SEO Keyword taxonomy
+[2024-09-15 07:38:09] AI SEO Keyword taxonomy registered
+[2024-09-15 07:38:11] Initializing AI SEO Writer plugin
+[2024-09-15 07:38:11] AI SEO Writer plugin initialized
+[2024-09-15 07:38:11] Registering AI SEO Keyword taxonomy
+[2024-09-15 07:38:11] AI SEO Keyword taxonomy registered
+[2024-09-15 07:38:12] Adding admin menu items
+[2024-09-15 07:38:12] Admin menu items added
+[2024-09-15 07:38:12] Starting manual update of existing posts
+[2024-09-15 07:38:12] Starting update of existing posts
+[2024-09-15 07:38:12] Found 0 posts to process
+[2024-09-15 07:38:12] Finished updating existing posts
+[2024-09-15 07:38:12] Finished manual update of existing posts
+[2024-09-15 07:38:12] Enqueuing admin scripts for hook: rank-math_page_rank-math-options-general
+[2024-09-15 07:38:12] Initializing AI SEO Writer plugin
+[2024-09-15 07:38:12] AI SEO Writer plugin initialized
+[2024-09-15 07:38:12] Registering AI SEO Keyword taxonomy
+[2024-09-15 07:38:12] AI SEO Keyword taxonomy registered
+[2024-09-15 07:38:12] Starting manual update of existing posts
+[2024-09-15 07:38:12] Starting update of existing posts
+[2024-09-15 07:38:12] Found 0 posts to process
+[2024-09-15 07:38:12] Finished updating existing posts
+[2024-09-15 07:38:12] Finished manual update of existing posts
+[2024-09-15 07:38:31] Initializing AI SEO Writer plugin
+[2024-09-15 07:38:31] AI SEO Writer plugin initialized
+[2024-09-15 07:38:31] Registering AI SEO Keyword taxonomy
+[2024-09-15 07:38:31] AI SEO Keyword taxonomy registered
+[2024-09-15 07:38:31] Starting manual update of existing posts
+[2024-09-15 07:38:31] Starting update of existing posts
+[2024-09-15 07:38:31] Found 0 posts to process
+[2024-09-15 07:38:31] Finished updating existing posts
+[2024-09-15 07:38:31] Finished manual update of existing posts
+[2024-09-15 07:38:31] Initializing AI SEO Writer plugin
+[2024-09-15 07:38:31] AI SEO Writer plugin initialized
+[2024-09-15 07:38:31] Registering AI SEO Keyword taxonomy
+[2024-09-15 07:38:31] AI SEO Keyword taxonomy registered
+[2024-09-15 07:38:31] Adding admin menu items
+[2024-09-15 07:38:31] Admin menu items added
+[2024-09-15 07:38:31] Starting manual update of existing posts
+[2024-09-15 07:38:31] Starting update of existing posts
+[2024-09-15 07:38:31] Found 0 posts to process
+[2024-09-15 07:38:31] Finished updating existing posts
+[2024-09-15 07:38:31] Finished manual update of existing posts
+[2024-09-15 07:38:31] Enqueuing admin scripts for hook: rank-math_page_rank-math-options-general
+[2024-09-15 07:39:32] Initializing AI SEO Writer plugin
+[2024-09-15 07:39:32] AI SEO Writer plugin initialized
+[2024-09-15 07:39:32] Registering AI SEO Keyword taxonomy
+[2024-09-15 07:39:32] AI SEO Keyword taxonomy registered
+[2024-09-15 07:39:32] Starting manual update of existing posts
+[2024-09-15 07:39:32] Starting update of existing posts
+[2024-09-15 07:39:32] Found 0 posts to process
+[2024-09-15 07:39:32] Finished updating existing posts
+[2024-09-15 07:39:32] Finished manual update of existing posts
+[2024-09-15 07:39:32] Initializing AI SEO Writer plugin
+[2024-09-15 07:39:32] AI SEO Writer plugin initialized
+[2024-09-15 07:39:32] Registering AI SEO Keyword taxonomy
+[2024-09-15 07:39:32] AI SEO Keyword taxonomy registered

@@ -115,3 +115,4 @@ function aiseo_handle_update_existing_posts() {
 }
 add_action('admin_post_aiseo_update_existing_posts', 'aiseo_handle_update_existing_posts');
 
+

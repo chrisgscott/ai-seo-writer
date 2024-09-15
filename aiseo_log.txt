@@ -903,3 +903,1025 @@ Happy journaling!
 [2024-09-15 07:39:32] AI SEO Writer plugin initialized
 [2024-09-15 07:39:32] Registering AI SEO Keyword taxonomy
 [2024-09-15 07:39:32] AI SEO Keyword taxonomy registered
+[2024-09-15 07:41:33] Initializing AI SEO Writer plugin
+[2024-09-15 07:41:33] AI SEO Writer plugin initialized
+[2024-09-15 07:41:33] Registering AI SEO Keyword taxonomy
+[2024-09-15 07:41:33] AI SEO Keyword taxonomy registered
+[2024-09-15 07:41:33] Starting manual update of existing posts
+[2024-09-15 07:41:33] Starting update of existing posts
+[2024-09-15 07:41:33] Found 0 posts to process
+[2024-09-15 07:41:33] Finished updating existing posts
+[2024-09-15 07:41:33] Finished manual update of existing posts
+[2024-09-15 07:41:33] Initializing AI SEO Writer plugin
+[2024-09-15 07:41:33] AI SEO Writer plugin initialized
+[2024-09-15 07:41:33] Registering AI SEO Keyword taxonomy
+[2024-09-15 07:41:33] AI SEO Keyword taxonomy registered
+[2024-09-15 07:43:34] Initializing AI SEO Writer plugin
+[2024-09-15 07:43:34] AI SEO Writer plugin initialized
+[2024-09-15 07:43:34] Registering AI SEO Keyword taxonomy
+[2024-09-15 07:43:34] AI SEO Keyword taxonomy registered
+[2024-09-15 07:43:34] Starting manual update of existing posts
+[2024-09-15 07:43:34] Starting update of existing posts
+[2024-09-15 07:43:34] Found 0 posts to process
+[2024-09-15 07:43:34] Finished updating existing posts
+[2024-09-15 07:43:34] Finished manual update of existing posts
+[2024-09-15 07:43:34] Initializing AI SEO Writer plugin
+[2024-09-15 07:43:34] AI SEO Writer plugin initialized
+[2024-09-15 07:43:34] Registering AI SEO Keyword taxonomy
+[2024-09-15 07:43:34] AI SEO Keyword taxonomy registered
+[2024-09-15 07:45:35] Initializing AI SEO Writer plugin
+[2024-09-15 07:45:35] AI SEO Writer plugin initialized
+[2024-09-15 07:45:35] Registering AI SEO Keyword taxonomy
+[2024-09-15 07:45:35] AI SEO Keyword taxonomy registered
+[2024-09-15 07:45:35] Starting manual update of existing posts
+[2024-09-15 07:45:35] Starting update of existing posts
+[2024-09-15 07:45:35] Found 0 posts to process
+[2024-09-15 07:45:35] Finished updating existing posts
+[2024-09-15 07:45:35] Finished manual update of existing posts
+[2024-09-15 07:45:35] Initializing AI SEO Writer plugin
+[2024-09-15 07:45:35] AI SEO Writer plugin initialized
+[2024-09-15 07:45:35] Registering AI SEO Keyword taxonomy
+[2024-09-15 07:45:35] AI SEO Keyword taxonomy registered
+[2024-09-15 07:47:36] Initializing AI SEO Writer plugin
+[2024-09-15 07:47:36] AI SEO Writer plugin initialized
+[2024-09-15 07:47:36] Registering AI SEO Keyword taxonomy
+[2024-09-15 07:47:36] AI SEO Keyword taxonomy registered
+[2024-09-15 07:47:36] Starting manual update of existing posts
+[2024-09-15 07:47:36] Starting update of existing posts
+[2024-09-15 07:47:36] Found 0 posts to process
+[2024-09-15 07:47:36] Finished updating existing posts
+[2024-09-15 07:47:36] Finished manual update of existing posts
+[2024-09-15 07:47:36] Initializing AI SEO Writer plugin
+[2024-09-15 07:47:36] AI SEO Writer plugin initialized
+[2024-09-15 07:47:36] Registering AI SEO Keyword taxonomy
+[2024-09-15 07:47:36] AI SEO Keyword taxonomy registered
+[2024-09-15 07:49:37] Initializing AI SEO Writer plugin
+[2024-09-15 07:49:37] AI SEO Writer plugin initialized
+[2024-09-15 07:49:37] Registering AI SEO Keyword taxonomy
+[2024-09-15 07:49:37] AI SEO Keyword taxonomy registered
+[2024-09-15 07:49:37] Starting manual update of existing posts
+[2024-09-15 07:49:37] Starting update of existing posts
+[2024-09-15 07:49:37] Found 0 posts to process
+[2024-09-15 07:49:37] Finished updating existing posts
+[2024-09-15 07:49:37] Finished manual update of existing posts
+[2024-09-15 07:49:37] Initializing AI SEO Writer plugin
+[2024-09-15 07:49:37] AI SEO Writer plugin initialized
+[2024-09-15 07:49:37] Registering AI SEO Keyword taxonomy
+[2024-09-15 07:49:37] AI SEO Keyword taxonomy registered
+[2024-09-15 07:50:19] Initializing AI SEO Writer plugin
+[2024-09-15 07:50:19] AI SEO Writer plugin initialized
+[2024-09-15 07:50:19] Registering AI SEO Keyword taxonomy
+[2024-09-15 07:50:19] AI SEO Keyword taxonomy registered
+[2024-09-15 07:50:19] Adding admin menu items
+[2024-09-15 07:50:19] Admin menu items added
+[2024-09-15 07:50:19] Initializing AI SEO Writer plugin
+[2024-09-15 07:50:19] AI SEO Writer plugin initialized
+[2024-09-15 07:50:19] Starting manual update of existing posts
+[2024-09-15 07:50:19] Starting update of existing posts
+[2024-09-15 07:50:19] Found 0 posts to process
+[2024-09-15 07:50:19] Finished updating existing posts
+[2024-09-15 07:50:19] Finished manual update of existing posts
+[2024-09-15 07:50:19] Registering AI SEO Keyword taxonomy
+[2024-09-15 07:50:19] AI SEO Keyword taxonomy registered
+[2024-09-15 07:50:20] Enqueuing admin scripts for hook: plugins.php
+[2024-09-15 07:50:22] Initializing AI SEO Writer plugin
+[2024-09-15 07:50:22] AI SEO Writer plugin initialized
+[2024-09-15 07:50:22] Registering AI SEO Keyword taxonomy
+[2024-09-15 07:50:22] AI SEO Keyword taxonomy registered
+[2024-09-15 07:50:22] Adding admin menu items
+[2024-09-15 07:50:22] Admin menu items added
+[2024-09-15 07:50:22] Starting manual update of existing posts
+[2024-09-15 07:50:22] Starting update of existing posts
+[2024-09-15 07:50:22] Found 0 posts to process
+[2024-09-15 07:50:22] Finished updating existing posts
+[2024-09-15 07:50:22] Finished manual update of existing posts
+[2024-09-15 07:50:22] Deactivating AI SEO Writer plugin
+[2024-09-15 07:50:22] AI SEO Writer plugin deactivated
+[2024-09-15 07:50:24] Initializing AI SEO Writer plugin
+[2024-09-15 07:50:24] AI SEO Writer plugin initialized
+[2024-09-15 07:50:24] Registering AI SEO Keyword taxonomy
+[2024-09-15 07:50:24] AI SEO Keyword taxonomy registered
+[2024-09-15 07:50:24] Adding admin menu items
+[2024-09-15 07:50:24] Admin menu items added
+[2024-09-15 07:50:24] Initializing AI SEO Writer plugin
+[2024-09-15 07:50:24] AI SEO Writer plugin initialized
+[2024-09-15 07:50:24] Starting manual update of existing posts
+[2024-09-15 07:50:24] Starting update of existing posts
+[2024-09-15 07:50:24] Found 0 posts to process
+[2024-09-15 07:50:24] Finished updating existing posts
+[2024-09-15 07:50:24] Finished manual update of existing posts
+[2024-09-15 07:50:24] Registering AI SEO Keyword taxonomy
+[2024-09-15 07:50:24] AI SEO Keyword taxonomy registered
+[2024-09-15 07:50:24] Starting queue processing
+[2024-09-15 07:50:24] Queue processing triggered. Current queue size: 0
+[2024-09-15 07:50:24] Queue processing completed
+[2024-09-15 07:50:24] Starting internal linking process for all posts
+[2024-09-15 07:50:25] Enqueuing admin scripts for hook: plugins.php
+[2024-09-15 07:50:30] Initializing AI SEO Writer plugin
+[2024-09-15 07:50:30] AI SEO Writer plugin initialized
+[2024-09-15 07:50:30] Registering AI SEO Keyword taxonomy
+[2024-09-15 07:50:30] AI SEO Keyword taxonomy registered
+[2024-09-15 07:50:30] Adding admin menu items
+[2024-09-15 07:50:30] Admin menu items added
+[2024-09-15 07:50:30] Starting manual update of existing posts
+[2024-09-15 07:50:30] Starting update of existing posts
+[2024-09-15 07:50:30] Found 0 posts to process
+[2024-09-15 07:50:30] Finished updating existing posts
+[2024-09-15 07:50:30] Finished manual update of existing posts
+[2024-09-15 07:50:30] Enqueuing admin scripts for hook: toplevel_page_ai-seo-writer
+[2024-09-15 07:50:33] Initializing AI SEO Writer plugin
+[2024-09-15 07:50:33] AI SEO Writer plugin initialized
+[2024-09-15 07:50:33] Registering AI SEO Keyword taxonomy
+[2024-09-15 07:50:33] AI SEO Keyword taxonomy registered
+[2024-09-15 07:50:33] Starting manual update of existing posts
+[2024-09-15 07:50:33] Starting update of existing posts
+[2024-09-15 07:50:33] Found 0 posts to process
+[2024-09-15 07:50:33] Finished updating existing posts
+[2024-09-15 07:50:33] Finished manual update of existing posts
+[2024-09-15 07:50:33] Updating keyword index for post ID: 1345
+[2024-09-15 07:50:33] Primary keyword: journal prompt of the day
+[2024-09-15 07:50:33] Alternate keywords: 
+[2024-09-15 07:50:33] Updating keyword index for post ID: 1347
+[2024-09-15 07:50:33] Primary keyword: daily journal prompts app free
+[2024-09-15 07:50:33] Alternate keywords: 
+[2024-09-15 07:50:33] Updating keyword index for post ID: 1349
+[2024-09-15 07:50:33] Primary keyword: 365 daily journal prompts
+[2024-09-15 07:50:33] Alternate keywords: 
+[2024-09-15 07:50:33] Updating keyword index for post ID: 1351
+[2024-09-15 07:50:33] Primary keyword: daily journal prompts app for mental health
+[2024-09-15 07:50:33] Alternate keywords: 
+[2024-09-15 07:50:33] Updating keyword index for post ID: 1353
+[2024-09-15 07:50:33] Primary keyword: daily journal prompts app for adults
+[2024-09-15 07:50:33] Alternate keywords: 
+[2024-09-15 07:50:34] Updating keyword index for post ID: 1355
+[2024-09-15 07:50:34] Primary keyword: best daily journal prompts app
+[2024-09-15 07:50:34] Alternate keywords: 
+[2024-09-15 07:50:34] Updating keyword index for post ID: 1357
+[2024-09-15 07:50:34] Primary keyword: daily journal prompt generator
+[2024-09-15 07:50:34] Alternate keywords: 
+[2024-09-15 07:50:34] Updating keyword index for post ID: 1359
+[2024-09-15 07:50:34] Primary keyword: daily journal prompts for self growth
+[2024-09-15 07:50:34] Alternate keywords: 
+[2024-09-15 07:50:34] Updating keyword index for post ID: 1361
+[2024-09-15 07:50:34] Primary keyword: free daily journal prompts
+[2024-09-15 07:50:34] Alternate keywords: 
+[2024-09-15 07:50:34] Updating keyword index for post ID: 1363
+[2024-09-15 07:50:34] Primary keyword: daily journal prompts for adults pdf
+[2024-09-15 07:50:34] Alternate keywords: 
+[2024-09-15 07:50:34] Updating keyword index for post ID: 1365
+[2024-09-15 07:50:34] Primary keyword: daily journal prompts for adults free
+[2024-09-15 07:50:34] Alternate keywords: 
+[2024-09-15 07:50:34] Updating keyword index for post ID: 1367
+[2024-09-15 07:50:34] Primary keyword: daily journal prompts for adults for mental health
+[2024-09-15 07:50:34] Alternate keywords: 
+[2024-09-15 07:50:34] Updating keyword index for post ID: 1369
+[2024-09-15 07:50:34] Primary keyword: daily journal questions
+[2024-09-15 07:50:34] Alternate keywords: 
+[2024-09-15 07:50:34] Updating keyword index for post ID: 1371
+[2024-09-15 07:50:34] Primary keyword: daily journaling prompts for mental health
+[2024-09-15 07:50:34] Alternate keywords: 
+[2024-09-15 07:50:34] Updating keyword index for post ID: 1373
+[2024-09-15 07:50:34] Primary keyword: social emotional journal prompts for elementary students
+[2024-09-15 07:50:34] Alternate keywords: 
+[2024-09-15 07:50:34] Updating keyword index for post ID: 1375
+[2024-09-15 07:50:34] Primary keyword: journal prompts for self-reflection
+[2024-09-15 07:50:34] Alternate keywords: 
+[2024-09-15 07:50:40] Initializing AI SEO Writer plugin
+[2024-09-15 07:50:40] AI SEO Writer plugin initialized
+[2024-09-15 07:50:40] Registering AI SEO Keyword taxonomy
+[2024-09-15 07:50:40] AI SEO Keyword taxonomy registered
+[2024-09-15 07:50:40] Adding admin menu items
+[2024-09-15 07:50:40] Admin menu items added
+[2024-09-15 07:50:40] Starting manual update of existing posts
+[2024-09-15 07:50:40] Starting update of existing posts
+[2024-09-15 07:50:40] Found 0 posts to process
+[2024-09-15 07:50:40] Finished updating existing posts
+[2024-09-15 07:50:40] Finished manual update of existing posts
+[2024-09-15 07:50:40] Enqueuing admin scripts for hook: edit.php
+[2024-09-15 07:50:41] Initializing AI SEO Writer plugin
+[2024-09-15 07:50:41] AI SEO Writer plugin initialized
+[2024-09-15 07:50:41] Registering AI SEO Keyword taxonomy
+[2024-09-15 07:50:41] AI SEO Keyword taxonomy registered
+[2024-09-15 07:50:41] Starting manual update of existing posts
+[2024-09-15 07:50:41] Starting update of existing posts
+[2024-09-15 07:50:41] Found 0 posts to process
+[2024-09-15 07:50:41] Finished updating existing posts
+[2024-09-15 07:50:41] Finished manual update of existing posts
+[2024-09-15 07:50:42] Initializing AI SEO Writer plugin
+[2024-09-15 07:50:42] AI SEO Writer plugin initialized
+[2024-09-15 07:50:42] Registering AI SEO Keyword taxonomy
+[2024-09-15 07:50:42] AI SEO Keyword taxonomy registered
+[2024-09-15 07:50:42] Adding admin menu items
+[2024-09-15 07:50:42] Admin menu items added
+[2024-09-15 07:50:42] Starting manual update of existing posts
+[2024-09-15 07:50:42] Starting update of existing posts
+[2024-09-15 07:50:42] Found 0 posts to process
+[2024-09-15 07:50:42] Finished updating existing posts
+[2024-09-15 07:50:42] Finished manual update of existing posts
+[2024-09-15 07:50:42] Enqueuing admin scripts for hook: post.php
+[2024-09-15 07:50:44] Initializing AI SEO Writer plugin
+[2024-09-15 07:50:44] AI SEO Writer plugin initialized
+[2024-09-15 07:50:44] Registering AI SEO Keyword taxonomy
+[2024-09-15 07:50:44] AI SEO Keyword taxonomy registered
+[2024-09-15 07:50:44] Starting manual update of existing posts
+[2024-09-15 07:50:44] Starting update of existing posts
+[2024-09-15 07:50:44] Found 0 posts to process
+[2024-09-15 07:50:44] Finished updating existing posts
+[2024-09-15 07:50:44] Finished manual update of existing posts
+[2024-09-15 07:51:15] Initializing AI SEO Writer plugin
+[2024-09-15 07:51:15] AI SEO Writer plugin initialized
+[2024-09-15 07:51:15] Registering AI SEO Keyword taxonomy
+[2024-09-15 07:51:15] AI SEO Keyword taxonomy registered
+[2024-09-15 07:51:15] Adding admin menu items
+[2024-09-15 07:51:15] Admin menu items added
+[2024-09-15 07:51:15] Starting manual update of existing posts
+[2024-09-15 07:51:15] Starting update of existing posts
+[2024-09-15 07:51:15] Found 0 posts to process
+[2024-09-15 07:51:15] Finished updating existing posts
+[2024-09-15 07:51:15] Finished manual update of existing posts
+[2024-09-15 07:51:15] Enqueuing admin scripts for hook: post.php
+[2024-09-15 07:51:15] Initializing AI SEO Writer plugin
+[2024-09-15 07:51:15] AI SEO Writer plugin initialized
+[2024-09-15 07:51:15] Registering AI SEO Keyword taxonomy
+[2024-09-15 07:51:15] AI SEO Keyword taxonomy registered
+[2024-09-15 07:51:15] Starting manual update of existing posts
+[2024-09-15 07:51:15] Starting update of existing posts
+[2024-09-15 07:51:15] Found 0 posts to process
+[2024-09-15 07:51:15] Finished updating existing posts
+[2024-09-15 07:51:15] Finished manual update of existing posts
+[2024-09-15 07:51:16] Initializing AI SEO Writer plugin
+[2024-09-15 07:51:16] AI SEO Writer plugin initialized
+[2024-09-15 07:51:16] Registering AI SEO Keyword taxonomy
+[2024-09-15 07:51:16] AI SEO Keyword taxonomy registered
+[2024-09-15 07:51:17] Initializing AI SEO Writer plugin
+[2024-09-15 07:51:17] AI SEO Writer plugin initialized
+[2024-09-15 07:51:17] Registering AI SEO Keyword taxonomy
+[2024-09-15 07:51:17] AI SEO Keyword taxonomy registered
+[2024-09-15 07:51:17] Starting manual update of existing posts
+[2024-09-15 07:51:17] Starting update of existing posts
+[2024-09-15 07:51:17] Found 0 posts to process
+[2024-09-15 07:51:17] Finished updating existing posts
+[2024-09-15 07:51:17] Finished manual update of existing posts
+[2024-09-15 07:52:15] Initializing AI SEO Writer plugin
+[2024-09-15 07:52:15] AI SEO Writer plugin initialized
+[2024-09-15 07:52:16] Registering AI SEO Keyword taxonomy
+[2024-09-15 07:52:16] AI SEO Keyword taxonomy registered
+[2024-09-15 07:52:16] Starting manual update of existing posts
+[2024-09-15 07:52:16] Starting update of existing posts
+[2024-09-15 07:52:16] Found 0 posts to process
+[2024-09-15 07:52:16] Finished updating existing posts
+[2024-09-15 07:52:16] Finished manual update of existing posts
+[2024-09-15 07:52:16] Initializing AI SEO Writer plugin
+[2024-09-15 07:52:16] AI SEO Writer plugin initialized
+[2024-09-15 07:52:16] Registering AI SEO Keyword taxonomy
+[2024-09-15 07:52:16] AI SEO Keyword taxonomy registered
+[2024-09-15 07:52:16] Initializing AI SEO Writer plugin
+[2024-09-15 07:52:16] AI SEO Writer plugin initialized
+[2024-09-15 07:52:16] Registering AI SEO Keyword taxonomy
+[2024-09-15 07:52:16] AI SEO Keyword taxonomy registered
+[2024-09-15 07:52:16] Starting manual update of existing posts
+[2024-09-15 07:52:16] Starting update of existing posts
+[2024-09-15 07:52:16] Found 0 posts to process
+[2024-09-15 07:52:16] Finished updating existing posts
+[2024-09-15 07:52:16] Finished manual update of existing posts
+[2024-09-15 07:53:59] Initializing AI SEO Writer plugin
+[2024-09-15 07:53:59] AI SEO Writer plugin initialized
+[2024-09-15 07:53:59] Registering AI SEO Keyword taxonomy
+[2024-09-15 07:53:59] AI SEO Keyword taxonomy registered
+[2024-09-15 07:53:59] Starting manual update of existing posts
+[2024-09-15 07:53:59] Starting update of existing posts
+[2024-09-15 07:53:59] Found 0 posts to process
+[2024-09-15 07:53:59] Finished updating existing posts
+[2024-09-15 07:53:59] Finished manual update of existing posts
+[2024-09-15 07:53:59] Initializing AI SEO Writer plugin
+[2024-09-15 07:53:59] AI SEO Writer plugin initialized
+[2024-09-15 07:53:59] Registering AI SEO Keyword taxonomy
+[2024-09-15 07:53:59] AI SEO Keyword taxonomy registered
+[2024-09-15 07:54:02] Initializing AI SEO Writer plugin
+[2024-09-15 07:54:02] AI SEO Writer plugin initialized
+[2024-09-15 07:54:02] Registering AI SEO Keyword taxonomy
+[2024-09-15 07:54:02] AI SEO Keyword taxonomy registered
+[2024-09-15 07:54:02] Adding admin menu items
+[2024-09-15 07:54:02] Admin menu items added
+[2024-09-15 07:54:02] Initializing AI SEO Writer plugin
+[2024-09-15 07:54:02] AI SEO Writer plugin initialized
+[2024-09-15 07:54:02] Starting manual update of existing posts
+[2024-09-15 07:54:02] Starting update of existing posts
+[2024-09-15 07:54:02] Found 0 posts to process
+[2024-09-15 07:54:02] Finished updating existing posts
+[2024-09-15 07:54:02] Finished manual update of existing posts
+[2024-09-15 07:54:02] Enqueuing admin scripts for hook: toplevel_page_ai-seo-writer
+[2024-09-15 07:54:02] Registering AI SEO Keyword taxonomy
+[2024-09-15 07:54:02] AI SEO Keyword taxonomy registered
+[2024-09-15 07:54:03] Initializing AI SEO Writer plugin
+[2024-09-15 07:54:03] AI SEO Writer plugin initialized
+[2024-09-15 07:54:03] Registering AI SEO Keyword taxonomy
+[2024-09-15 07:54:03] AI SEO Keyword taxonomy registered
+[2024-09-15 07:54:03] Starting manual update of existing posts
+[2024-09-15 07:54:03] Starting update of existing posts
+[2024-09-15 07:54:03] Found 0 posts to process
+[2024-09-15 07:54:03] Finished updating existing posts
+[2024-09-15 07:54:03] Finished manual update of existing posts
+[2024-09-15 07:54:06] Initializing AI SEO Writer plugin
+[2024-09-15 07:54:06] AI SEO Writer plugin initialized
+[2024-09-15 07:54:06] Registering AI SEO Keyword taxonomy
+[2024-09-15 07:54:06] AI SEO Keyword taxonomy registered
+[2024-09-15 07:54:06] Starting manual update of existing posts
+[2024-09-15 07:54:06] Starting update of existing posts
+[2024-09-15 07:54:06] Found 0 posts to process
+[2024-09-15 07:54:06] Finished updating existing posts
+[2024-09-15 07:54:06] Finished manual update of existing posts
+[2024-09-15 07:54:06] Updating keyword index for post ID: 1357
+[2024-09-15 07:54:06] Primary keyword: daily journal prompt generator
+[2024-09-15 07:54:06] Alternate keywords: 
+[2024-09-15 07:54:06] Updating keyword index for post ID: 1359
+[2024-09-15 07:54:06] Primary keyword: daily journal prompts for self growth
+[2024-09-15 07:54:06] Alternate keywords: 
+[2024-09-15 07:54:06] Updating keyword index for post ID: 1365
+[2024-09-15 07:54:06] Primary keyword: daily journal prompts for adults free
+[2024-09-15 07:54:06] Alternate keywords: 
+[2024-09-15 07:54:06] Updating keyword index for post ID: 1367
+[2024-09-15 07:54:06] Primary keyword: daily journal prompts for adults for mental health
+[2024-09-15 07:54:06] Alternate keywords: 
+[2024-09-15 07:54:14] Initializing AI SEO Writer plugin
+[2024-09-15 07:54:14] AI SEO Writer plugin initialized
+[2024-09-15 07:54:14] Registering AI SEO Keyword taxonomy
+[2024-09-15 07:54:14] AI SEO Keyword taxonomy registered
+[2024-09-15 07:54:15] Adding admin menu items
+[2024-09-15 07:54:15] Admin menu items added
+[2024-09-15 07:54:15] Starting manual update of existing posts
+[2024-09-15 07:54:15] Starting update of existing posts
+[2024-09-15 07:54:15] Found 0 posts to process
+[2024-09-15 07:54:15] Finished updating existing posts
+[2024-09-15 07:54:15] Finished manual update of existing posts
+[2024-09-15 07:54:15] Enqueuing admin scripts for hook: edit.php
+[2024-09-15 07:54:15] Initializing AI SEO Writer plugin
+[2024-09-15 07:54:15] AI SEO Writer plugin initialized
+[2024-09-15 07:54:15] Registering AI SEO Keyword taxonomy
+[2024-09-15 07:54:15] AI SEO Keyword taxonomy registered
+[2024-09-15 07:54:15] Starting manual update of existing posts
+[2024-09-15 07:54:15] Starting update of existing posts
+[2024-09-15 07:54:15] Found 0 posts to process
+[2024-09-15 07:54:15] Finished updating existing posts
+[2024-09-15 07:54:15] Finished manual update of existing posts
+[2024-09-15 07:54:17] Initializing AI SEO Writer plugin
+[2024-09-15 07:54:17] AI SEO Writer plugin initialized
+[2024-09-15 07:54:17] Registering AI SEO Keyword taxonomy
+[2024-09-15 07:54:17] AI SEO Keyword taxonomy registered
+[2024-09-15 07:54:17] Adding admin menu items
+[2024-09-15 07:54:17] Admin menu items added
+[2024-09-15 07:54:17] Starting manual update of existing posts
+[2024-09-15 07:54:17] Starting update of existing posts
+[2024-09-15 07:54:17] Found 0 posts to process
+[2024-09-15 07:54:17] Finished updating existing posts
+[2024-09-15 07:54:17] Finished manual update of existing posts
+[2024-09-15 07:54:17] Enqueuing admin scripts for hook: post.php
+[2024-09-15 07:54:19] Initializing AI SEO Writer plugin
+[2024-09-15 07:54:19] AI SEO Writer plugin initialized
+[2024-09-15 07:54:19] Registering AI SEO Keyword taxonomy
+[2024-09-15 07:54:19] AI SEO Keyword taxonomy registered
+[2024-09-15 07:54:19] Starting manual update of existing posts
+[2024-09-15 07:54:19] Starting update of existing posts
+[2024-09-15 07:54:19] Found 0 posts to process
+[2024-09-15 07:54:19] Finished updating existing posts
+[2024-09-15 07:54:19] Finished manual update of existing posts
+[2024-09-15 07:54:40] Initializing AI SEO Writer plugin
+[2024-09-15 07:54:40] AI SEO Writer plugin initialized
+[2024-09-15 07:54:40] Registering AI SEO Keyword taxonomy
+[2024-09-15 07:54:40] AI SEO Keyword taxonomy registered
+[2024-09-15 07:54:40] Adding admin menu items
+[2024-09-15 07:54:40] Admin menu items added
+[2024-09-15 07:54:40] Starting manual update of existing posts
+[2024-09-15 07:54:40] Starting update of existing posts
+[2024-09-15 07:54:40] Found 0 posts to process
+[2024-09-15 07:54:40] Finished updating existing posts
+[2024-09-15 07:54:40] Finished manual update of existing posts
+[2024-09-15 07:54:40] Enqueuing admin scripts for hook: edit.php
+[2024-09-15 07:54:40] Initializing AI SEO Writer plugin
+[2024-09-15 07:54:40] AI SEO Writer plugin initialized
+[2024-09-15 07:54:40] Registering AI SEO Keyword taxonomy
+[2024-09-15 07:54:40] AI SEO Keyword taxonomy registered
+[2024-09-15 07:54:40] Starting manual update of existing posts
+[2024-09-15 07:54:40] Starting update of existing posts
+[2024-09-15 07:54:40] Found 0 posts to process
+[2024-09-15 07:54:40] Finished updating existing posts
+[2024-09-15 07:54:40] Finished manual update of existing posts
+[2024-09-15 07:54:40] Initializing AI SEO Writer plugin
+[2024-09-15 07:54:40] AI SEO Writer plugin initialized
+[2024-09-15 07:54:40] Registering AI SEO Keyword taxonomy
+[2024-09-15 07:54:40] AI SEO Keyword taxonomy registered
+[2024-09-15 07:54:40] Starting manual update of existing posts
+[2024-09-15 07:54:40] Starting update of existing posts
+[2024-09-15 07:54:40] Found 0 posts to process
+[2024-09-15 07:54:40] Finished updating existing posts
+[2024-09-15 07:54:40] Finished manual update of existing posts
+[2024-09-15 07:54:44] Initializing AI SEO Writer plugin
+[2024-09-15 07:54:44] AI SEO Writer plugin initialized
+[2024-09-15 07:54:44] Registering AI SEO Keyword taxonomy
+[2024-09-15 07:54:44] AI SEO Keyword taxonomy registered
+[2024-09-15 07:54:44] Adding admin menu items
+[2024-09-15 07:54:44] Admin menu items added
+[2024-09-15 07:54:44] Starting manual update of existing posts
+[2024-09-15 07:54:44] Starting update of existing posts
+[2024-09-15 07:54:44] Found 0 posts to process
+[2024-09-15 07:54:44] Finished updating existing posts
+[2024-09-15 07:54:44] Finished manual update of existing posts
+[2024-09-15 07:54:44] Enqueuing admin scripts for hook: post.php
+[2024-09-15 07:54:45] Initializing AI SEO Writer plugin
+[2024-09-15 07:54:45] AI SEO Writer plugin initialized
+[2024-09-15 07:54:45] Registering AI SEO Keyword taxonomy
+[2024-09-15 07:54:45] AI SEO Keyword taxonomy registered
+[2024-09-15 07:54:45] Starting manual update of existing posts
+[2024-09-15 07:54:45] Starting update of existing posts
+[2024-09-15 07:54:45] Found 0 posts to process
+[2024-09-15 07:54:45] Finished updating existing posts
+[2024-09-15 07:54:45] Finished manual update of existing posts
+[2024-09-15 07:54:45] Initializing AI SEO Writer plugin
+[2024-09-15 07:54:45] AI SEO Writer plugin initialized
+[2024-09-15 07:54:45] Registering AI SEO Keyword taxonomy
+[2024-09-15 07:54:45] AI SEO Keyword taxonomy registered
+[2024-09-15 07:54:55] Initializing AI SEO Writer plugin
+[2024-09-15 07:54:55] AI SEO Writer plugin initialized
+[2024-09-15 07:54:55] Registering AI SEO Keyword taxonomy
+[2024-09-15 07:54:55] AI SEO Keyword taxonomy registered
+[2024-09-15 07:54:55] Adding admin menu items
+[2024-09-15 07:54:55] Admin menu items added
+[2024-09-15 07:54:55] Starting manual update of existing posts
+[2024-09-15 07:54:55] Starting update of existing posts
+[2024-09-15 07:54:55] Found 0 posts to process
+[2024-09-15 07:54:55] Finished updating existing posts
+[2024-09-15 07:54:55] Finished manual update of existing posts
+[2024-09-15 07:54:55] Enqueuing admin scripts for hook: edit.php
+[2024-09-15 07:54:55] Initializing AI SEO Writer plugin
+[2024-09-15 07:54:55] AI SEO Writer plugin initialized
+[2024-09-15 07:54:55] Registering AI SEO Keyword taxonomy
+[2024-09-15 07:54:55] AI SEO Keyword taxonomy registered
+[2024-09-15 07:54:55] Starting manual update of existing posts
+[2024-09-15 07:54:55] Starting update of existing posts
+[2024-09-15 07:54:55] Found 0 posts to process
+[2024-09-15 07:54:55] Finished updating existing posts
+[2024-09-15 07:54:55] Finished manual update of existing posts
+[2024-09-15 07:54:56] Initializing AI SEO Writer plugin
+[2024-09-15 07:54:56] AI SEO Writer plugin initialized
+[2024-09-15 07:54:56] Registering AI SEO Keyword taxonomy
+[2024-09-15 07:54:56] AI SEO Keyword taxonomy registered
+[2024-09-15 07:54:56] Starting manual update of existing posts
+[2024-09-15 07:54:56] Starting update of existing posts
+[2024-09-15 07:54:56] Found 0 posts to process
+[2024-09-15 07:54:56] Finished updating existing posts
+[2024-09-15 07:54:56] Finished manual update of existing posts
+[2024-09-15 07:55:11] Initializing AI SEO Writer plugin
+[2024-09-15 07:55:11] AI SEO Writer plugin initialized
+[2024-09-15 07:55:11] Registering AI SEO Keyword taxonomy
+[2024-09-15 07:55:11] AI SEO Keyword taxonomy registered
+[2024-09-15 07:55:11] Starting manual update of existing posts
+[2024-09-15 07:55:11] Starting update of existing posts
+[2024-09-15 07:55:11] Found 0 posts to process
+[2024-09-15 07:55:11] Finished updating existing posts
+[2024-09-15 07:55:11] Finished manual update of existing posts
+[2024-09-15 07:55:11] Initializing AI SEO Writer plugin
+[2024-09-15 07:55:11] AI SEO Writer plugin initialized
+[2024-09-15 07:55:11] Registering AI SEO Keyword taxonomy
+[2024-09-15 07:55:11] AI SEO Keyword taxonomy registered
+[2024-09-15 07:57:11] Initializing AI SEO Writer plugin
+[2024-09-15 07:57:11] AI SEO Writer plugin initialized
+[2024-09-15 07:57:11] Registering AI SEO Keyword taxonomy
+[2024-09-15 07:57:11] AI SEO Keyword taxonomy registered
+[2024-09-15 07:57:11] Starting manual update of existing posts
+[2024-09-15 07:57:11] Starting update of existing posts
+[2024-09-15 07:57:11] Found 0 posts to process
+[2024-09-15 07:57:11] Finished updating existing posts
+[2024-09-15 07:57:11] Finished manual update of existing posts
+[2024-09-15 07:57:11] Initializing AI SEO Writer plugin
+[2024-09-15 07:57:11] AI SEO Writer plugin initialized
+[2024-09-15 07:57:11] Registering AI SEO Keyword taxonomy
+[2024-09-15 07:57:11] AI SEO Keyword taxonomy registered
+[2024-09-15 07:59:11] Initializing AI SEO Writer plugin
+[2024-09-15 07:59:11] AI SEO Writer plugin initialized
+[2024-09-15 07:59:11] Registering AI SEO Keyword taxonomy
+[2024-09-15 07:59:11] AI SEO Keyword taxonomy registered
+[2024-09-15 07:59:11] Starting manual update of existing posts
+[2024-09-15 07:59:11] Starting update of existing posts
+[2024-09-15 07:59:11] Found 0 posts to process
+[2024-09-15 07:59:11] Finished updating existing posts
+[2024-09-15 07:59:11] Finished manual update of existing posts
+[2024-09-15 07:59:11] Initializing AI SEO Writer plugin
+[2024-09-15 07:59:11] AI SEO Writer plugin initialized
+[2024-09-15 07:59:11] Registering AI SEO Keyword taxonomy
+[2024-09-15 07:59:11] AI SEO Keyword taxonomy registered
+[2024-09-15 08:01:11] Initializing AI SEO Writer plugin
+[2024-09-15 08:03:11] Initializing AI SEO Writer plugin
+[2024-09-15 08:04:53] Initializing AI SEO Writer plugin
+[2024-09-15 08:04:58] Initializing AI SEO Writer plugin
+[2024-09-15 08:06:58] Initializing AI SEO Writer plugin
+[2024-09-15 08:06:58] AI SEO Writer plugin initialized
+[2024-09-15 08:06:58] Registering AI SEO Keyword taxonomy
+[2024-09-15 08:06:58] AI SEO Keyword taxonomy registered
+[2024-09-15 08:06:58] Admin menu items added
+[2024-09-15 08:06:58] Initializing AI SEO Writer plugin
+[2024-09-15 08:06:58] AI SEO Writer plugin initialized
+[2024-09-15 08:06:58] Starting manual update of existing posts
+[2024-09-15 08:06:58] Starting update of existing posts
+[2024-09-15 08:06:58] Found 0 posts to process
+[2024-09-15 08:06:58] Finished updating existing posts
+[2024-09-15 08:06:58] Finished manual update of existing posts
+[2024-09-15 08:06:58] Enqueuing admin scripts for hook: ai-seo-writer_page_ai-seo-writer-settings
+[2024-09-15 08:06:58] Registering AI SEO Keyword taxonomy
+[2024-09-15 08:06:58] AI SEO Keyword taxonomy registered
+[2024-09-15 08:06:59] Initializing AI SEO Writer plugin
+[2024-09-15 08:06:59] AI SEO Writer plugin initialized
+[2024-09-15 08:06:59] Registering AI SEO Keyword taxonomy
+[2024-09-15 08:06:59] AI SEO Keyword taxonomy registered
+[2024-09-15 08:07:08] Initializing AI SEO Writer plugin
+[2024-09-15 08:07:08] AI SEO Writer plugin initialized
+[2024-09-15 08:07:08] Registering AI SEO Keyword taxonomy
+[2024-09-15 08:07:08] AI SEO Keyword taxonomy registered
+[2024-09-15 08:07:08] Starting manual update of existing posts
+[2024-09-15 08:07:08] Starting update of existing posts
+[2024-09-15 08:07:08] Found 0 posts to process
+[2024-09-15 08:07:08] Finished updating existing posts
+[2024-09-15 08:07:08] Finished manual update of existing posts
+[2024-09-15 08:07:08] Initializing AI SEO Writer plugin
+[2024-09-15 08:07:08] AI SEO Writer plugin initialized
+[2024-09-15 08:07:08] Registering AI SEO Keyword taxonomy
+[2024-09-15 08:07:08] AI SEO Keyword taxonomy registered
+[2024-09-15 08:07:10] Initializing AI SEO Writer plugin
+[2024-09-15 08:07:10] AI SEO Writer plugin initialized
+[2024-09-15 08:07:10] Registering AI SEO Keyword taxonomy
+[2024-09-15 08:07:10] AI SEO Keyword taxonomy registered
+[2024-09-15 08:07:11] Starting manual update of existing posts
+[2024-09-15 08:07:11] Starting update of existing posts
+[2024-09-15 08:07:11] Found 0 posts to process
+[2024-09-15 08:07:11] Finished updating existing posts
+[2024-09-15 08:07:11] Finished manual update of existing posts
+[2024-09-15 08:07:16] Initializing AI SEO Writer plugin
+[2024-09-15 08:07:16] AI SEO Writer plugin initialized
+[2024-09-15 08:07:16] Registering AI SEO Keyword taxonomy
+[2024-09-15 08:07:16] AI SEO Keyword taxonomy registered
+[2024-09-15 08:07:16] Starting manual update of existing posts
+[2024-09-15 08:07:16] Starting update of existing posts
+[2024-09-15 08:07:16] Found 0 posts to process
+[2024-09-15 08:07:16] Finished updating existing posts
+[2024-09-15 08:07:16] Finished manual update of existing posts
+[2024-09-15 08:07:58] Initializing AI SEO Writer plugin
+[2024-09-15 08:07:58] AI SEO Writer plugin initialized
+[2024-09-15 08:07:58] Registering AI SEO Keyword taxonomy
+[2024-09-15 08:07:58] AI SEO Keyword taxonomy registered
+[2024-09-15 08:07:58] Starting manual update of existing posts
+[2024-09-15 08:07:58] Starting update of existing posts
+[2024-09-15 08:07:58] Found 0 posts to process
+[2024-09-15 08:07:58] Finished updating existing posts
+[2024-09-15 08:07:58] Finished manual update of existing posts
+[2024-09-15 08:07:58] Initializing AI SEO Writer plugin
+[2024-09-15 08:07:58] AI SEO Writer plugin initialized
+[2024-09-15 08:07:58] Registering AI SEO Keyword taxonomy
+[2024-09-15 08:07:58] AI SEO Keyword taxonomy registered
+[2024-09-15 08:09:58] Initializing AI SEO Writer plugin
+[2024-09-15 08:09:58] AI SEO Writer plugin initialized
+[2024-09-15 08:09:58] Registering AI SEO Keyword taxonomy
+[2024-09-15 08:09:58] AI SEO Keyword taxonomy registered
+[2024-09-15 08:09:58] Starting manual update of existing posts
+[2024-09-15 08:09:58] Starting update of existing posts
+[2024-09-15 08:09:58] Found 0 posts to process
+[2024-09-15 08:09:58] Finished updating existing posts
+[2024-09-15 08:09:58] Finished manual update of existing posts
+[2024-09-15 08:09:58] Initializing AI SEO Writer plugin
+[2024-09-15 08:09:58] AI SEO Writer plugin initialized
+[2024-09-15 08:09:58] Registering AI SEO Keyword taxonomy
+[2024-09-15 08:09:58] AI SEO Keyword taxonomy registered
+[2024-09-15 08:11:30] Initializing AI SEO Writer plugin
+[2024-09-15 08:11:30] AI SEO Writer plugin initialized
+[2024-09-15 08:11:30] Registering AI SEO Keyword taxonomy
+[2024-09-15 08:11:30] AI SEO Keyword taxonomy registered
+[2024-09-15 08:11:30] Starting manual update of existing posts
+[2024-09-15 08:11:30] Starting update of existing posts
+[2024-09-15 08:11:30] Found 0 posts to process
+[2024-09-15 08:11:30] Finished updating existing posts
+[2024-09-15 08:11:30] Finished manual update of existing posts
+[2024-09-15 08:11:30] Initializing AI SEO Writer plugin
+[2024-09-15 08:11:30] AI SEO Writer plugin initialized
+[2024-09-15 08:11:30] Registering AI SEO Keyword taxonomy
+[2024-09-15 08:11:30] AI SEO Keyword taxonomy registered
+[2024-09-15 08:11:33] Initializing AI SEO Writer plugin
+[2024-09-15 08:11:33] AI SEO Writer plugin initialized
+[2024-09-15 08:11:33] Registering AI SEO Keyword taxonomy
+[2024-09-15 08:11:33] AI SEO Keyword taxonomy registered
+[2024-09-15 08:11:33] Admin menu items added
+[2024-09-15 08:11:33] Starting manual update of existing posts
+[2024-09-15 08:11:33] Starting update of existing posts
+[2024-09-15 08:11:33] Found 0 posts to process
+[2024-09-15 08:11:33] Finished updating existing posts
+[2024-09-15 08:11:33] Finished manual update of existing posts
+[2024-09-15 08:11:33] Enqueuing admin scripts for hook: ai-seo-writer_page_ai-seo-writer-settings
+[2024-09-15 08:11:34] Initializing AI SEO Writer plugin
+[2024-09-15 08:11:34] AI SEO Writer plugin initialized
+[2024-09-15 08:11:34] Registering AI SEO Keyword taxonomy
+[2024-09-15 08:11:34] AI SEO Keyword taxonomy registered
+[2024-09-15 08:11:36] Initializing AI SEO Writer plugin
+[2024-09-15 08:11:36] AI SEO Writer plugin initialized
+[2024-09-15 08:11:36] Registering AI SEO Keyword taxonomy
+[2024-09-15 08:11:36] AI SEO Keyword taxonomy registered
+[2024-09-15 08:11:36] Starting manual update of existing posts
+[2024-09-15 08:11:36] Starting update of existing posts
+[2024-09-15 08:11:36] Found 0 posts to process
+[2024-09-15 08:11:36] Finished updating existing posts
+[2024-09-15 08:11:36] Finished manual update of existing posts
+[2024-09-15 08:11:36] Starting duplicate content removal process
+[2024-09-15 08:11:36] Found 16 posts to process
+[2024-09-15 08:11:36] Processing post ID: 1357, Status: draft
+[2024-09-15 08:11:36] Found 1 FAQ sections in post ID: 1357
+[2024-09-15 08:11:36] Processing post ID: 1359, Status: draft
+[2024-09-15 08:11:36] Found 1 FAQ sections in post ID: 1359
+[2024-09-15 08:11:36] Processing post ID: 1365, Status: draft
+[2024-09-15 08:11:36] Found 1 FAQ sections in post ID: 1365
+[2024-09-15 08:11:36] Processing post ID: 1367, Status: draft
+[2024-09-15 08:11:36] Found 1 FAQ sections in post ID: 1367
+[2024-09-15 08:11:36] Processing post ID: 1361, Status: draft
+[2024-09-15 08:11:36] Found 1 FAQ sections in post ID: 1361
+[2024-09-15 08:11:36] Processing post ID: 1363, Status: draft
+[2024-09-15 08:11:36] Found 1 FAQ sections in post ID: 1363
+[2024-09-15 08:11:36] Processing post ID: 1369, Status: draft
+[2024-09-15 08:11:36] Found 1 FAQ sections in post ID: 1369
+[2024-09-15 08:11:36] Processing post ID: 1371, Status: draft
+[2024-09-15 08:11:36] Found 1 FAQ sections in post ID: 1371
+[2024-09-15 08:11:36] Processing post ID: 1373, Status: draft
+[2024-09-15 08:11:36] Found 1 FAQ sections in post ID: 1373
+[2024-09-15 08:11:36] Processing post ID: 1375, Status: draft
+[2024-09-15 08:11:36] Found 1 FAQ sections in post ID: 1375
+[2024-09-15 08:11:36] Processing post ID: 1345, Status: draft
+[2024-09-15 08:11:36] Found 1 FAQ sections in post ID: 1345
+[2024-09-15 08:11:36] Processing post ID: 1347, Status: draft
+[2024-09-15 08:11:36] Found 1 FAQ sections in post ID: 1347
+[2024-09-15 08:11:36] Processing post ID: 1349, Status: draft
+[2024-09-15 08:11:36] Found 1 FAQ sections in post ID: 1349
+[2024-09-15 08:11:36] Processing post ID: 1351, Status: draft
+[2024-09-15 08:11:36] Found 1 FAQ sections in post ID: 1351
+[2024-09-15 08:11:36] Processing post ID: 1353, Status: draft
+[2024-09-15 08:11:36] Found 1 FAQ sections in post ID: 1353
+[2024-09-15 08:11:36] Processing post ID: 1355, Status: draft
+[2024-09-15 08:11:36] Found 1 FAQ sections in post ID: 1355
+[2024-09-15 08:11:36] Finished duplicate content removal process. Updated 0 posts.
+[2024-09-15 08:11:44] Initializing AI SEO Writer plugin
+[2024-09-15 08:11:44] AI SEO Writer plugin initialized
+[2024-09-15 08:11:44] Registering AI SEO Keyword taxonomy
+[2024-09-15 08:11:44] AI SEO Keyword taxonomy registered
+[2024-09-15 08:11:44] Admin menu items added
+[2024-09-15 08:11:44] Starting manual update of existing posts
+[2024-09-15 08:11:44] Starting update of existing posts
+[2024-09-15 08:11:44] Found 0 posts to process
+[2024-09-15 08:11:44] Finished updating existing posts
+[2024-09-15 08:11:44] Finished manual update of existing posts
+[2024-09-15 08:11:44] Enqueuing admin scripts for hook: edit.php
+[2024-09-15 08:11:44] Initializing AI SEO Writer plugin
+[2024-09-15 08:11:44] AI SEO Writer plugin initialized
+[2024-09-15 08:11:44] Registering AI SEO Keyword taxonomy
+[2024-09-15 08:11:44] AI SEO Keyword taxonomy registered
+[2024-09-15 08:11:44] Starting manual update of existing posts
+[2024-09-15 08:11:44] Starting update of existing posts
+[2024-09-15 08:11:44] Found 0 posts to process
+[2024-09-15 08:11:44] Finished updating existing posts
+[2024-09-15 08:11:44] Finished manual update of existing posts
+[2024-09-15 08:11:47] Initializing AI SEO Writer plugin
+[2024-09-15 08:11:47] AI SEO Writer plugin initialized
+[2024-09-15 08:11:47] Registering AI SEO Keyword taxonomy
+[2024-09-15 08:11:47] AI SEO Keyword taxonomy registered
+[2024-09-15 08:11:47] Admin menu items added
+[2024-09-15 08:11:47] Initializing AI SEO Writer plugin
+[2024-09-15 08:11:47] AI SEO Writer plugin initialized
+[2024-09-15 08:11:47] Starting manual update of existing posts
+[2024-09-15 08:11:47] Starting update of existing posts
+[2024-09-15 08:11:47] Found 0 posts to process
+[2024-09-15 08:11:47] Finished updating existing posts
+[2024-09-15 08:11:47] Finished manual update of existing posts
+[2024-09-15 08:11:47] Enqueuing admin scripts for hook: post.php
+[2024-09-15 08:11:47] Registering AI SEO Keyword taxonomy
+[2024-09-15 08:11:47] AI SEO Keyword taxonomy registered
+[2024-09-15 08:11:49] Initializing AI SEO Writer plugin
+[2024-09-15 08:11:49] AI SEO Writer plugin initialized
+[2024-09-15 08:11:49] Registering AI SEO Keyword taxonomy
+[2024-09-15 08:11:49] AI SEO Keyword taxonomy registered
+[2024-09-15 08:11:49] Starting manual update of existing posts
+[2024-09-15 08:11:49] Starting update of existing posts
+[2024-09-15 08:11:49] Found 0 posts to process
+[2024-09-15 08:11:49] Finished updating existing posts
+[2024-09-15 08:11:49] Finished manual update of existing posts
+[2024-09-15 08:12:48] Initializing AI SEO Writer plugin
+[2024-09-15 08:12:48] AI SEO Writer plugin initialized
+[2024-09-15 08:12:48] Registering AI SEO Keyword taxonomy
+[2024-09-15 08:12:48] AI SEO Keyword taxonomy registered
+[2024-09-15 08:12:48] Starting manual update of existing posts
+[2024-09-15 08:12:48] Starting update of existing posts
+[2024-09-15 08:12:48] Found 0 posts to process
+[2024-09-15 08:12:48] Finished updating existing posts
+[2024-09-15 08:12:48] Finished manual update of existing posts
+[2024-09-15 08:12:48] Initializing AI SEO Writer plugin
+[2024-09-15 08:12:48] AI SEO Writer plugin initialized
+[2024-09-15 08:12:48] Registering AI SEO Keyword taxonomy
+[2024-09-15 08:12:48] AI SEO Keyword taxonomy registered
+[2024-09-15 08:14:48] Initializing AI SEO Writer plugin
+[2024-09-15 08:14:48] AI SEO Writer plugin initialized
+[2024-09-15 08:14:48] Registering AI SEO Keyword taxonomy
+[2024-09-15 08:14:48] AI SEO Keyword taxonomy registered
+[2024-09-15 08:14:48] Starting manual update of existing posts
+[2024-09-15 08:14:48] Starting update of existing posts
+[2024-09-15 08:14:48] Found 0 posts to process
+[2024-09-15 08:14:48] Finished updating existing posts
+[2024-09-15 08:14:48] Finished manual update of existing posts
+[2024-09-15 08:14:48] Initializing AI SEO Writer plugin
+[2024-09-15 08:14:48] AI SEO Writer plugin initialized
+[2024-09-15 08:14:48] Registering AI SEO Keyword taxonomy
+[2024-09-15 08:14:48] AI SEO Keyword taxonomy registered
+[2024-09-15 08:16:22] Initializing AI SEO Writer plugin
+[2024-09-15 08:16:22] AI SEO Writer plugin initialized
+[2024-09-15 08:16:22] Registering AI SEO Keyword taxonomy
+[2024-09-15 08:16:22] AI SEO Keyword taxonomy registered
+[2024-09-15 08:16:22] Starting manual update of existing posts
+[2024-09-15 08:16:22] Starting update of existing posts
+[2024-09-15 08:16:22] Found 0 posts to process
+[2024-09-15 08:16:22] Finished updating existing posts
+[2024-09-15 08:16:22] Finished manual update of existing posts
+[2024-09-15 08:16:22] Initializing AI SEO Writer plugin
+[2024-09-15 08:16:22] AI SEO Writer plugin initialized
+[2024-09-15 08:16:22] Registering AI SEO Keyword taxonomy
+[2024-09-15 08:16:22] AI SEO Keyword taxonomy registered
+[2024-09-15 08:16:28] Initializing AI SEO Writer plugin
+[2024-09-15 08:16:28] AI SEO Writer plugin initialized
+[2024-09-15 08:16:28] Registering AI SEO Keyword taxonomy
+[2024-09-15 08:16:28] AI SEO Keyword taxonomy registered
+[2024-09-15 08:16:28] Admin menu items added
+[2024-09-15 08:16:28] Starting manual update of existing posts
+[2024-09-15 08:16:28] Starting update of existing posts
+[2024-09-15 08:16:28] Found 0 posts to process
+[2024-09-15 08:16:28] Finished updating existing posts
+[2024-09-15 08:16:28] Finished manual update of existing posts
+[2024-09-15 08:16:28] Enqueuing admin scripts for hook: ai-seo-writer_page_ai-seo-writer-settings
+[2024-09-15 08:16:28] Initializing AI SEO Writer plugin
+[2024-09-15 08:16:28] AI SEO Writer plugin initialized
+[2024-09-15 08:16:28] Registering AI SEO Keyword taxonomy
+[2024-09-15 08:16:28] AI SEO Keyword taxonomy registered
+[2024-09-15 08:16:28] Starting manual update of existing posts
+[2024-09-15 08:16:28] Starting update of existing posts
+[2024-09-15 08:16:28] Found 0 posts to process
+[2024-09-15 08:16:28] Finished updating existing posts
+[2024-09-15 08:16:28] Finished manual update of existing posts
+[2024-09-15 08:16:32] Initializing AI SEO Writer plugin
+[2024-09-15 08:16:32] AI SEO Writer plugin initialized
+[2024-09-15 08:16:32] Registering AI SEO Keyword taxonomy
+[2024-09-15 08:16:32] AI SEO Keyword taxonomy registered
+[2024-09-15 08:16:32] Starting manual update of existing posts
+[2024-09-15 08:16:32] Starting update of existing posts
+[2024-09-15 08:16:32] Found 0 posts to process
+[2024-09-15 08:16:32] Finished updating existing posts
+[2024-09-15 08:16:32] Finished manual update of existing posts
+[2024-09-15 08:16:32] Starting duplicate content removal process
+[2024-09-15 08:16:32] Found 16 posts to process
+[2024-09-15 08:16:32] Processing post ID: 1357, Status: draft
+[2024-09-15 08:16:32] Found 2 FAQ sections in post ID: 1357
+[2024-09-15 08:16:33] Updating keyword index for post ID: 1357
+[2024-09-15 08:16:33] Primary keyword: daily journal prompt generator
+[2024-09-15 08:16:33] Alternate keywords: 
+[2024-09-15 08:16:33] Updated post ID: 1357, removed 1 duplicate FAQ sections
+[2024-09-15 08:16:33] Processing post ID: 1359, Status: draft
+[2024-09-15 08:16:33] Found 1 FAQ sections in post ID: 1359
+[2024-09-15 08:16:33] No duplicate FAQ sections found in post ID: 1359
+[2024-09-15 08:16:33] Processing post ID: 1365, Status: draft
+[2024-09-15 08:16:33] Found 2 FAQ sections in post ID: 1365
+[2024-09-15 08:16:33] Updating keyword index for post ID: 1365
+[2024-09-15 08:16:33] Primary keyword: daily journal prompts for adults free
+[2024-09-15 08:16:33] Alternate keywords: 
+[2024-09-15 08:16:33] Updated post ID: 1365, removed 1 duplicate FAQ sections
+[2024-09-15 08:16:33] Processing post ID: 1367, Status: draft
+[2024-09-15 08:16:33] Found 1 FAQ sections in post ID: 1367
+[2024-09-15 08:16:33] No duplicate FAQ sections found in post ID: 1367
+[2024-09-15 08:16:33] Processing post ID: 1361, Status: draft
+[2024-09-15 08:16:33] Found 1 FAQ sections in post ID: 1361
+[2024-09-15 08:16:33] No duplicate FAQ sections found in post ID: 1361
+[2024-09-15 08:16:33] Processing post ID: 1363, Status: draft
+[2024-09-15 08:16:33] Found 2 FAQ sections in post ID: 1363
+[2024-09-15 08:16:33] Updating keyword index for post ID: 1363
+[2024-09-15 08:16:33] Primary keyword: daily journal prompts for adults pdf
+[2024-09-15 08:16:33] Alternate keywords: 
+[2024-09-15 08:16:33] Updated post ID: 1363, removed 1 duplicate FAQ sections
+[2024-09-15 08:16:33] Processing post ID: 1369, Status: draft
+[2024-09-15 08:16:33] Found 1 FAQ sections in post ID: 1369
+[2024-09-15 08:16:33] No duplicate FAQ sections found in post ID: 1369
+[2024-09-15 08:16:33] Processing post ID: 1371, Status: draft
+[2024-09-15 08:16:33] Found 1 FAQ sections in post ID: 1371
+[2024-09-15 08:16:33] No duplicate FAQ sections found in post ID: 1371
+[2024-09-15 08:16:33] Processing post ID: 1373, Status: draft
+[2024-09-15 08:16:33] Found 1 FAQ sections in post ID: 1373
+[2024-09-15 08:16:33] No duplicate FAQ sections found in post ID: 1373
+[2024-09-15 08:16:33] Processing post ID: 1375, Status: draft
+[2024-09-15 08:16:33] Found 1 FAQ sections in post ID: 1375
+[2024-09-15 08:16:33] No duplicate FAQ sections found in post ID: 1375
+[2024-09-15 08:16:33] Processing post ID: 1345, Status: draft
+[2024-09-15 08:16:33] Found 1 FAQ sections in post ID: 1345
+[2024-09-15 08:16:33] No duplicate FAQ sections found in post ID: 1345
+[2024-09-15 08:16:33] Processing post ID: 1347, Status: draft
+[2024-09-15 08:16:33] Found 1 FAQ sections in post ID: 1347
+[2024-09-15 08:16:33] No duplicate FAQ sections found in post ID: 1347
+[2024-09-15 08:16:33] Processing post ID: 1349, Status: draft
+[2024-09-15 08:16:33] Found 1 FAQ sections in post ID: 1349
+[2024-09-15 08:16:33] No duplicate FAQ sections found in post ID: 1349
+[2024-09-15 08:16:33] Processing post ID: 1351, Status: draft
+[2024-09-15 08:16:33] Found 1 FAQ sections in post ID: 1351
+[2024-09-15 08:16:33] No duplicate FAQ sections found in post ID: 1351
+[2024-09-15 08:16:33] Processing post ID: 1353, Status: draft
+[2024-09-15 08:16:33] Found 1 FAQ sections in post ID: 1353
+[2024-09-15 08:16:33] No duplicate FAQ sections found in post ID: 1353
+[2024-09-15 08:16:33] Processing post ID: 1355, Status: draft
+[2024-09-15 08:16:33] Found 1 FAQ sections in post ID: 1355
+[2024-09-15 08:16:33] No duplicate FAQ sections found in post ID: 1355
+[2024-09-15 08:16:33] Finished duplicate content removal process. Updated 3 posts.
+[2024-09-15 08:16:40] Initializing AI SEO Writer plugin
+[2024-09-15 08:16:40] AI SEO Writer plugin initialized
+[2024-09-15 08:16:40] Registering AI SEO Keyword taxonomy
+[2024-09-15 08:16:40] AI SEO Keyword taxonomy registered
+[2024-09-15 08:16:40] Admin menu items added
+[2024-09-15 08:16:40] Starting manual update of existing posts
+[2024-09-15 08:16:40] Starting update of existing posts
+[2024-09-15 08:16:40] Found 0 posts to process
+[2024-09-15 08:16:40] Finished updating existing posts
+[2024-09-15 08:16:40] Finished manual update of existing posts
+[2024-09-15 08:16:40] Enqueuing admin scripts for hook: edit.php
+[2024-09-15 08:16:40] Initializing AI SEO Writer plugin
+[2024-09-15 08:16:40] AI SEO Writer plugin initialized
+[2024-09-15 08:16:40] Registering AI SEO Keyword taxonomy
+[2024-09-15 08:16:40] AI SEO Keyword taxonomy registered
+[2024-09-15 08:16:40] Starting manual update of existing posts
+[2024-09-15 08:16:40] Starting update of existing posts
+[2024-09-15 08:16:40] Found 0 posts to process
+[2024-09-15 08:16:40] Finished updating existing posts
+[2024-09-15 08:16:40] Finished manual update of existing posts
+[2024-09-15 08:16:43] Initializing AI SEO Writer plugin
+[2024-09-15 08:16:43] AI SEO Writer plugin initialized
+[2024-09-15 08:16:43] Registering AI SEO Keyword taxonomy
+[2024-09-15 08:16:43] AI SEO Keyword taxonomy registered
+[2024-09-15 08:16:43] Admin menu items added
+[2024-09-15 08:16:43] Starting manual update of existing posts
+[2024-09-15 08:16:43] Starting update of existing posts
+[2024-09-15 08:16:43] Found 0 posts to process
+[2024-09-15 08:16:43] Finished updating existing posts
+[2024-09-15 08:16:43] Finished manual update of existing posts
+[2024-09-15 08:16:43] Enqueuing admin scripts for hook: post.php
+[2024-09-15 08:16:45] Initializing AI SEO Writer plugin
+[2024-09-15 08:16:45] AI SEO Writer plugin initialized
+[2024-09-15 08:16:45] Registering AI SEO Keyword taxonomy
+[2024-09-15 08:16:45] AI SEO Keyword taxonomy registered
+[2024-09-15 08:16:45] Starting manual update of existing posts
+[2024-09-15 08:16:45] Starting update of existing posts
+[2024-09-15 08:16:45] Found 0 posts to process
+[2024-09-15 08:16:45] Finished updating existing posts
+[2024-09-15 08:16:45] Finished manual update of existing posts
+[2024-09-15 08:16:45] Initializing AI SEO Writer plugin
+[2024-09-15 08:16:45] AI SEO Writer plugin initialized
+[2024-09-15 08:16:45] Registering AI SEO Keyword taxonomy
+[2024-09-15 08:16:45] AI SEO Keyword taxonomy registered
+[2024-09-15 08:17:12] Initializing AI SEO Writer plugin
+[2024-09-15 08:17:12] AI SEO Writer plugin initialized
+[2024-09-15 08:17:12] Registering AI SEO Keyword taxonomy
+[2024-09-15 08:17:12] AI SEO Keyword taxonomy registered
+[2024-09-15 08:17:12] Initializing AI SEO Writer plugin
+[2024-09-15 08:17:12] AI SEO Writer plugin initialized
+[2024-09-15 08:17:12] Registering AI SEO Keyword taxonomy
+[2024-09-15 08:17:12] AI SEO Keyword taxonomy registered
+[2024-09-15 08:17:12] Initializing AI SEO Writer plugin
+[2024-09-15 08:17:12] AI SEO Writer plugin initialized
+[2024-09-15 08:17:12] Registering AI SEO Keyword taxonomy
+[2024-09-15 08:17:12] AI SEO Keyword taxonomy registered
+[2024-09-15 08:17:12] Admin menu items added
+[2024-09-15 08:17:12] Starting manual update of existing posts
+[2024-09-15 08:17:12] Starting update of existing posts
+[2024-09-15 08:17:12] Found 0 posts to process
+[2024-09-15 08:17:12] Finished updating existing posts
+[2024-09-15 08:17:12] Finished manual update of existing posts
+[2024-09-15 08:17:12] Updating keyword index for post ID: 1363
+[2024-09-15 08:17:12] Primary keyword: daily journal prompts for adults pdf
+[2024-09-15 08:17:12] Alternate keywords: 
+[2024-09-15 08:17:12] Initializing AI SEO Writer plugin
+[2024-09-15 08:17:12] AI SEO Writer plugin initialized
+[2024-09-15 08:17:12] Registering AI SEO Keyword taxonomy
+[2024-09-15 08:17:12] AI SEO Keyword taxonomy registered
+[2024-09-15 08:17:12] Admin menu items added
+[2024-09-15 08:17:12] Starting manual update of existing posts
+[2024-09-15 08:17:12] Starting update of existing posts
+[2024-09-15 08:17:12] Found 0 posts to process
+[2024-09-15 08:17:12] Finished updating existing posts
+[2024-09-15 08:17:12] Finished manual update of existing posts
+[2024-09-15 08:17:12] Enqueuing admin scripts for hook: post.php
+[2024-09-15 08:17:12] Initializing AI SEO Writer plugin
+[2024-09-15 08:17:12] AI SEO Writer plugin initialized
+[2024-09-15 08:17:12] Registering AI SEO Keyword taxonomy
+[2024-09-15 08:17:12] AI SEO Keyword taxonomy registered
+[2024-09-15 08:17:12] Starting manual update of existing posts
+[2024-09-15 08:17:12] Starting update of existing posts
+[2024-09-15 08:17:12] Found 0 posts to process
+[2024-09-15 08:17:12] Finished updating existing posts
+[2024-09-15 08:17:12] Finished manual update of existing posts
+[2024-09-15 08:17:13] Initializing AI SEO Writer plugin
+[2024-09-15 08:17:13] Initializing AI SEO Writer plugin
+[2024-09-15 08:17:13] AI SEO Writer plugin initialized
+[2024-09-15 08:17:13] AI SEO Writer plugin initialized
+[2024-09-15 08:17:13] Registering AI SEO Keyword taxonomy
+[2024-09-15 08:17:13] Registering AI SEO Keyword taxonomy
+[2024-09-15 08:17:13] AI SEO Keyword taxonomy registered
+[2024-09-15 08:17:13] AI SEO Keyword taxonomy registered
+[2024-09-15 08:17:13] Starting manual update of existing posts
+[2024-09-15 08:17:13] Starting update of existing posts
+[2024-09-15 08:17:13] Found 0 posts to process
+[2024-09-15 08:17:13] Finished updating existing posts
+[2024-09-15 08:17:13] Finished manual update of existing posts
+[2024-09-15 08:17:13] Admin menu items added
+[2024-09-15 08:17:14] Starting manual update of existing posts
+[2024-09-15 08:17:14] Starting update of existing posts
+[2024-09-15 08:17:14] Found 0 posts to process
+[2024-09-15 08:17:14] Finished updating existing posts
+[2024-09-15 08:17:14] Finished manual update of existing posts
+[2024-09-15 08:17:14] Enqueuing admin scripts for hook: edit.php
+[2024-09-15 08:17:14] Initializing AI SEO Writer plugin
+[2024-09-15 08:17:14] AI SEO Writer plugin initialized
+[2024-09-15 08:17:14] Registering AI SEO Keyword taxonomy
+[2024-09-15 08:17:14] AI SEO Keyword taxonomy registered
+[2024-09-15 08:17:14] Starting manual update of existing posts
+[2024-09-15 08:17:14] Starting update of existing posts
+[2024-09-15 08:17:14] Found 0 posts to process
+[2024-09-15 08:17:14] Finished updating existing posts
+[2024-09-15 08:17:14] Finished manual update of existing posts
+[2024-09-15 08:17:14] Initializing AI SEO Writer plugin
+[2024-09-15 08:17:14] AI SEO Writer plugin initialized
+[2024-09-15 08:17:14] Registering AI SEO Keyword taxonomy
+[2024-09-15 08:17:14] AI SEO Keyword taxonomy registered
+[2024-09-15 08:17:14] Starting manual update of existing posts
+[2024-09-15 08:17:14] Starting update of existing posts
+[2024-09-15 08:17:14] Found 0 posts to process
+[2024-09-15 08:17:14] Finished updating existing posts
+[2024-09-15 08:17:14] Finished manual update of existing posts
+[2024-09-15 08:17:18] Initializing AI SEO Writer plugin
+[2024-09-15 08:17:18] AI SEO Writer plugin initialized
+[2024-09-15 08:17:18] Registering AI SEO Keyword taxonomy
+[2024-09-15 08:17:18] AI SEO Keyword taxonomy registered
+[2024-09-15 08:17:18] Admin menu items added
+[2024-09-15 08:17:18] Starting manual update of existing posts
+[2024-09-15 08:17:18] Starting update of existing posts
+[2024-09-15 08:17:18] Found 0 posts to process
+[2024-09-15 08:17:18] Finished updating existing posts
+[2024-09-15 08:17:18] Finished manual update of existing posts
+[2024-09-15 08:17:18] Enqueuing admin scripts for hook: post.php
+[2024-09-15 08:17:20] Initializing AI SEO Writer plugin
+[2024-09-15 08:17:20] AI SEO Writer plugin initialized
+[2024-09-15 08:17:20] Registering AI SEO Keyword taxonomy
+[2024-09-15 08:17:20] AI SEO Keyword taxonomy registered
+[2024-09-15 08:17:20] Starting manual update of existing posts
+[2024-09-15 08:17:20] Starting update of existing posts
+[2024-09-15 08:17:20] Found 0 posts to process
+[2024-09-15 08:17:20] Finished updating existing posts
+[2024-09-15 08:17:20] Finished manual update of existing posts
+[2024-09-15 08:17:33] Initializing AI SEO Writer plugin
+[2024-09-15 08:17:33] AI SEO Writer plugin initialized
+[2024-09-15 08:17:33] Registering AI SEO Keyword taxonomy
+[2024-09-15 08:17:33] AI SEO Keyword taxonomy registered
+[2024-09-15 08:17:33] Admin menu items added
+[2024-09-15 08:17:33] Starting manual update of existing posts
+[2024-09-15 08:17:33] Starting update of existing posts
+[2024-09-15 08:17:33] Found 0 posts to process
+[2024-09-15 08:17:33] Finished updating existing posts
+[2024-09-15 08:17:33] Finished manual update of existing posts
+[2024-09-15 08:17:33] Enqueuing admin scripts for hook: edit.php
+[2024-09-15 08:17:33] Initializing AI SEO Writer plugin
+[2024-09-15 08:17:33] AI SEO Writer plugin initialized
+[2024-09-15 08:17:33] Registering AI SEO Keyword taxonomy
+[2024-09-15 08:17:33] AI SEO Keyword taxonomy registered
+[2024-09-15 08:17:33] Starting manual update of existing posts
+[2024-09-15 08:17:33] Starting update of existing posts
+[2024-09-15 08:17:33] Found 0 posts to process
+[2024-09-15 08:17:33] Finished updating existing posts
+[2024-09-15 08:17:33] Finished manual update of existing posts
+[2024-09-15 08:17:33] Initializing AI SEO Writer plugin
+[2024-09-15 08:17:33] AI SEO Writer plugin initialized
+[2024-09-15 08:17:33] Registering AI SEO Keyword taxonomy
+[2024-09-15 08:17:33] AI SEO Keyword taxonomy registered
+[2024-09-15 08:17:33] Starting manual update of existing posts
+[2024-09-15 08:17:33] Starting update of existing posts
+[2024-09-15 08:17:33] Found 0 posts to process
+[2024-09-15 08:17:33] Finished updating existing posts
+[2024-09-15 08:17:33] Finished manual update of existing posts
+[2024-09-15 08:17:42] Initializing AI SEO Writer plugin
+[2024-09-15 08:17:42] AI SEO Writer plugin initialized
+[2024-09-15 08:17:42] Registering AI SEO Keyword taxonomy
+[2024-09-15 08:17:42] AI SEO Keyword taxonomy registered
+[2024-09-15 08:17:42] Admin menu items added
+[2024-09-15 08:17:42] Starting manual update of existing posts
+[2024-09-15 08:17:42] Starting update of existing posts
+[2024-09-15 08:17:42] Found 0 posts to process
+[2024-09-15 08:17:42] Finished updating existing posts
+[2024-09-15 08:17:42] Finished manual update of existing posts
+[2024-09-15 08:17:42] Enqueuing admin scripts for hook: post.php
+[2024-09-15 08:17:43] Initializing AI SEO Writer plugin
+[2024-09-15 08:17:43] AI SEO Writer plugin initialized
+[2024-09-15 08:17:44] Registering AI SEO Keyword taxonomy
+[2024-09-15 08:17:44] AI SEO Keyword taxonomy registered
+[2024-09-15 08:17:44] Starting manual update of existing posts
+[2024-09-15 08:17:44] Starting update of existing posts
+[2024-09-15 08:17:44] Found 0 posts to process
+[2024-09-15 08:17:44] Finished updating existing posts
+[2024-09-15 08:17:44] Finished manual update of existing posts

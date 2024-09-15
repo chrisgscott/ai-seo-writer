@@ -134,7 +134,7 @@ function aiseo_create_post($content, $keyword, $all_keywords) {
         'post_status' => 'draft',
         'post_type' => 'post',
         'post_category' => array($category_id),
-        'post_name' => $post_slug, // Set the post slug
+        'post_name' => $post_slug,
     ]);
     
     if (!$post_id) {
@@ -145,11 +145,15 @@ function aiseo_create_post($content, $keyword, $all_keywords) {
     add_post_meta($post_id, '_aiseo_generated', true);
     add_post_meta($post_id, '_aiseo_alternate_titles', array_slice($content['titles'], 1));
     add_post_meta($post_id, '_aiseo_primary_keyword', $keyword);
-    // Add all keywords to the aiseo_keyword taxonomy
     wp_set_object_terms($post_id, $all_keywords, 'aiseo_keyword', true);
 
     aiseo_update_seo_metadata($post_id, $keyword, $content['titles'][0], $content['excerpt']);
     aiseo_add_faq_to_post($post_id, $content['faqs']);
+
+    // Store the custom CTA as post meta instead of adding it to the content
+    if (isset($content['custom_cta'])) {
+        add_post_meta($post_id, '_aiseo_custom_cta', $content['custom_cta']);
+    }
 
     return $post_id;
 }
@@ -282,5 +286,104 @@ function aiseo_update_existing_post_slugs() {
     }
     
     aiseo_log("Finished updating existing post slugs. Updated " . $updated_count . " posts.");
+    return $updated_count;
+}
+
+function aiseo_remove_cta_from_posts() {
+    $posts = get_posts(array(
+        'post_type' => 'post',
+        'numberposts' => -1,
+        'post_status' => array('publish', 'draft'),
+    ));
+
+    $updated_count = 0;
+
+    foreach ($posts as $post) {
+        $content = $post->post_content;
+        
+        // Remove the CTA heading and content (including variations)
+        $patterns = array(
+            '/<h2>Custom Call to Action<\/h2>.*?(<h2>|$)/s',
+            '/<h2>Call to Action<\/h2>.*?(<h2>|$)/s',
+            '/Call to Action\s*[\r\n]+.*?(\r?\n\r?\n|$)/s'
+        );
+        
+        foreach ($patterns as $pattern) {
+            $content = preg_replace($pattern, '$1', $content);
+        }
+        
+        // Remove any trailing whitespace
+        $content = trim($content);
+
+        // Update the post if content has changed
+        if ($content !== $post->post_content) {
+            wp_update_post(array(
+                'ID' => $post->ID,
+                'post_content' => $content
+            ));
+            $updated_count++;
+        }
+
+        // Remove the CTA from post meta
+        delete_post_meta($post->ID, '_aiseo_custom_cta');
+    }
+
+    return $updated_count;
+}
+
+function aiseo_remove_duplicate_content() {
+    aiseo_log("Starting duplicate content removal process");
+    $posts = get_posts(array(
+        'post_type' => 'post',
+        'numberposts' => -1,
+        'post_status' => array('publish', 'draft'),
+    ));
+
+    aiseo_log("Found " . count($posts) . " posts to process");
+
+    $updated_count = 0;
+
+    foreach ($posts as $post) {
+        aiseo_log("Processing post ID: " . $post->ID . ", Status: " . $post->post_status);
+        $content = $post->post_content;
+        
+        // Check for duplicate FAQ sections with different titles
+        $patterns = array(
+            '/<h2>Frequently Asked Questions<\/h2>.*?(?=<h2>|$)/s',
+            '/<h2>FAQs<\/h2>.*?(?=<h2>|$)/s'
+        );
+        
+        $faq_sections = array();
+        foreach ($patterns as $pattern) {
+            if (preg_match_all($pattern, $content, $matches)) {
+                $faq_sections = array_merge($faq_sections, $matches[0]);
+            }
+        }
+        
+        $faq_count = count($faq_sections);
+        aiseo_log("Found " . $faq_count . " FAQ sections in post ID: " . $post->ID);
+        
+        if ($faq_count > 1) {
+            // Keep only the first FAQ section
+            $first_faq = $faq_sections[0];
+            foreach ($faq_sections as $faq) {
+                if ($faq !== $first_faq) {
+                    $content = str_replace($faq, '', $content);
+                }
+            }
+            $content = trim($content);
+            
+            wp_update_post(array(
+                'ID' => $post->ID,
+                'post_content' => $content
+            ));
+            $updated_count++;
+            aiseo_log("Updated post ID: " . $post->ID . ", removed " . ($faq_count - 1) . " duplicate FAQ sections");
+        } else {
+            aiseo_log("No duplicate FAQ sections found in post ID: " . $post->ID);
+        }
+    }
+
+    aiseo_log("Finished duplicate content removal process. Updated " . $updated_count . " posts.");
     return $updated_count;
 }

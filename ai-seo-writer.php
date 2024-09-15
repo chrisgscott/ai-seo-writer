@@ -109,7 +109,6 @@ function aiseo_plugin_deactivation() {
 register_deactivation_hook(__FILE__, 'aiseo_plugin_deactivation');
 
 function aiseo_add_admin_menu() {
-    aiseo_log("Adding admin menu items");
     add_menu_page(
         'AI SEO Writer',
         'AI SEO Writer',
@@ -121,8 +120,8 @@ function aiseo_add_admin_menu() {
 
     add_submenu_page(
         'ai-seo-writer',
-        'Settings',
-        'Settings',
+        'Settings & Utilities',
+        'Settings & Utilities',
         'manage_options',
         'ai-seo-writer-settings',
         'aiseo_settings_page'
@@ -226,3 +225,29 @@ function aiseo_update_post_slugs_ajax() {
     wp_send_json_success(['updated_count' => $updated_count]);
 }
 add_action('wp_ajax_aiseo_update_post_slugs', 'aiseo_update_post_slugs_ajax');
+
+function aiseo_remove_cta_ajax() {
+    check_ajax_referer('aiseo-remove-cta-nonce', 'nonce');
+
+    if (!current_user_can('manage_options')) {
+        wp_send_json_error(['message' => 'Permission denied.']);
+    }
+
+    $updated_count = aiseo_remove_cta_from_posts();
+
+    wp_send_json_success(['updated_count' => $updated_count]);
+}
+add_action('wp_ajax_aiseo_remove_cta', 'aiseo_remove_cta_ajax');
+
+function aiseo_remove_duplicate_content_ajax() {
+    check_ajax_referer('aiseo-remove-duplicate-content-nonce', 'nonce');
+
+    if (!current_user_can('manage_options')) {
+        wp_send_json_error(['message' => 'Permission denied.']);
+    }
+
+    $updated_count = aiseo_remove_duplicate_content();
+
+    wp_send_json_success(['updated_count' => $updated_count]);
+}
+add_action('wp_ajax_aiseo_remove_duplicate_content', 'aiseo_remove_duplicate_content_ajax');

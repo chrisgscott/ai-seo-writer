@@ -34,7 +34,7 @@ function aiseo_admin_page() {
 
     ?>
     <div class="wrap">
-        <h1>Generate AI SEO Content</h1>
+        <h1>AI SEO Writer</h1>
         <?php if ($success_message): ?>
             <div class="notice notice-success is-dismissible">
                 <p><?php echo esc_html($success_message); ?></p>
@@ -60,47 +60,6 @@ function aiseo_admin_page() {
             </table>
             <?php submit_button('Generate Posts'); ?>
         </form>
-
-        <hr>
-
-        <h2>Update Existing Post Slugs</h2>
-        <p>Click the button below to update the slugs of all existing posts based on their primary keywords.</p>
-        <button id="aiseo-update-slugs" class="button button-primary">Update Post Slugs</button>
-        <div id="aiseo-update-slugs-result"></div>
     </div>
-
-    <script type="text/javascript">
-    jQuery(document).ready(function($) {
-        $('#aiseo-update-slugs').click(function() {
-            var button = $(this);
-            button.prop('disabled', true);
-            $('#aiseo-update-slugs-result').text('Updating slugs... This may take a while.');
-
-            $.ajax({
-                url: ajaxurl,
-                type: 'POST',
-                data: {
-                    action: 'aiseo_update_post_slugs',
-                    nonce: '<?php echo wp_create_nonce('aiseo-update-slugs-nonce'); ?>'
-                },
-                success: function(response) {
-                    if (response.success) {
-                        $('#aiseo-update-slugs-result').text('Successfully updated ' + response.data.updated_count + ' post slugs.');
-                    } else {
-                        $('#aiseo-update-slugs-result').text('Error: ' + response.data.message);
-                    }
-                },
-                error: function() {
-                    $('#aiseo-update-slugs-result').text('An error occurred. Please try again.');
-                },
-                complete: function() {
-                    button.prop('disabled', false);
-                }
-            });
-        });
-    });
-    </script>
     <?php
 }
-
-remove_action('admin_init', 'aiseo_handle_form_submission');

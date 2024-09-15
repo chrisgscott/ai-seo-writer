@@ -24,7 +24,120 @@ function aiseo_settings_page() {
             submit_button('Save Settings');
             ?>
         </form>
+
+        <hr>
+
+        <h2>Maintenance Utilities</h2>
+        
+        <hr>
+
+        <h2>Update Existing Post Slugs</h2>
+        <p>Click the button below to update the slugs of all existing posts based on their primary keywords.</p>
+        <button id="aiseo-update-slugs" class="button button-primary">Update Post Slugs</button>
+        <div id="aiseo-update-slugs-result"></div>
+
+        <hr>
+
+        <h2>Remove Custom CTAs</h2>
+        <p>Click the button below to remove custom CTAs from all existing posts (both published and draft).</p>
+        <button id="aiseo-remove-cta" class="button button-primary">Remove Custom CTAs</button>
+        <div id="aiseo-remove-cta-result"></div>
+
+        <hr>
+
+        <h2>Remove Duplicate Content</h2>
+        <p>Click the button below to remove duplicate FAQ sections from all existing posts (both published and draft).</p>
+        <button id="aiseo-remove-duplicate-content" class="button button-primary">Remove Duplicate Content</button>
+        <div id="aiseo-remove-duplicate-content-result"></div>
     </div>
+
+    <script type="text/javascript">
+    jQuery(document).ready(function($) {
+        $('#aiseo-update-slugs').click(function() {
+            var button = $(this);
+            button.prop('disabled', true);
+            $('#aiseo-update-slugs-result').text('Updating slugs... This may take a while.');
+
+            $.ajax({
+                url: ajaxurl,
+                type: 'POST',
+                data: {
+                    action: 'aiseo_update_post_slugs',
+                    nonce: '<?php echo wp_create_nonce('aiseo-update-slugs-nonce'); ?>'
+                },
+                success: function(response) {
+                    if (response.success) {
+                        $('#aiseo-update-slugs-result').text('Successfully updated ' + response.data.updated_count + ' post slugs.');
+                    } else {
+                        $('#aiseo-update-slugs-result').text('Error: ' + response.data.message);
+                    }
+                },
+                error: function() {
+                    $('#aiseo-update-slugs-result').text('An error occurred. Please try again.');
+                },
+                complete: function() {
+                    button.prop('disabled', false);
+                }
+            });
+        });
+
+        $('#aiseo-remove-cta').click(function() {
+            var button = $(this);
+            button.prop('disabled', true);
+            $('#aiseo-remove-cta-result').text('Removing CTAs... This may take a while.');
+
+            $.ajax({
+                url: ajaxurl,
+                type: 'POST',
+                data: {
+                    action: 'aiseo_remove_cta',
+                    nonce: '<?php echo wp_create_nonce('aiseo-remove-cta-nonce'); ?>'
+                },
+                success: function(response) {
+                    if (response.success) {
+                        $('#aiseo-remove-cta-result').html('Successfully processed all posts. ' + response.data.updated_count + ' posts were updated.<br>Please check a few posts to ensure CTAs have been removed as expected.');
+                    } else {
+                        $('#aiseo-remove-cta-result').text('Error: ' + response.data.message);
+                    }
+                },
+                error: function() {
+                    $('#aiseo-remove-cta-result').text('An error occurred. Please try again.');
+                },
+                complete: function() {
+                    button.prop('disabled', false);
+                }
+            });
+        });
+
+        $('#aiseo-remove-duplicate-content').click(function() {
+            var button = $(this);
+            button.prop('disabled', true);
+            $('#aiseo-remove-duplicate-content-result').text('Removing duplicate content... This may take a while.');
+
+            $.ajax({
+                url: ajaxurl,
+                type: 'POST',
+                data: {
+                    action: 'aiseo_remove_duplicate_content',
+                    nonce: '<?php echo wp_create_nonce('aiseo-remove-duplicate-content-nonce'); ?>'
+                },
+                success: function(response) {
+                    if (response.success) {
+                        $('#aiseo-remove-duplicate-content-result').html('Successfully processed all posts. ' + response.data.updated_count + ' posts were updated.<br>Please check a few posts to ensure duplicate content has been removed as expected.');
+                    } else {
+                        $('#aiseo-remove-duplicate-content-result').text('Error: ' + response.data.message);
+                    }
+                },
+                error: function() {
+                    $('#aiseo-remove-duplicate-content-result').text('An error occurred. Please try again.');
+                },
+                complete: function() {
+                    button.prop('disabled', false);
+                }
+            });
+        });
+    });
+    </script>
     <?php
 }
 

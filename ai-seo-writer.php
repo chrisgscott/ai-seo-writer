@@ -2,8 +2,8 @@
 /*
 Plugin Name: AI SEO Writer
 Description: Generate SEO-optimized blog posts from keywords using OpenAI API.
-Version: 1.0
-Author: Your Name
+Version: 1.1
+Author: Mosaic
 */
 
 // Prevent direct access to this file

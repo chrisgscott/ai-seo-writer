@@ -125,6 +125,8 @@ function aiseo_create_post($content, $keyword, $all_keywords) {
     $category_id = wp_create_category($content['category']);
     $post_content = aiseo_process_content($content['content']);
     
+    $post_slug = aiseo_create_slug_from_keyword($keyword);
+    
     $post_id = wp_insert_post([
         'post_title' => $content['titles'][0],
         'post_content' => $post_content,
@@ -132,6 +134,7 @@ function aiseo_create_post($content, $keyword, $all_keywords) {
         'post_status' => 'draft',
         'post_type' => 'post',
         'post_category' => array($category_id),
+        'post_name' => $post_slug, // Set the post slug
     ]);
     
     if (!$post_id) {
@@ -211,3 +214,30 @@ add_action('aiseo_daily_cleanup', 'aiseo_cleanup_processed_keywords');
 
 // Initialize the processed keywords option if it doesn't exist
 add_option('aiseo_processed_keywords', array());
+
+function aiseo_create_slug_from_keyword($keyword) {
+    // Convert to lowercase
+    $slug = strtolower($keyword);
+    
+    // Replace spaces with hyphens
+    $slug = str_replace(' ', '-', $slug);
+    
+    // Remove any character that is not a letter, number, or hyphen
+    $slug = preg_replace('/[^a-z0-9-]/', '', $slug);
+    
+    // Remove multiple hyphens
+    $slug = preg_replace('/-+/', '-', $slug);
+    
+    // Trim hyphens from the beginning and end
+    $slug = trim($slug, '-');
+    
+    // Ensure the slug is unique
+    $original_slug = $slug;
+    $counter = 1;
+    while (get_page_by_path($slug, OBJECT, 'post')) {
+        $slug = $original_slug . '-' . $counter;
+        $counter++;
+    }
+    
+    return $slug;
+}

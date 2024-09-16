@@ -226,6 +226,10 @@ function aiseo_reprocess_post() {
         ];
         wp_update_post($post_data);
         aiseo_log("Post ID " . $post_id . " reprocessed successfully. Content length: " . strlen($processed_content));
+        
+        // Add AI SEO Keywords to Link Juicer
+        aiseo_add_keywords_to_link_juicer($post_id);
+        
         wp_send_json_success(['content' => $processed_content]);
 
         // Add internal links to the reprocessed content
@@ -268,3 +272,38 @@ function aiseo_add_internal_links_ajax() {
     }
 }
 add_action('wp_ajax_aiseo_add_internal_links', 'aiseo_add_internal_links_ajax');
+
+function aiseo_update_post_title() {
+    check_ajax_referer('aiseo_update_title', 'nonce');
+
+    if (!current_user_can('edit_posts')) {
+        wp_send_json_error(['message' => 'Permission denied.']);
+    }
+
+    $post_id = intval($_POST['post_id']);
+    $new_title = sanitize_text_field($_POST['new_title']);
+
+    // Update post title
+    $post_data = [
+        'ID' => $post_id,
+        'post_title' => $new_title,
+    ];
+    $update_result = wp_update_post($post_data);
+
+    if (is_wp_error($update_result)) {
+        wp_send_json_error(['message' => 'Error updating post title.']);
+    }
+
+    // Update Rank Math SEO title
+    if (function_exists('RankMath')) {
+        RankMath\Post::update_meta('title', $new_title, $post_id);
+        aiseo_log("Updated Rank Math SEO title for post ID " . $post_id . ": " . $new_title);
+    } else {
+        aiseo_log("Rank Math not active, SEO title not updated for post ID " . $post_id);
+    }
+
+    aiseo_log("Updated WordPress title for post ID " . $post_id . ": " . $new_title);
+    wp_send_json_success(['message' => 'Title updated successfully.']);
+}
+add_action('wp_ajax_aiseo_update_post_title', 'aiseo_update_post_title');
+

@@ -108,8 +108,8 @@ function aiseo_process_queue() {
     update_option('aiseo_current_process', 'No active process');
     aiseo_log("Queue processing completed");
 
-    aiseo_log("Starting internal linking process for all posts");
-    aiseo_add_internal_links_to_all_posts($all_keywords);
+    // Commenting out the internal linking process for now
+    // aiseo_add_internal_links_to_all_posts($all_keywords);
 }
 
 function aiseo_process_single_keyword($api_key, $item, $all_keywords) {
@@ -168,19 +168,20 @@ function aiseo_create_post($content, $keyword, $all_keywords) {
         add_post_meta($post_id, '_aiseo_custom_cta', $content['custom_cta']);
     }
 
+    // Add AI SEO Keywords to Link Juicer
+    aiseo_add_keywords_to_link_juicer($post_id);
+
     return $post_id;
 }
 
 function aiseo_update_seo_metadata($post_id, $focus_keyword, $seo_title, $seo_description) {
-    if (function_exists('RankMath\Helper\update_meta')) {
-        \RankMath\Helper\update_meta('focus_keyword', $focus_keyword, $post_id);
-        \RankMath\Helper\update_meta('title', $seo_title, $post_id);
-        \RankMath\Helper\update_meta('description', $seo_description, $post_id);
-    } else {
-        update_post_meta($post_id, 'rank_math_focus_keyword', $focus_keyword);
-        update_post_meta($post_id, 'rank_math_title', $seo_title);
+    if (class_exists('RankMath')) {
+        $rank_math_title = str_replace('%title%', get_the_title($post_id), $seo_title);
+        update_post_meta($post_id, 'rank_math_title', $rank_math_title);
         update_post_meta($post_id, 'rank_math_description', $seo_description);
+        update_post_meta($post_id, 'rank_math_focus_keyword', $focus_keyword);
     }
+    aiseo_log("Updated SEO metadata for post ID " . $post_id);
 }
 
 function aiseo_add_faq_to_post($post_id, $faqs) {

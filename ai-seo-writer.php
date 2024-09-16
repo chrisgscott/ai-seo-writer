@@ -12,6 +12,8 @@ if (!defined('ABSPATH')) {
 }
 
 require_once plugin_dir_path(__FILE__) . 'internal-linking.php';
+require_once plugin_dir_path(__FILE__) . 'queue-handler.php';
+require_once plugin_dir_path(__FILE__) . 'link-juicer-integration.php';
 
 function aiseo_init() {
     aiseo_log("Initializing AI SEO Writer plugin");
@@ -275,3 +277,62 @@ function aiseo_update_post_title_ajax() {
     }
 }
 add_action('wp_ajax_aiseo_update_post_title', 'aiseo_update_post_title_ajax');
+
+function aiseo_update_link_juicer_keywords_ajax() {
+    check_ajax_referer('aiseo-update-link-juicer-nonce', 'nonce');
+
+    if (!current_user_can('manage_options')) {
+        wp_send_json_error(['message' => 'Permission denied.']);
+    }
+
+    // Ensure the function is available
+    if (!function_exists('aiseo_add_keywords_to_link_juicer')) {
+        require_once plugin_dir_path(__FILE__) . 'link-juicer-integration.php';
+    }
+
+    $posts = get_posts(array(
+        'post_type' => 'post',
+        'numberposts' => -1,
+        'post_status' => array('publish', 'draft')
+    ));
+
+    $updated_count = 0;
+
+    foreach ($posts as $post) {
+        aiseo_log("Processing post ID: " . $post->ID);
+        aiseo_add_keywords_to_link_juicer($post->ID);
+        $updated_count++;
+    }
+
+    aiseo_log("Total posts processed: " . $updated_count);
+
+    // Verify Link Juicer keywords
+    aiseo_verify_link_juicer_keywords();
+
+    wp_send_json_success(['updated_count' => $updated_count]);
+}
+add_action('wp_ajax_aiseo_update_link_juicer_keywords', 'aiseo_update_link_juicer_keywords_ajax');
+
+function aiseo_add_link_juicer_meta_box() {
+    add_meta_box(
+        'aiseo_link_juicer_keywords',
+        'Link Juicer Keywords',
+        'aiseo_link_juicer_meta_box_callback',
+        'post',
+        'side',
+        'default'
+    );
+}
+add_action('add_meta_boxes', 'aiseo_add_link_juicer_meta_box');
+
+function aiseo_link_juicer_meta_box_callback($post) {
+    $keywords = get_post_meta($post->ID, '_ilj_keywords', true);
+    if (is_array($keywords) && !empty($keywords)) {
+        $keywords_list = esc_html(implode(', ', $keywords));
+        echo '<p><strong>Keywords:</strong></p>';
+        echo '<textarea rows="3" style="width: 100%;" readonly onclick="this.select();">' . $keywords_list . '</textarea>';
+        echo '<p><small>Click the text area to select all keywords for copying.</small></p>';
+    } else {
+        echo '<p>No Link Juicer keywords found for this post.</p>';
+    }
+}
